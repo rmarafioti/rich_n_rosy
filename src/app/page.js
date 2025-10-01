@@ -6,7 +6,8 @@ export default function Home() {
     <div className={styles.page}>
       <main className={styles.main}>
         <h1> Rich N Rosy Get Hitched</h1>
-        <h2> this is our wedding website</h2>
+        <h2>This is our wedding website</h2>
+        <h3>This will be a very cool website</h3>
       </main>
       <footer className={styles.footer}>
         <a
