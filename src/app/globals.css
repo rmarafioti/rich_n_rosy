@@ -36,12 +36,20 @@ a {
   text-decoration: none;
 }
 
-nav {
+nav, footer {
   display: flex;
   flex-direction: row;
   margin: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid black;
+}
+
+footer {
+  justify-content: center;
+  padding-top: 1rem;
+  border-top: 1px solid black;
+  padding-bottom: 0rem;
+  border-bottom: none;
 }
 
 main {
@@ -51,6 +59,8 @@ main {
   justify-items: center;
   padding: 80px;
   font-family: var(--font-geist-sans);
+  /* ensure footer stays at the bottom of page*/
+  min-height: 100vh; 
 }
 
 @media (prefers-color-scheme: dark) {
