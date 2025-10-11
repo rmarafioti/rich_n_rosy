@@ -1,0 +1,22 @@
+.icon {
+    /* width is soley for layout looks atm*/
+    width: 300px;
+}
+
+.nav_menu {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0rem 1rem 0rem 1rem;
+}
+
+.nav_menu .nav_link {
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.nav_menu .nav_link:hover {
+    background-color: red;
+}
