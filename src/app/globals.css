@@ -44,6 +44,13 @@ nav, footer {
   border-bottom: 1px solid black;
 }
 
+@media (max-width: 1300px) {
+  /*push ham menu to the right*/
+  nav {
+    justify-content: flex-end;
+  }
+}
+
 footer {
   justify-content: center;
   padding-top: 1rem;

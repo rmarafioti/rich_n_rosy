@@ -8,10 +8,49 @@
 }
 
 .nav_menu .nav_link {
-    padding: 1rem;
-    cursor: pointer;
+  padding: 1rem;
+  cursor: pointer;
 }
 
 .nav_menu .nav_link:hover {
-    background-color: red;
+  background-color: red;
+}
+
+.mobile_nav {
+  display: none;
+}
+
+.menu {
+  display: none;
+}
+
+/* mobile breakpoint */
+@media (max-width: 1300px) {
+  .nav_menu {
+    display: none;
+  }
+  .mobile_nav {
+    display: flex;
+    align-self: center;
+  }
+
+  /* mobile menu */
+
+  .menu {
+    position: absolute;
+    width: 100%;
+    margin: 0rem;
+    padding: 0rem;
+    background-color: var(--background);
+    border-bottom: 1px solid var(--gbGrayText);
+    border-top: 1px solid var(--gbGrayText);
+  }
+
+  .menu.active {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 80vh;
+    z-index: 1000;
+  }
 }
