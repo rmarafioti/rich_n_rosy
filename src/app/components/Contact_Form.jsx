@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState, useRef } from "react";
-
 import emailjs from "@emailjs/browser";
+
+import styles from "../styling/contact_form.module.css";
 
 export default function Contact_Form() {
   const formRef = useRef();
@@ -90,13 +91,14 @@ export default function Contact_Form() {
 
   return (
     <>
-      <h1>This is the contact form</h1>
+      <p className={styles.header}>Are you excited for the wedding?!?</p>
+      <p>Send us a message and let us know</p>
       <form ref={formRef} onSubmit={sendEmail}>
-        <div>
-          s
+        <div className={styles.name_section}>
           <div>
             <label>First name*</label>
             <input
+              className={styles.name}
               type="text"
               name="first_name"
               aria-label="first_name"
@@ -107,6 +109,7 @@ export default function Contact_Form() {
           <div>
             <label>Last name*</label>
             <input
+              className={styles.name}
               type="text"
               name="last_name"
               aria-label="last_name"
@@ -117,6 +120,7 @@ export default function Contact_Form() {
         </div>
         <label>Email*</label>
         <input
+          className={styles.email}
           type="email"
           name="email"
           aria-label="email"
@@ -125,6 +129,7 @@ export default function Contact_Form() {
         />
         <label>Your message*</label>
         <textarea
+          className={styles.message}
           name="message"
           aria-label="additional_information"
           value={formValues.message}
@@ -132,6 +137,7 @@ export default function Contact_Form() {
         />
         <p>*Required</p>
         <input
+          className={styles.send}
           type="submit"
           aria-label="form_submit_button"
           value={isLoading ? "Sending..." : "Send"}
@@ -145,6 +151,8 @@ export default function Contact_Form() {
         {messageStatus === "error" && (
           <p>*Message failed to send. Please try again*</p>
         )}
+        {/* leave for now but modal will look better */}
+        {messageStatus === "success" && <p>Message Sent!</p>}
       </form>
       {/*<MessageSentModal
         isModalVisible={isModalVisible}
