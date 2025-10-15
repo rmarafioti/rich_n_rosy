@@ -1,0 +1,52 @@
+.header {
+    font-size: 22px;
+    margin: 2rem 0rem .5rem 0rem
+}
+
+.name_section {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0rem 1rem 0rem;
+}
+
+.name, .email, .message, .send {
+    display: flex;
+    padding: .5rem;
+    width: 280px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.email, .message, .send {
+    width: 100%;
+    margin: 0rem 0rem 1rem 0rem;
+}
+
+.send {
+    padding: .8rem .5rem .8rem .5rem;
+    border: none;
+    cursor: pointer;
+}
+
+.send:hover {
+    background-color: red;
+}
+
+/* make this breakpoint a small max_width */
+@media (max-width: 1300px) {
+    .header {
+        font-size: 20px;
+    }
+ .name_section {
+    flex-direction: column;
+    width: 100%;
+ }
+
+ .name_section :first-child {
+    margin-bottom: 1rem;
+ }
+
+ .name_section, .name, .email, .message, .send {
+    width: 100%;
+ }
+}
