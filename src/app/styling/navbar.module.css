@@ -7,13 +7,22 @@
   margin: 0rem 1rem 0rem 1rem;
 }
 
-.nav_menu .nav_link {
-  padding: 1rem;
+.nav_link {
+  margin-top: 1rem;
+  padding: 4rem 4.5rem;
+  text-align: center;
+  height: 125px;
+  width: 240px;
+  border-top-left-radius: 125px;
+  border-top-right-radius: 125px;
   cursor: pointer;
+  background: antiquewhite;
+  box-shadow: 0 20px 8px antiquewhite; 
+  transition: background 0.5s ease-in-out;
 }
 
-.nav_menu .nav_link:hover {
-  background-color: red;
+.nav_link:hover {
+  background: red;
 }
 
 .mobile_nav {

@@ -39,14 +39,11 @@ a {
 nav, footer {
   display: flex;
   flex-direction: row;
-  margin: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid black;
+  margin: 1rem 0rem 0rem 0rem;
+  /*padding-bottom: 1rem;*/
 }
 
 form {
-    display: flex;
-    flex-direction: column;
     width: 600px;
 }
 
@@ -69,6 +66,7 @@ main {
   font-family: var(--font-geist-sans);
   /* ensure footer stays at the bottom of page*/
   min-height: 100vh; 
+  background-color: antiquewhite;
 }
 
 @media (max-width: 1300px) {
@@ -80,6 +78,9 @@ main {
   main {
     padding: 16px;
   }
+}
+
+@media (max-width: 600px) {
   form {
     width: 100%;
   }
