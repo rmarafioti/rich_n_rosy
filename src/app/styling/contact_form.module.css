@@ -9,9 +9,15 @@
     margin: 1rem 0rem 1rem 0rem;
 }
 
+.name_container_one, .name_container_two {
+    display: flex;
+    flex-direction: column;
+}
+
 .name, .email, .message, .send {
     display: flex;
     padding: .5rem;
+    margin-top: .2rem;
     width: 280px;
     border-radius: 5px;
     border: 1px solid black;
@@ -19,10 +25,12 @@
 
 .email, .message, .send {
     width: 100%;
-    margin: 0rem 0rem 1rem 0rem;
+    margin-bottom: 1rem;
 }
 
 .send {
+    background-color: var(--button_gray);
+    color: black;
     padding: .8rem .5rem .8rem .5rem;
     border: none;
     cursor: pointer;
@@ -32,21 +40,24 @@
     background-color: red;
 }
 
-/* make this breakpoint a small max_width */
-@media (max-width: 1300px) {
+@media (max-width: 600px) and (hover: none) {
     .header {
         font-size: 20px;
     }
  .name_section {
+    display: block;
     flex-direction: column;
     width: 100%;
  }
 
- .name_section :first-child {
+.name_container_one {
     margin-bottom: 1rem;
- }
+}
 
  .name_section, .name, .email, .message, .send {
     width: 100%;
  }
+ .send:hover {
+    background-color: initial;
+}
 }

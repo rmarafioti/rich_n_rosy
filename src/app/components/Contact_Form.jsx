@@ -10,10 +10,6 @@ export default function Contact_Form() {
   const [isLoading, setIsLoading] = useState(false);
   const [messageStatus, setMessageStatus] = useState(null);
 
-  const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
-  const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-  const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-
   const inputForm = {
     first_name: "",
     last_name: "",
@@ -45,17 +41,17 @@ export default function Contact_Form() {
     return errors;
   };
 
+  const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormValues({
       ...formValues,
       [name]: value,
     });
-  };
-
-  const isValidEmail = (email) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
   };
 
   const sendEmail = (e) => {
@@ -70,6 +66,10 @@ export default function Contact_Form() {
     }
 
     setIsLoading(true);
+
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
 
     emailjs.sendForm(serviceID, templateID, formRef.current, publicKey).then(
       () => {
@@ -95,8 +95,8 @@ export default function Contact_Form() {
       <p>Send us a message and let us know</p>
       <form ref={formRef} onSubmit={sendEmail}>
         <div className={styles.name_section}>
-          <div>
-            <label>First name*</label>
+          <div className={styles.name_container_one}>
+            <label className={styles.label}>First name*</label>
             <input
               className={styles.name}
               type="text"
@@ -106,8 +106,8 @@ export default function Contact_Form() {
               onChange={handleInputChange}
             />
           </div>
-          <div>
-            <label>Last name*</label>
+          <div className={styles.name_container_two}>
+            <label className={styles.label}>Last name*</label>
             <input
               className={styles.name}
               type="text"
@@ -118,7 +118,7 @@ export default function Contact_Form() {
             />
           </div>
         </div>
-        <label>Email*</label>
+        <label className={styles.label}>Email*</label>
         <input
           className={styles.email}
           type="email"
@@ -127,7 +127,7 @@ export default function Contact_Form() {
           value={formValues.email}
           onChange={handleInputChange}
         />
-        <label>Your message*</label>
+        <label className={styles.label}>Your message*</label>
         <textarea
           className={styles.message}
           name="message"

@@ -8,12 +8,15 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --antique_white: antiquewhite;
+  --button_gray: lightgray
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --antique_white: #0a0a0a;
   }
 }
 
@@ -39,24 +42,21 @@ a {
 nav, footer {
   display: flex;
   flex-direction: row;
-  margin: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid black;
+  padding: 1rem 0rem 0rem 0rem;
+  /*padding-bottom: 1rem;*/
 }
 
 form {
-    display: flex;
-    flex-direction: column;
     width: 600px;
 }
 
 
 footer {
   justify-content: center;
-  padding-top: 1rem;
-  border-top: 1px solid black;
-  padding-bottom: 0rem;
+  padding: 2rem 0rem 2rem 0rem;
+  border-top: 1px solid var(--foreground);
   border-bottom: none;
+  background-color: var(--antique_white);
 }
 
 main {
@@ -69,6 +69,7 @@ main {
   font-family: var(--font-geist-sans);
   /* ensure footer stays at the bottom of page*/
   min-height: 100vh; 
+  background-color: var(--antique_white)
 }
 
 @media (max-width: 1300px) {
@@ -80,8 +81,14 @@ main {
   main {
     padding: 16px;
   }
+}
+
+@media (max-width: 600px) {
   form {
     width: 100%;
+  }
+  nav {
+     background-color: var(--antique_white);
   }
 }
 

@@ -4,16 +4,23 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 0rem 1rem 0rem 1rem;
 }
 
-.nav_menu .nav_link {
-  padding: 1rem;
+.nav_link {
+  margin-top: 1rem;
+  padding: 4rem 4.5rem;
+  text-align: center;
+  height: 125px;
+  width: 240px;
+  border-top-left-radius: 125px;
+  border-top-right-radius: 125px;
   cursor: pointer;
+  background: var(--antique_white);
+  transition: background 0.5s ease-in-out;
 }
 
-.nav_menu .nav_link:hover {
-  background-color: red;
+.nav_link:hover {
+  background: red;
 }
 
 .mobile_nav {
@@ -32,6 +39,7 @@
   .mobile_nav {
     display: flex;
     align-self: center;
+    margin-right: 1rem;
   }
 
   /* mobile menu */
@@ -42,8 +50,6 @@
     margin: 0rem;
     padding: 0rem;
     background-color: var(--background);
-    border-bottom: 1px solid var(--gbGrayText);
-    border-top: 1px solid var(--gbGrayText);
   }
 
   .menu.active {
