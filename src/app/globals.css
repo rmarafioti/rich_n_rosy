@@ -42,7 +42,7 @@ a {
 nav, footer {
   display: flex;
   flex-direction: row;
-  margin: 1rem 0rem 0rem 0rem;
+  padding: 1rem 0rem 0rem 0rem;
   /*padding-bottom: 1rem;*/
 }
 
@@ -53,10 +53,10 @@ form {
 
 footer {
   justify-content: center;
-  padding-top: 1rem;
+  padding: 2rem 0rem 2rem 0rem;
   border-top: 1px solid var(--foreground);
-  padding-bottom: 0rem;
   border-bottom: none;
+  background-color: var(--antique_white);
 }
 
 main {
@@ -86,6 +86,9 @@ main {
 @media (max-width: 600px) {
   form {
     width: 100%;
+  }
+  nav {
+     background-color: var(--antique_white);
   }
 }
 
