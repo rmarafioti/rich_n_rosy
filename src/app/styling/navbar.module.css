@@ -16,8 +16,7 @@
   border-top-left-radius: 125px;
   border-top-right-radius: 125px;
   cursor: pointer;
-  background: antiquewhite;
-  box-shadow: 0 20px 8px antiquewhite; 
+  background: var(--antique_white);
   transition: background 0.5s ease-in-out;
 }
 

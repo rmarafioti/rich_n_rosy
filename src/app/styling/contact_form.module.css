@@ -29,6 +29,8 @@
 }
 
 .send {
+    background-color: var(--button_gray);
+    color: black;
     padding: .8rem .5rem .8rem .5rem;
     border: none;
     cursor: pointer;
