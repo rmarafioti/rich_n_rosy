@@ -16,7 +16,7 @@
   border-top-left-radius: 125px;
   border-top-right-radius: 125px;
   cursor: pointer;
-  background: magenta;
+  background: var(--olive);
   transition: background 0.2s ease-in-out;
 }
 
@@ -25,6 +25,11 @@
 }
 
 .nav_link:hover {
+  background: var(--antique_white);
+  border-bottom: none;
+}
+
+.active_link {
   background: var(--antique_white);
   border-bottom: none;
 }

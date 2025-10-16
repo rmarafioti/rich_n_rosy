@@ -20,6 +20,18 @@ export default function Navbar() {
     setMenuOpen(!menuOpen);
   };
 
+  const links = [
+    { href: "/", label: "Home" },
+    { href: "/section_one", label: "section one" },
+    { href: "/section_two", label: "section two" },
+    { href: "/section_three", label: "section three" },
+    { href: "/section_four", label: "section four" },
+    { href: "/section_five", label: "section five" },
+  ];
+
+  const isActive = (href) =>
+    pathname === href || pathname.startsWith(href + "/");
+
   return (
     <>
       <nav>
@@ -27,21 +39,19 @@ export default function Navbar() {
           <Link href="/" className={pc.menu_icon}>
             *menu icon
           </Link>
-          <Link href="/section_one" className={pc.nav_link}>
-            section one
-          </Link>
-          <Link href="/section_two" className={pc.nav_link}>
-            section two
-          </Link>
-          <Link href="/section_three" className={pc.nav_link}>
-            section three
-          </Link>
-          <Link href="/section_four" className={pc.nav_link}>
-            section four
-          </Link>
-          <Link href="/section_five" className={pc.nav_link}>
-            section five
-          </Link>
+          {links
+            .filter((link) => link.href !== "/")
+            .map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                className={`${pc.nav_link} ${
+                  isActive(href) ? pc.active_link : ""
+                }`}
+              >
+                {label}
+              </Link>
+            ))}
         </div>
 
         {/* mobile navigation menu below */}
@@ -63,24 +73,18 @@ export default function Navbar() {
         className={`${pc.menu} ${menuOpen ? pc.active : ""}`}
         aria-label="Mobile Navigation"
       >
-        <Link href="/" role="heading" className={mobile.nav_link}>
-          Home
-        </Link>
-        <Link href="/section_one" role="heading" className={mobile.nav_link}>
-          section one
-        </Link>
-        <Link href="/section_two" role="heading" className={mobile.nav_link}>
-          section two
-        </Link>
-        <Link href="/section_three" role="heading" className={mobile.nav_link}>
-          section three
-        </Link>
-        <Link href="/section_four" role="heading" className={mobile.nav_link}>
-          section four
-        </Link>
-        <Link href="/section_five" role="heading" className={mobile.nav_link}>
-          section five
-        </Link>
+        {links.map(({ href, label }) => (
+          <Link
+            key={href}
+            href={href}
+            role="heading"
+            className={`${mobile.nav_link} ${
+              isActive(href) ? mobile.active_link : ""
+            }`}
+          >
+            {label}
+          </Link>
+        ))}
       </menu>
     </>
   );
