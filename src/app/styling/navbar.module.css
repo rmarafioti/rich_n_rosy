@@ -6,21 +6,27 @@
   align-items: center;
 }
 
-.nav_link {
+.menu_icon, .nav_link {
   margin-top: 1rem;
   padding: 4rem 4.5rem;
+  padding-bottom: 5rem;
   text-align: center;
   height: 125px;
   width: 240px;
   border-top-left-radius: 125px;
   border-top-right-radius: 125px;
   cursor: pointer;
-  background: var(--antique_white);
-  transition: background 0.5s ease-in-out;
+  background: magenta;
+  transition: background 0.2s ease-in-out;
+}
+
+.menu_icon {
+  background-color: var(--background);
 }
 
 .nav_link:hover {
-  background: red;
+  background: var(--antique_white);
+  border-bottom: none;
 }
 
 .mobile_nav {

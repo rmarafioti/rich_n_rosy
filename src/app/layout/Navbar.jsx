@@ -24,7 +24,7 @@ export default function Navbar() {
     <>
       <nav>
         <div className={pc.nav_menu}>
-          <Link href="/" className={pc.nav_link}>
+          <Link href="/" className={pc.menu_icon}>
             *menu icon
           </Link>
           <Link href="/section_one" className={pc.nav_link}>
