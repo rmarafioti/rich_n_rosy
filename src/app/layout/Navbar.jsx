@@ -39,19 +39,21 @@ export default function Navbar() {
           <Link href="/" className={pc.menu_icon}>
             *menu icon
           </Link>
-          {links
-            .filter((link) => link.href !== "/")
-            .map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                className={`${pc.nav_link} ${
-                  isActive(href) ? pc.active_link : ""
-                }`}
-              >
-                {label}
-              </Link>
-            ))}
+          <div className={pc.link_container}>
+            {links
+              .filter((link) => link.href !== "/")
+              .map(({ href, label }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  className={`${pc.nav_link} ${
+                    isActive(href) ? pc.active_link : ""
+                  }`}
+                >
+                  {label}
+                </Link>
+              ))}
+          </div>
         </div>
 
         {/* mobile navigation menu below */}
@@ -78,9 +80,7 @@ export default function Navbar() {
             key={href}
             href={href}
             role="heading"
-            className={`${mobile.nav_link} ${
-              isActive(href) ? mobile.active_link : ""
-            }`}
+            className={mobile.nav_link}
           >
             {label}
           </Link>

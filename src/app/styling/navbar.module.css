@@ -2,22 +2,33 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  gap: 0;
 }
 
 .menu_icon, .nav_link {
+  flex: 1;
   margin-top: 1rem;
-  padding: 4rem 4.5rem;
+  padding: 4rem 0rem;
   padding-bottom: 5rem;
   text-align: center;
   height: 125px;
-  width: 240px;
   border-top-left-radius: 125px;
   border-top-right-radius: 125px;
+  min-width: 150px; /* prevents being too narrow on small screens */
+  max-width: 250px; /* caps growth on large screens */
   cursor: pointer;
   background: var(--olive);
   transition: background 0.2s ease-in-out;
+}
+
+.link_container {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end; 
+  align-items: center;
+  gap: 0; 
 }
 
 .menu_icon {
