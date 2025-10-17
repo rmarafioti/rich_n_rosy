@@ -9,7 +9,14 @@
   --background: #ffffff;
   --foreground: #171717;
   --antique_white: antiquewhite;
-  --button_gray: lightgray
+  --button_gray: lightgray;
+
+  /* wedding colors */
+  --lilac: #d9add2;
+  --baby_blue: #cbcadb;
+  --flamingo: #f69593;
+  --poppy: #f69593;
+  --olive: #ada435;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,6 +24,8 @@
     --background: #0a0a0a;
     --foreground: #ededed;
     --antique_white: #0a0a0a;
+    --lilac: #0a0a0a;
+    --olive: #0a0a0a;
   }
 }
 
@@ -28,7 +37,7 @@ body {
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: var(--lilac);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -54,7 +63,7 @@ form {
 footer {
   justify-content: center;
   padding: 2rem 0rem 2rem 0rem;
-  border-top: 1px solid var(--foreground);
+  border-top: 1px solid var(--background);
   border-bottom: none;
   background-color: var(--antique_white);
 }

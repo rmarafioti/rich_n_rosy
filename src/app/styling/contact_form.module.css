@@ -20,7 +20,7 @@
     margin-top: .2rem;
     width: 280px;
     border-radius: 5px;
-    border: 1px solid black;
+    border: 1px solid var(--foreground);
 }
 
 .email, .message, .send {
@@ -31,6 +31,7 @@
 .send {
     background-color: var(--button_gray);
     color: black;
+    text-align: center;
     padding: .8rem .5rem .8rem .5rem;
     border: none;
     cursor: pointer;
@@ -58,6 +59,6 @@
     width: 100%;
  }
  .send:hover {
-    background-color: initial;
+    background-color: var(--button_gray);
 }
 }
