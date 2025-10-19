@@ -14,7 +14,10 @@ export default function Toggle({ onToggle, isToggled }) {
         aria-pressed={isToggled}
         tabIndex={0}
         onKeyDown={(e) => {
-          if (e.key === "Enter" || e.key === " ") handleToggle();
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            handleToggle();
+          }
         }}
       >
         <div
