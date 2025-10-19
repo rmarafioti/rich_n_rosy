@@ -58,6 +58,6 @@
     .toggleButton {
       height: 22px;
       width: 22px;
-      left: unset;
+      top: 2px;
     }
   }
