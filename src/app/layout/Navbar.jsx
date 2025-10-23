@@ -22,11 +22,11 @@ export default function Navbar() {
 
   const links = [
     { href: "/", label: "Home" },
-    { href: "/section_one", label: "section one" },
-    { href: "/section_two", label: "section two" },
-    { href: "/section_three", label: "section three" },
-    { href: "/section_four", label: "section four" },
-    { href: "/section_five", label: "section five" },
+    { href: "/section_one", label: "one" },
+    { href: "/section_two", label: "two" },
+    { href: "/section_three", label: "three" },
+    { href: "/section_four", label: "four" },
+    { href: "/section_five", label: "five" },
   ];
 
   const isActive = (href) =>

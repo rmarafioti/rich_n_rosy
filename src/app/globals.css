@@ -7,18 +7,18 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-  --antique_white: antiquewhite;
-  --button_gray: lightgray;
+  --foreground: #262429;
+  --antique_white: #edd6ce;
 
   /* wedding colors */
+  --deep_red: #6a010f;
   --lilac: #d9add2;
   --baby_blue: #cbcadb;
   --flamingo: #f69593;
-  --poppy: #f69593;
+  --poppy: #e4682a;
   --olive: #ada435;
 
-  /*--main-font: 'Fraunces', serif;*/
+  --main-font: 'Fraunces', serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -95,12 +95,13 @@ main {
   padding: 80px;
   /* ensure footer stays at the bottom of page*/
   min-height: 100vh; 
-  background-color: var(--antique_white)
+  background-color: antiquewhite;
 }
 
 button {
+  font-family: var(--main-font);
   padding: .5rem;
-  border-radius: 5px;;
+  border-radius: 5px;
   width: 120px;
 }
 

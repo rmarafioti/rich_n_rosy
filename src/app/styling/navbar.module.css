@@ -8,6 +8,10 @@
 }
 
 .menu_icon, .nav_link {
+  font-family: var(--main-font);
+  font-weight: 600;
+  font-size: 28px;
+  color: var(--background);
   flex: 1;
   margin-top: 1rem;
   padding: 4rem 0rem;
@@ -36,11 +40,13 @@
 }
 
 .nav_link:hover {
+  color: var(--forground);
   background: var(--antique_white);
   border-bottom: none;
 }
 
 .active_link {
+  color: var(--forground);
   background: var(--antique_white);
   border-bottom: none;
 }

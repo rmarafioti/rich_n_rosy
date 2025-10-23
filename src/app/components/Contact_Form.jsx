@@ -135,7 +135,7 @@ export default function Contact_Form() {
           value={formValues.message}
           onChange={handleInputChange}
         />
-        <p>*Required</p>
+        <p className={styles.required}>*Required</p>
         <input
           className={styles.send}
           type="submit"
