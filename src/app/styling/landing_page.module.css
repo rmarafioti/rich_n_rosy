@@ -1,0 +1,39 @@
+.image {
+    width: 1000px;
+    height: auto;
+    border-radius: 10px;
+    margin: 0rem 0rem 1rem 0rem;
+}
+
+.header {
+    color: var(--blush);
+    position: relative;
+    top: 170px;
+    right: 20px;
+}
+
+.title {
+    font-size: 68px;
+}
+
+.sub_title {
+    font-size: 38px;
+}
+
+@media (max-width: 600px) {
+  .image {
+    width: 100%;
+  }
+  .header {
+    color: black;
+    top: 0px;
+    right: 0px;
+    margin: 3rem 0rem 2rem 0rem;
+  }
+  .title {
+    font-size: 26px;
+  }
+  .sub_title {
+    font-size: 20px;;
+  }
+}

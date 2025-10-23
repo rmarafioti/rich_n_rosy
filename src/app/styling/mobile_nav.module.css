@@ -2,15 +2,20 @@
   font-size: 16px;
 }
 
+.menu_icon {
+  width: 100px;
+  height: auto;
+}
+
 #hamMenuContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  background-color: lightgray;
+  background-color: var(--olive);
   width: 45.5px;
   height: 45.5px;
-  border-radius: 5px;
+  border-radius: 25px;
   transition: all 0.5s ease-in-out;
 }
 
@@ -18,7 +23,7 @@
   position: relative;
   width: 25px;
   height: 3px;
-  background: black;
+  background: var(--blush);
   border-radius: 5px;
   transition: all 0.5s ease-in-out;
   display: block;
@@ -31,7 +36,7 @@
   position: absolute;
   width: 25px;
   height: 3px;
-  background: black;
+  background: var(--blush);
   border-radius: 5px;
   transition: all 0.5s ease-in-out;
   transform-origin: center;

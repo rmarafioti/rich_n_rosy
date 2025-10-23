@@ -1,5 +1,4 @@
 .header {
-    font-size: 22px;
     margin: 2rem 0rem .5rem 0rem
 }
 
@@ -33,11 +32,11 @@
 }
 
 .send {
-    background-color: var(--deep_red);
+    background-color: var(--maroon);
     font-family: var(--main-font);
     font-size: 18px;
     font-weight: 600;
-    color: var(--antique_white);
+    color: var(--blush);
     text-align: center;
     padding: .8rem .5rem .8rem .5rem;
     border: none;

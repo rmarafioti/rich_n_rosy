@@ -8,15 +8,13 @@
 :root {
   --background: #ffffff;
   --foreground: #262429;
-  --antique_white: #edd6ce;
-  --background_color: antiquewhite;
 
   /* wedding colors */
-  --deep_red: #6a010f;
-  --lilac: #d9add2;
-  --baby_blue: #cbcadb;
-  --flamingo: #f69593;
-  --poppy: #e4682a;
+  --blush: #ecd5cd;
+  --maroon: #680a14;
+  --lilac: #e3afca;
+  --rose: #f69694;
+  --orange: #e56829;
   --olive: #ada435;
 
   --main-font: "Fraunces", serif;
@@ -40,8 +38,8 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--lilac);
+  color: var(--maroon);
+  background: #dfbfd0;
 }
 
 /* important for accessibility font reszing */
@@ -83,7 +81,7 @@ footer {
   justify-content: center;
   padding: 2rem 0rem 2rem 0rem;
   border-bottom: none;
-  background-color: var(--antique_white);
+  background-color: var(--blush);
 }
 
 main {
@@ -91,11 +89,9 @@ main {
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  /* width of page*/
-  padding: 80px;
   /* ensure footer stays at the bottom of page*/
   min-height: 100vh;
-  background-color: var(--background_color);
+  background-color: var(--blush);
 }
 
 button {
@@ -106,10 +102,6 @@ button {
 }
 
 @media (max-width: 1300px) {
-  /*push ham menu to the right*/
-  nav {
-    justify-content: flex-end;
-  }
   /* margins on mobile */
   main {
     padding: 16px;
@@ -121,7 +113,7 @@ button {
     width: 100%;
   }
   nav {
-    background-color: var(--antique_white);
+    background-color: var(--blush);
   }
 }
 
