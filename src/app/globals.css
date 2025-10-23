@@ -9,6 +9,7 @@
   --background: #ffffff;
   --foreground: #262429;
   --antique_white: #edd6ce;
+  --background_color: antiquewhite;
 
   /* wedding colors */
   --deep_red: #6a010f;
@@ -18,7 +19,7 @@
   --poppy: #e4682a;
   --olive: #ada435;
 
-  --main-font: 'Fraunces', serif;
+  --main-font: "Fraunces", serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,6 +29,7 @@
     --antique_white: #0a0a0a;
     --lilac: #0a0a0a;
     --olive: #0a0a0a;
+    --background_color: #0a0a0a;
   }
 }
 
@@ -66,22 +68,20 @@ a {
   text-decoration: none;
 }
 
-nav, footer {
+nav,
+footer {
   display: flex;
   flex-direction: row;
   padding: 1rem 0rem 0rem 0rem;
-  /*padding-bottom: 1rem;*/
 }
 
 form {
-    width: 600px;
+  width: 600px;
 }
-
 
 footer {
   justify-content: center;
   padding: 2rem 0rem 2rem 0rem;
-  border-top: 1px solid var(--background);
   border-bottom: none;
   background-color: var(--antique_white);
 }
@@ -94,13 +94,13 @@ main {
   /* width of page*/
   padding: 80px;
   /* ensure footer stays at the bottom of page*/
-  min-height: 100vh; 
-  background-color: antiquewhite;
+  min-height: 100vh;
+  background-color: var(--background_color);
 }
 
 button {
   font-family: var(--main-font);
-  padding: .5rem;
+  padding: 0.5rem;
   border-radius: 5px;
   width: 120px;
 }
@@ -121,7 +121,7 @@ button {
     width: 100%;
   }
   nav {
-     background-color: var(--antique_white);
+    background-color: var(--antique_white);
   }
 }
 
@@ -142,4 +142,5 @@ button {
   --antique_white: #0a0a0a;
   --lilac: #0a0a0a;
   --olive: #0a0a0a;
+  --background_color: #0a0a0a;
 }
