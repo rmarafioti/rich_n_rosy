@@ -46,7 +46,7 @@
 
 .send:hover {
     color: var(--foreground);
-    background-color: var(--lilac);
+    background-color: var(--rose);
 }
 
 @media (max-width: 600px) and (hover: none) {

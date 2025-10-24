@@ -24,10 +24,14 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    
     --antique_white: #0a0a0a;
     --lilac: #0a0a0a;
     --olive: #0a0a0a;
     --background_color: #0a0a0a;
+    --rose: #0a0a0a;
+    --blush: #0a0a0a;
+    --maroon: #ecd5cd;
   }
 }
 
@@ -39,7 +43,7 @@ body {
 
 body {
   color: var(--maroon);
-  background: #dfbfd0;
+  background: var(--blush);
 }
 
 /* important for accessibility font reszing */
@@ -66,6 +70,10 @@ a {
   text-decoration: none;
 }
 
+nav {
+  background-color: var(--lilac);
+}
+
 nav,
 footer {
   display: flex;
@@ -82,6 +90,7 @@ footer {
   padding: 2rem 0rem 2rem 0rem;
   border-bottom: none;
   background-color: var(--blush);
+  border-top: 1px solid var(--background);
 }
 
 main {
@@ -92,6 +101,7 @@ main {
   /* ensure footer stays at the bottom of page*/
   min-height: 100vh;
   background-color: var(--blush);
+  margin-bottom: 4rem;
 }
 
 button {
@@ -121,6 +131,9 @@ button {
   html {
     color-scheme: dark;
   }
+  nav {
+  background-color: #232227;
+}
 }
 
 [data-theme="dark"] html {

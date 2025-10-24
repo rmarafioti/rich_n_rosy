@@ -23,11 +23,11 @@ export default function Navbar() {
 
   const links = [
     { href: "/", label: "Home" },
-    { href: "/section_one", label: "one" },
-    { href: "/section_two", label: "two" },
-    { href: "/section_three", label: "three" },
-    { href: "/section_four", label: "four" },
-    { href: "/section_five", label: "five" },
+    { href: "/section_one", label: "event" },
+    { href: "/section_two", label: "details" },
+    { href: "/section_three", label: "our story" },
+    { href: "/section_four", label: "gallery" },
+    { href: "/section_five", label: "faqs" },
   ];
 
   const isActive = (href) =>
@@ -37,13 +37,16 @@ export default function Navbar() {
     <>
       <nav>
         <div className={pc.nav_menu}>
-          <Link href="/">
+          <Link
+            href="/"
+            className={`${pc.menu_icon} ${isActive("/") ? pc.active_link : ""}`}
+          >
             <Image
               src="https://res.cloudinary.com/dzpne110u/image/upload/v1761257615/wedding_website/icons/monogram_maroon_vmlyu6.svg"
               alt="website icon and home page button"
               width={179}
               height={118}
-              className={pc.menu_icon}
+              className={pc.icon}
             />
           </Link>
           <div className={pc.link_container}>
