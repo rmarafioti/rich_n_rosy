@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 /* naming conventions to define responsive design*/
 import pc from "../styling/navbar.module.css";
@@ -22,11 +23,11 @@ export default function Navbar() {
 
   const links = [
     { href: "/", label: "Home" },
-    { href: "/section_one", label: "section one" },
-    { href: "/section_two", label: "section two" },
-    { href: "/section_three", label: "section three" },
-    { href: "/section_four", label: "section four" },
-    { href: "/section_five", label: "section five" },
+    { href: "/section_one", label: "event" },
+    { href: "/section_two", label: "details" },
+    { href: "/section_three", label: "our story" },
+    { href: "/section_four", label: "gallery" },
+    { href: "/section_five", label: "faqs" },
   ];
 
   const isActive = (href) =>
@@ -36,8 +37,17 @@ export default function Navbar() {
     <>
       <nav>
         <div className={pc.nav_menu}>
-          <Link href="/" className={pc.menu_icon}>
-            *menu icon
+          <Link
+            href="/"
+            className={`${pc.menu_icon} ${isActive("/") ? pc.active_link : ""}`}
+          >
+            <Image
+              src="https://res.cloudinary.com/dzpne110u/image/upload/v1761257615/wedding_website/icons/monogram_maroon_vmlyu6.svg"
+              alt="website icon and home page button"
+              width={179}
+              height={118}
+              className={pc.icon}
+            />
           </Link>
           <div className={pc.link_container}>
             {links
@@ -59,6 +69,13 @@ export default function Navbar() {
         {/* mobile navigation menu below */}
 
         <section className={pc.mobile_nav}>
+          <Image
+            src="https://res.cloudinary.com/dzpne110u/image/upload/v1761257615/wedding_website/icons/monogram_maroon_vmlyu6.svg"
+            alt="website icon and home page button"
+            width={179}
+            height={118}
+            className={mobile.menu_icon}
+          />
           {/*hamburger menu*/}
           <div id={mobile.hamMenuContainer} onClick={toggleMenu}>
             <div

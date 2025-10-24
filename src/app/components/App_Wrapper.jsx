@@ -1,41 +1,17 @@
 "use client";
 
+import { Fraunces } from "next/font/google";
+
 import { useState, useEffect } from "react";
 import Navbar from "../layout/Navbar";
 import Footer from "../layout/Footer";
 import Access_Menu from "../components/Access_Menu";
 
-/* import localFont from "next/font/local";
-
-import "../globalmenucontrols.css"; */
-
-/* for loading in locally downloaded fonts 
-const openDyslexic = localFont({
-  src: [
-    {
-      path: "../fonts/OpenDyslexic-Bold-Italic.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../fonts/OpenDyslexic-Bold.woff2",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../fonts/OpenDyslexic-Italic.woff2",
-      weight: "400",
-      style: "italic",
-    },
-    {
-      path: "../fonts/OpenDyslexic-Bold-Italic.woff2",
-      weight: "700",
-      style: "italic",
-    },
-  ],
-  display: "swap",
+const fraunces = Fraunces({
+  variable: "--main-font",
+  weight: ["300", "600"],
+  subsets: ["latin"],
 });
-*/
 
 export default function AppWrapper({ children }) {
   const [accessibility, setAccessibility] = useState({
@@ -81,7 +57,7 @@ export default function AppWrapper({ children }) {
   };
 
   return (
-    <>
+    <div>
       <Navbar />
       <Access_Menu
         accessibility={accessibility}
@@ -92,7 +68,11 @@ export default function AppWrapper({ children }) {
       <article
         className={`
           appContainer
-          ${accessibility.isRemoveFontStyle ? "accessible-font" : ""}
+          ${
+            accessibility.isRemoveFontStyle
+              ? "accessible-font"
+              : fraunces.className
+          }
         `}
         style={{
           fontSize: `${1 * accessibility.fontSizeAdjust}rem`,
@@ -101,6 +81,6 @@ export default function AppWrapper({ children }) {
         {children}
       </article>
       <Footer />
-    </>
+    </div>
   );
 }

@@ -1,5 +1,4 @@
 .header {
-    font-size: 22px;
     margin: 2rem 0rem .5rem 0rem
 }
 
@@ -7,6 +6,10 @@
     display: flex;
     justify-content: space-between;
     margin: 1rem 0rem 1rem 0rem;
+}
+
+.label, .required {
+    font-family: Arial, Verdana, sans-serif;
 }
 
 .name_container_one, .name_container_two {
@@ -29,16 +32,21 @@
 }
 
 .send {
-    background-color: var(--button_gray);
-    color: black;
+    background-color: var(--maroon);
+    font-family: var(--main-font);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--blush);
     text-align: center;
     padding: .8rem .5rem .8rem .5rem;
     border: none;
     cursor: pointer;
+    transition: background 0.2s ease-in-out;
 }
 
 .send:hover {
-    background-color: red;
+    color: var(--foreground);
+    background-color: var(--rose);
 }
 
 @media (max-width: 600px) and (hover: none) {

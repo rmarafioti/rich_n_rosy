@@ -7,25 +7,31 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-  --antique_white: antiquewhite;
-  --button_gray: lightgray;
+  --foreground: #262429;
 
   /* wedding colors */
-  --lilac: #d9add2;
-  --baby_blue: #cbcadb;
-  --flamingo: #f69593;
-  --poppy: #f69593;
+  --blush: #ecd5cd;
+  --maroon: #680a14;
+  --lilac: #e3afca;
+  --rose: #f69694;
+  --orange: #e56829;
   --olive: #ada435;
+
+  --main-font: "Fraunces", serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    
     --antique_white: #0a0a0a;
     --lilac: #0a0a0a;
     --olive: #0a0a0a;
+    --background_color: #0a0a0a;
+    --rose: #0a0a0a;
+    --blush: #0a0a0a;
+    --maroon: #ecd5cd;
   }
 }
 
@@ -36,11 +42,8 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--lilac);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: var(--maroon);
+  background: var(--blush);
 }
 
 /* important for accessibility font reszing */
@@ -50,6 +53,7 @@ body {
 
 h1 {
   font-size: 3em;
+  font-weight: 600;
 }
 
 p {
@@ -57,13 +61,8 @@ p {
 }
 
 /* accessibility controls styles */
-
 .accessible-font {
   font-family: Arial, Verdana, sans-serif;
-}
-
-.dyslexic-font {
-  font-family: 'OpenDyslexic', Arial, sans-serif;
 }
 
 a {
@@ -71,24 +70,27 @@ a {
   text-decoration: none;
 }
 
-nav, footer {
+nav {
+  background-color: var(--lilac);
+}
+
+nav,
+footer {
   display: flex;
   flex-direction: row;
   padding: 1rem 0rem 0rem 0rem;
-  /*padding-bottom: 1rem;*/
 }
 
 form {
-    width: 600px;
+  width: 600px;
 }
-
 
 footer {
   justify-content: center;
   padding: 2rem 0rem 2rem 0rem;
-  border-top: 1px solid var(--background);
   border-bottom: none;
-  background-color: var(--antique_white);
+  background-color: var(--blush);
+  border-top: 1px solid var(--background);
 }
 
 main {
@@ -96,25 +98,20 @@ main {
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  /* width of page*/
-  padding: 80px;
-  font-family: var(--font-geist-sans);
   /* ensure footer stays at the bottom of page*/
-  min-height: 100vh; 
-  background-color: var(--antique_white)
+  min-height: 100vh;
+  background-color: var(--blush);
+  margin-bottom: 4rem;
 }
 
 button {
-  padding: .5rem;
-  border-radius: 5px;;
+  font-family: var(--main-font);
+  padding: 0.5rem;
+  border-radius: 5px;
   width: 120px;
 }
 
 @media (max-width: 1300px) {
-  /*push ham menu to the right*/
-  nav {
-    justify-content: flex-end;
-  }
   /* margins on mobile */
   main {
     padding: 16px;
@@ -126,7 +123,7 @@ button {
     width: 100%;
   }
   nav {
-     background-color: var(--antique_white);
+    background-color: var(--blush);
   }
 }
 
@@ -134,6 +131,9 @@ button {
   html {
     color-scheme: dark;
   }
+  nav {
+  background-color: #232227;
+}
 }
 
 [data-theme="dark"] html {
@@ -147,4 +147,5 @@ button {
   --antique_white: #0a0a0a;
   --lilac: #0a0a0a;
   --olive: #0a0a0a;
+  --background_color: #0a0a0a;
 }

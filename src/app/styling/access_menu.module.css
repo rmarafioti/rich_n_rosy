@@ -15,6 +15,7 @@
 }
 
 .accessMenu {
+  font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -39,6 +40,7 @@
 }
 
 .closeButton {
+  font-family: Arial, Helvetica, sans-serif;
   color: #ffffff;
   background-color: #242424;
   cursor: pointer;
@@ -87,6 +89,7 @@
 }
 
 .resetButton {
+  font-family: Arial, Helvetica, sans-serif;
   color: #242424;
   font-weight: bold;
   border-color: #242424;
@@ -116,4 +119,18 @@
 /*[data-theme="dark"] .resetButton,*/
 [data-theme="dark"] .closeButton {
   border: 1px solid #ffffff;
+}
+
+@media (max-width: 600px) {
+  .accessIcon {
+  font-size: 60px;
+  padding: .5rem;
+  top: 100px;
+}
+.accessMenu {
+  top: 100px;
+  right: 0px;
+  border-radius: 0px;
+  width: 100%;
+}
 }
