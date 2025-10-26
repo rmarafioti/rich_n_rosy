@@ -38,8 +38,13 @@
   }
 }
 
+/* dark mode stylings */
 @media (prefers-color-scheme: dark) {
 .header {
   color: #ecd5cd
 }
+}
+
+[data-theme="dark"] .header {
+  color: #ecd5cd
 }

@@ -41,12 +41,21 @@ export default function Navbar() {
             href="/"
             className={`${pc.menu_icon} ${isActive("/") ? pc.active_link : ""}`}
           >
+            {/* Light theme image */}
             <Image
               src="https://res.cloudinary.com/dzpne110u/image/upload/v1761257615/wedding_website/icons/monogram_maroon_vmlyu6.svg"
               alt="website icon and home page button"
               width={179}
               height={118}
-              className={pc.icon}
+              className={`${pc.icon} ${pc.icon_light}`}
+            />
+            {/* Dark theme image */}
+            <Image
+              src="https://res.cloudinary.com/dzpne110u/image/upload/v1761257555/wedding_website/icons/monogram_blush_xospub.svg"
+              alt="website icon and home page button"
+              width={179}
+              height={118}
+              className={`${pc.icon} ${pc.icon_dark}`}
             />
           </Link>
           <div className={pc.link_container}>
