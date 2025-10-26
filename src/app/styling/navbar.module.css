@@ -102,6 +102,8 @@
   /* mobile menu */
 
   .menu {
+    font-family: var(--main-font);
+    font-weight: 600;
     position: absolute;
     width: 100%;
     margin: 0rem;
@@ -109,11 +111,15 @@
     background-color: var(--background);
   }
 
+  .menu :last-child {
+    border-bottom: none;
+  }
+
   .menu.active {
     display: flex;
     flex-direction: column;
     text-align: center;
-    height: 80vh;
+    height: 74vh;
     z-index: 1000;
   }
 }

@@ -43,7 +43,11 @@ h1 {
   font-weight: 600;
 }
 
-p {
+h2 {
+  font-size: 2em;
+}
+
+p, label {
   font-size: 1.2em; /* 1.2x the size of .app-container */
 }
 
@@ -95,16 +99,10 @@ button {
 }
 
 /* responsive */
-@media (max-width: 1300px) {
-  /* margins on mobile */
-  main {
-    padding: 16px;
-  }
-}
 
 @media (max-width: 600px) {
   form {
-    width: 100%;
+    width: 90%;
   }
   nav {
     background-color: var(--blush);
@@ -116,6 +114,7 @@ button {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --button_color_dm: #ecd5cd;
 
     --antique_white: #0a0a0a;
     --lilac: #0a0a0a;
@@ -143,6 +142,7 @@ button {
 :root[data-theme="dark"] {
   --background: #0a0a0a;
   --foreground: #ededed;
+  --button_color_dm: #ecd5cd;
 
   --antique_white: #0a0a0a;
   --lilac: #0a0a0a;

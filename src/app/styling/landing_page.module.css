@@ -5,6 +5,10 @@
     margin: 0rem 0rem 1rem 0rem;
 }
 
+.image_mobile {
+  display: none;
+}
+
 .header {
     color: var(--blush);
     position: relative;
@@ -22,19 +26,25 @@
 
 @media (max-width: 600px) {
   .image {
+    display: none;
+  }
+  .image_mobile {
+    display: block;
     width: 100%;
+    height: auto;
   }
   .header {
-    color: black;
+    color: var(--maroon);
+    text-align: center;
     top: 0px;
     right: 0px;
     margin: 3rem 0rem 2rem 0rem;
   }
   .title {
-    font-size: 26px;
+    font-size: 50px;
   }
   .sub_title {
-    font-size: 20px;;
+    font-size:30px;;
   }
 }
 

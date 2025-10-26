@@ -101,60 +101,63 @@
 
 /* dark mode stylings */
 @media (prefers-color-scheme: dark) {
-.headerSection, .controls {
-  color: #ffffff;
-}
-.accessMenu {
-  background-color: #242424;
-  border: 1px solid #ffffff;
-  border-right: none;
-}
+  .headerSection,
+  .controls,
+  .accessIcon {
+    color: var(--foreground);
+  }
+  .accessMenu,
+  .accessIcon {
+    background-color: #242424;
+    border: 1px solid var(--foreground);
+    border-right: none;
+  }
 
-.accessIcon {
-  background-color: #242424;
-  color: #ffffff;
-  border: 1px solid #ffffff;
-  border-right: none;
-}
-
-.sizeItem {
-  color: #242424;
-}
+  .sizeItem {
+    color: #242424;
+  }
   .closeButton {
-  border: 1px solid #ffffff;
-
-}
+    border: 1px solid var(--foreground);
+  }
 }
 
 [data-theme="dark"] :is(.accessMenu, .accessIcon) {
+  color: var(--foreground);
   background-color: #242424;
-  border: 1px solid #ffffff;
+  border: 1px solid var(--foreground);
   border-right: none;
 }
 
 [data-theme="dark"] :is(.headerSection, .controls) {
-  color: #ffffff;
+  color: var(--foreground);
 }
 
 [data-theme="dark"] .sizeItem {
   color: #242424;
 }
 
-/*[data-theme="dark"] .resetButton,*/
 [data-theme="dark"] .closeButton {
-  border: 1px solid #ffffff;
+  border: 1px solid var(--foreground);
 }
 
 @media (max-width: 600px) {
   .accessIcon {
-  font-size: 60px;
-  padding: .5rem;
-  top: 100px;
-}
-.accessMenu {
-  top: 100px;
-  right: 0px;
-  border-radius: 0px;
-  width: 100%;
-}
+    font-size: 50px;
+    padding: 0.5rem;
+    top: 98px;
+  }
+  .accessMenu {
+    top: 96px;
+    right: 0px;
+    border-radius: 0px;
+    width: 100%;
+  }
+  @media (prefers-color-scheme: dark) {
+    .accessMenu {
+      border: none;
+    }
+  }
+  [data-theme="dark"] .accessMenu {
+    border: none;
+  }
 }

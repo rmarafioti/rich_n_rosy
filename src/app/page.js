@@ -19,6 +19,13 @@ export default function Home() {
         height={2779}
         className={styles.image}
       />
+      <Image
+        src="https://res.cloudinary.com/dzpne110u/image/upload/v1761505752/wedding_website/engagement_photos/marquee_walking_web_y5mkhb.jpg"
+        alt="website icon and home page button"
+        width={2424}
+        height={3624}
+        className={styles.image_mobile}
+      />
       <Contact_Form />
     </main>
   );
