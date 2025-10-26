@@ -7,6 +7,10 @@
   height: auto;
 }
 
+.menu_icon_dm {
+  display: none;
+}
+
 #hamMenuContainer {
   display: flex;
   justify-content: center;
@@ -23,7 +27,7 @@
   position: relative;
   width: 25px;
   height: 3px;
-  background: var(--blush);
+  background: var(--background);
   border-radius: 5px;
   transition: all 0.5s ease-in-out;
   display: block;
@@ -36,7 +40,7 @@
   position: absolute;
   width: 25px;
   height: 3px;
-  background: var(--blush);
+  background: var(--background);
   border-radius: 5px;
   transition: all 0.5s ease-in-out;
   transform-origin: center;
@@ -75,5 +79,36 @@
 .nav_link {
   font-size: 20px;
   padding: 1.5rem;
-  margin: .5rem;
+  margin: 0.5rem;
+  margin-bottom: 0rem;
+  border-bottom: 1px solid var(--blush);
+}
+
+/* dark mode stylings */
+@media (prefers-color-scheme: dark) {
+  .nav_link {
+    border-bottom: 1px solid #3b3840;
+  }
+  .menu_icon {
+    display: none;
+  }
+  .menu_icon_dm {
+    display: block;
+    width: 100px;
+    height: auto;
+  }
+}
+
+[data-theme="dark"] .nav_link {
+  border-bottom: 1px solid #3b3840;
+}
+
+[data-theme="dark"] .menu_icon {
+  display: none;
+}
+
+[data-theme="dark"] .menu_icon_dm {
+  display: block;
+  width: 100px;
+  height: auto;
 }

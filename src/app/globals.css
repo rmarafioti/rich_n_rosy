@@ -20,21 +20,6 @@
   --main-font: "Fraunces", serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    
-    --antique_white: #0a0a0a;
-    --lilac: #0a0a0a;
-    --olive: #0a0a0a;
-    --background_color: #0a0a0a;
-    --rose: #0a0a0a;
-    --blush: #0a0a0a;
-    --maroon: #ecd5cd;
-  }
-}
-
 html,
 body {
   max-width: 100vw;
@@ -42,7 +27,9 @@ body {
 }
 
 body {
+  /* main text color */
   color: var(--maroon);
+  /* main background color*/
   background: var(--blush);
 }
 
@@ -56,7 +43,11 @@ h1 {
   font-weight: 600;
 }
 
-p {
+h2 {
+  font-size: 2em;
+}
+
+p, label {
   font-size: 1.2em; /* 1.2x the size of .app-container */
 }
 
@@ -70,19 +61,12 @@ a {
   text-decoration: none;
 }
 
-nav {
-  background-color: var(--lilac);
-}
-
 nav,
 footer {
+  background-color: var(--lilac);
   display: flex;
   flex-direction: row;
   padding: 1rem 0rem 0rem 0rem;
-}
-
-form {
-  width: 600px;
 }
 
 footer {
@@ -100,8 +84,11 @@ main {
   justify-items: center;
   /* ensure footer stays at the bottom of page*/
   min-height: 100vh;
-  background-color: var(--blush);
   margin-bottom: 4rem;
+}
+
+form {
+  width: 600px;
 }
 
 button {
@@ -111,41 +98,62 @@ button {
   width: 120px;
 }
 
-@media (max-width: 1300px) {
-  /* margins on mobile */
-  main {
-    padding: 16px;
-  }
-}
+/* responsive */
 
 @media (max-width: 600px) {
   form {
-    width: 100%;
+    width: 90%;
   }
   nav {
     background-color: var(--blush);
   }
 }
 
+/* system pref dark mode styling */
 @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --button_color_dm: #ecd5cd;
+
+    --antique_white: #0a0a0a;
+    --lilac: #0a0a0a;
+    --olive: #0a0a0a;
+    --background_color: #0a0a0a;
+    --rose: #0a0a0a;
+    --blush: #0a0a0a;
+    --maroon: #ecd5cd;
+  }
+
   html {
     color-scheme: dark;
   }
   nav {
-  background-color: #232227;
+    background-color: #232227;
+  }
 }
-}
+
+/* working syntax for manual them toggle*/
 
 [data-theme="dark"] html {
   color-scheme: dark;
 }
 
-/* working syntax for manual them toggle*/
-[data-theme="dark"] {
-  --background: #000000;
-  --foreground: #ffffff;
+:root[data-theme="dark"] {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --button_color_dm: #ecd5cd;
+
   --antique_white: #0a0a0a;
   --lilac: #0a0a0a;
   --olive: #0a0a0a;
   --background_color: #0a0a0a;
+  --rose: #0a0a0a;
+  --blush: #0a0a0a;
+  --maroon: #ecd5cd;
 }
+
+[data-theme="dark"] nav {
+  background-color: #232227;
+}
+

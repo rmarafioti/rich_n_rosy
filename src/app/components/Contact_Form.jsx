@@ -91,8 +91,8 @@ export default function Contact_Form() {
 
   return (
     <>
-      <p className={styles.header}>Are you excited for the wedding?!?</p>
-      <p>Send us a message and let us know</p>
+      <h2 className={styles.header}>Are you excited for the wedding?!?</h2>
+      <p className={styles.sub_header}>Send us a message and let us know</p>
       <form ref={formRef} onSubmit={sendEmail}>
         <div className={styles.name_section}>
           <div className={styles.name_container_one}>
@@ -144,12 +144,22 @@ export default function Contact_Form() {
           disabled={isLoading}
         />
 
-        {validationError.first_name && <p>*Please enter your first name*</p>}
-        {validationError.last_name && <p>*Please enter your last name*</p>}
-        {validationError.email && <p>*Please enter your email*</p>}
-        {validationError.message && <p>*Please leave us a message*</p>}
+        {validationError.first_name && (
+          <p className={styles.required_error}>*Please enter your first name</p>
+        )}
+        {validationError.last_name && (
+          <p className={styles.required_error}>*Please enter your last name</p>
+        )}
+        {validationError.email && (
+          <p className={styles.required_error}>*Please enter your email</p>
+        )}
+        {validationError.message && (
+          <p className={styles.required_error}>*Please leave us a message</p>
+        )}
         {messageStatus === "error" && (
-          <p>*Message failed to send. Please try again*</p>
+          <p className={styles.required_error}>
+            *Message failed to send. Please try again
+          </p>
         )}
         {/* leave for now but modal will look better */}
         {messageStatus === "success" && <p>Message Sent!</p>}

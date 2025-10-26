@@ -23,11 +23,11 @@ export default function Navbar() {
 
   const links = [
     { href: "/", label: "Home" },
-    { href: "/section_one", label: "event" },
-    { href: "/section_two", label: "details" },
-    { href: "/section_three", label: "our story" },
-    { href: "/section_four", label: "gallery" },
-    { href: "/section_five", label: "faqs" },
+    { href: "/section_one", label: "Event" },
+    { href: "/section_two", label: "Details" },
+    { href: "/section_three", label: "Our Story" },
+    { href: "/section_four", label: "Gallery" },
+    { href: "/section_five", label: "FAQs" },
   ];
 
   const isActive = (href) =>
@@ -41,12 +41,21 @@ export default function Navbar() {
             href="/"
             className={`${pc.menu_icon} ${isActive("/") ? pc.active_link : ""}`}
           >
+            {/* Light theme image */}
             <Image
               src="https://res.cloudinary.com/dzpne110u/image/upload/v1761257615/wedding_website/icons/monogram_maroon_vmlyu6.svg"
               alt="website icon and home page button"
               width={179}
               height={118}
-              className={pc.icon}
+              className={`${pc.icon} ${pc.icon_light}`}
+            />
+            {/* Dark theme image */}
+            <Image
+              src="https://res.cloudinary.com/dzpne110u/image/upload/v1761257555/wedding_website/icons/monogram_blush_xospub.svg"
+              alt="website icon and home page button"
+              width={179}
+              height={118}
+              className={`${pc.icon} ${pc.icon_dark}`}
             />
           </Link>
           <div className={pc.link_container}>
@@ -75,6 +84,14 @@ export default function Navbar() {
             width={179}
             height={118}
             className={mobile.menu_icon}
+          />
+          {/* Dark theme image */}
+          <Image
+            src="https://res.cloudinary.com/dzpne110u/image/upload/v1761257555/wedding_website/icons/monogram_blush_xospub.svg"
+            alt="website icon and home page button"
+            width={179}
+            height={118}
+            className={mobile.menu_icon_dm}
           />
           {/*hamburger menu*/}
           <div id={mobile.hamMenuContainer} onClick={toggleMenu}>
