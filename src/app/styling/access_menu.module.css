@@ -99,17 +99,41 @@
   cursor: pointer;
 }
 
-[data-theme="dark"] .accessMenu {
+/* dark mode stylings */
+@media (prefers-color-scheme: dark) {
+.headerSection, .controls {
+  color: #ffffff;
+}
+.accessMenu {
   background-color: #242424;
   border: 1px solid #ffffff;
   border-right: none;
 }
 
-[data-theme="dark"] .accessIcon {
+.accessIcon {
   background-color: #242424;
   color: #ffffff;
   border: 1px solid #ffffff;
   border-right: none;
+}
+
+.sizeItem {
+  color: #242424;
+}
+  .closeButton {
+  border: 1px solid #ffffff;
+
+}
+}
+
+[data-theme="dark"] :is(.accessMenu, .accessIcon) {
+  background-color: #242424;
+  border: 1px solid #ffffff;
+  border-right: none;
+}
+
+[data-theme="dark"] :is(.headerSection, .controls) {
+  color: #ffffff;
 }
 
 [data-theme="dark"] .sizeItem {
