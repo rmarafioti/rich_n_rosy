@@ -1,5 +1,6 @@
 "use client";
 
+import localFont from "next/font/local";
 import { Fraunces } from "next/font/google";
 
 import { useState, useEffect } from "react";
@@ -11,6 +12,12 @@ const fraunces = Fraunces({
   variable: "--main-font",
   weight: ["300", "600"],
   subsets: ["latin"],
+});
+
+const summer_of_love = localFont({
+  src: "../../app/fonts/SummerofLove.otf",
+  variable: "--summer-of-love-font",
+  display: "swap",
 });
 
 export default function AppWrapper({ children }) {
@@ -68,6 +75,7 @@ export default function AppWrapper({ children }) {
       <article
         className={`
           appContainer
+          ${summer_of_love.variable}
           ${
             accessibility.isRemoveFontStyle
               ? "accessible-font"
