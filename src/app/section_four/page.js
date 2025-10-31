@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import usePhotoGallery from "../components/use_photo_gallery";
+import usePhotoGallery from "../components/usePhotoGallery";
 import { engagement_photos_mobile } from "../data/photos";
 
 import styles from "../styling/gallery.module.css";
