@@ -1,68 +1,98 @@
-const engagement_photos = [
+export const engagement_photos_mobile = [
   {
-    /* marquee photo */
+    /* marquee full front */
     id: 1,
     photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1761611090/wedding_website/engagement_photos/marquee_close_web_czppmn.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1761875520/wedding_website/engagement_photos_mobile_gallery/marquee_full_shot_1_sa32cv.png",
+    height: 2195,
+    width: 1464,
+  },
+  {
+    /* marquee photo */
+    id: 2,
+    photo:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1761875438/wedding_website/engagement_photos_mobile_gallery/marquee_close_up_1_yl5tco.png",
+    height: 2195,
+    width: 1464,
   },
   {
     /* walking with marquee */
-    id: 2,
+    id: 3,
     photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1761505752/wedding_website/engagement_photos/marquee_walking_web_y5mkhb.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1761875575/wedding_website/engagement_photos_mobile_gallery/marquee_walking_1_exnyud.png",
+    height: 2195,
+    width: 1464,
   },
   {
     /* close up with marquee */
-    id: 3,
+    id: 4,
     photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1761611100/wedding_website/engagement_photos/marquee_kiss_three_web_ydeb1i.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1761875553/wedding_website/engagement_photos_mobile_gallery/marquee_kiss_three_1_ru7ac9.png",
+    height: 2195,
+    width: 1464,
   },
   {
     /* full theatre */
-    id: 4,
+    id: 5,
     photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1761611076/wedding_website/engagement_photos/full_theatre_web_ufacpr.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1761875485/wedding_website/engagement_photos_mobile_gallery/full_theatre_1_ygw1ih.png",
+    height: 2195,
+    width: 1464,
   },
   {
     /* watching backs of heads */
-    id: 5,
+    id: 6,
     photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1761260843/wedding_website/engagement_photos/seats_watching_back_web_yidrxk.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1761875685/wedding_website/engagement_photos_mobile_gallery/seats_watching_back_1_hjwtio.png",
+    height: 2195,
+    width: 1464,
   },
   {
     /* seats kissing */
-    id: 6,
+    id: 7,
     photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1761611199/wedding_website/engagement_photos/seats_kiss_two_web_qmlhuh.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1761875964/wedding_website/engagement_photos_mobile_gallery/seats_kiss_two_1_vttinu.png",
+    height: 2195,
+    width: 1464,
   },
   {
     /* ring close-up */
-    id: 7,
+    id: 8,
     photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1761612067/wedding_website/engagement_photos/ring_web_bl0urs.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1761875601/wedding_website/engagement_photos_mobile_gallery/ring_1_sfolzb.png",
+    height: 2195,
+    width: 1464,
   },
   {
     /* aisle detail */
-    id: 8,
+    id: 9,
     photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1761257895/wedding_website/engagement_photos/aisle_detail_vzhyug.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1761875325/wedding_website/engagement_photos_mobile_gallery/aisle_detail_1_wmjpkx.png",
+    height: 2195,
+    width: 1464,
   },
   {
     /* theatre steps */
-    id: 9,
+    id: 10,
     photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1761611225/wedding_website/engagement_photos/theatre_steps_two_web_mvhvqv.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1761875711/wedding_website/engagement_photos_mobile_gallery/theatre_steps_two_1_qiu4pa.png",
+    height: 2195,
+    width: 1464,
   },
   {
     /* walking aisle */
-    id: 10,
+    id: 11,
     photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1761611252/wedding_website/engagement_photos/theatre_walking_two_web_vwbgzp.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1761875753/wedding_website/engagement_photos_mobile_gallery/theatre_walking_two_1_eeiisl.png",
+    height: 2195,
+    width: 1464,
   },
   {
     /* walking aisle close up */
-    id: 11,
+    id: 12,
     photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1761611241/wedding_website/engagement_photos/theatre_walking_one_web_yrxamy.jpg",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1761875733/wedding_website/engagement_photos_mobile_gallery/theatre_walking_one_1_ryzrh2.png",
+    height: 2195,
+    width: 1464,
   },
 ];
