@@ -6,7 +6,7 @@ import { engagement_photos_mobile } from "../data/photos";
 
 import styles from "../styling/gallery.module.css";
 
-export default function section_four() {
+export default function SectionFour() {
   const { handleNext, handlePrev, currentImageObj } = usePhotoGallery(
     engagement_photos_mobile
   );
