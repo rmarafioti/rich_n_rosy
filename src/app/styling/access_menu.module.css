@@ -145,6 +145,7 @@
     font-size: 50px;
     padding: 0.5rem;
     top: 98px;
+    box-shadow: none;
   }
   .accessMenu {
     top: 96px;
