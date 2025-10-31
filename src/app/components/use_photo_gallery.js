@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const use_photo_gallery = (photos) => {
+const usePhotoGallery = (photos) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
@@ -25,4 +25,4 @@ const use_photo_gallery = (photos) => {
   };
 };
 
-export default use_photo_gallery;
+export default usePhotoGallery;

@@ -1,13 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import use_photo_gallery from "../components/use_photo_gallery";
+import usePhotoGallery from "../components/use_photo_gallery";
 import { engagement_photos_mobile } from "../data/photos";
 
 import styles from "../styling/gallery.module.css";
 
 export default function section_four() {
-  const { handleNext, handlePrev, currentImageObj } = use_photo_gallery(
+  const { handleNext, handlePrev, currentImageObj } = usePhotoGallery(
     engagement_photos_mobile
   );
 
