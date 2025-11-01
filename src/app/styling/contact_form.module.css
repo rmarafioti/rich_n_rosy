@@ -86,9 +86,9 @@
   background-color: var(--button_color_dm);
 }
 
-@media (max-width: 600px) and (hover: none) {
+@media (max-width: 667px) and (hover: none) {
   .header {
-    font-size: 20px;
+    text-align: center;
   }
   .name_section {
     display: block;

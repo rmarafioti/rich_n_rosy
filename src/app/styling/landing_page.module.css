@@ -9,22 +9,19 @@
   display: none;
 }
 
-.header {
-    color: var(--blush);
-    position: relative;
-    top: 170px;
-    right: 20px;
-}
-
-.title {
+.title, .sub_title {
+  color: var(--blush);
+    position: absolute;
     font-size: 68px;
+    top: 300px;
 }
 
 .sub_title {
     font-size: 38px;
+    top: 400px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 667px) {
   .image {
     display: none;
   }
@@ -40,11 +37,16 @@
     right: 0px;
     margin: 3rem 0rem 2rem 0rem;
   }
-  .title {
+  .title, .sub_title {
+    position: relative;
+    color: var(--maroon);
     font-size: 50px;
+    top: 0px;
+    right: 0px;
   }
   .sub_title {
-    font-size:30px;;
+    font-size: 30px;
+    margin-bottom: 1rem;
   }
 }
 

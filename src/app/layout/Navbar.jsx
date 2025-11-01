@@ -78,21 +78,23 @@ export default function Navbar() {
         {/* mobile navigation menu below */}
 
         <section className={pc.mobile_nav}>
-          <Image
-            src="https://res.cloudinary.com/dzpne110u/image/upload/v1761257615/wedding_website/icons/monogram_maroon_vmlyu6.svg"
-            alt="website icon and home page button"
-            width={179}
-            height={118}
-            className={mobile.menu_icon}
-          />
-          {/* Dark theme image */}
-          <Image
-            src="https://res.cloudinary.com/dzpne110u/image/upload/v1761257555/wedding_website/icons/monogram_blush_xospub.svg"
-            alt="website icon and home page button"
-            width={179}
-            height={118}
-            className={mobile.menu_icon_dm}
-          />
+          <Link href="/">
+            <Image
+              src="https://res.cloudinary.com/dzpne110u/image/upload/v1761257615/wedding_website/icons/monogram_maroon_vmlyu6.svg"
+              alt="website icon and home page button"
+              width={179}
+              height={118}
+              className={mobile.menu_icon}
+            />
+            {/* Dark theme image */}
+            <Image
+              src="https://res.cloudinary.com/dzpne110u/image/upload/v1761257555/wedding_website/icons/monogram_blush_xospub.svg"
+              alt="website icon and home page button"
+              width={179}
+              height={118}
+              className={mobile.menu_icon_dm}
+            />
+          </Link>
           {/*hamburger menu*/}
           <div id={mobile.hamMenuContainer} onClick={toggleMenu}>
             <div
@@ -109,16 +111,18 @@ export default function Navbar() {
         className={`${pc.menu} ${menuOpen ? pc.active : ""}`}
         aria-label="Mobile Navigation"
       >
-        {links.map(({ href, label }) => (
-          <Link
-            key={href}
-            href={href}
-            role="heading"
-            className={mobile.nav_link}
-          >
-            {label}
-          </Link>
-        ))}
+        {links
+          .filter((link) => link.href !== "/")
+          .map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              role="heading"
+              className={mobile.nav_link}
+            >
+              {label}
+            </Link>
+          ))}
       </menu>
     </>
   );

@@ -20,16 +20,16 @@
   margin-top: 2rem;
 }
 
-@media (max-width: 600px) {
-    .photo_container {
-        width: 100%;
-    }
-.photo {
+@media (max-width: 667px) {
+  .photo_container {
+    width: 100%;
+  }
+  .photo {
     width: 100%;
     height: auto;
     border-radius: 0px;
-}
-.button_container {
+  }
+  .button_container {
     width: 90%;
-}
+  }
 }

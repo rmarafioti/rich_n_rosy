@@ -40,7 +40,7 @@
     left: calc(100% - 26px);
   }
   
-  @media (max-width: 600px) {
+  @media (max-width: 667px) {
     .toggleSection {
       margin-right: 0rem;
       width: 100px;

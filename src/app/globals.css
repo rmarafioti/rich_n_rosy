@@ -51,6 +51,13 @@ p, label {
   font-size: 1.2em; /* 1.2x the size of .app-container */
 }
 
+@media (max-width: 667px) {
+  h2 {
+  font-size: 1.8em;
+}
+}
+
+
 /* accessibility controls styles */
 .accessible-font {
   font-family: Arial, Verdana, sans-serif;
@@ -82,13 +89,15 @@ main {
   flex-direction: column;
   align-items: center;
   justify-items: center;
+  text-align: center;
   /* ensure footer stays at the bottom of page*/
   min-height: 100vh;
-  margin-bottom: 4rem;
+  margin: 6rem 0rem 4rem 0rem;
 }
 
 form {
   width: 600px;
+  text-align: left;
 }
 
 button {
@@ -100,12 +109,15 @@ button {
 
 /* responsive */
 
-@media (max-width: 600px) {
+@media (max-width: 667px) {
   form {
     width: 90%;
   }
   nav {
-    background-color: var(--blush);
+    padding-top: 0rem;
+  }
+  main {
+    margin: 8rem 0rem 4rem 0rem;
   }
 }
 
