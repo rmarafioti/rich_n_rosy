@@ -21,7 +21,7 @@ export default function Home() {
       {heroSectionPhotoPC && (
         <Image
           src={heroSectionPhotoPC.photo}
-          alt="website icon and home page button"
+          alt={heroSectionPhotoPC.alt}
           width={heroSectionPhotoPC.width}
           height={heroSectionPhotoPC.height}
           className={styles.image}
@@ -30,7 +30,7 @@ export default function Home() {
       {heroSectionPhotoMobile && (
         <Image
           src={heroSectionPhotoMobile.photo}
-          alt="website icon and home page button"
+          alt={heroSectionPhotoMobile.alt}
           width={heroSectionPhotoMobile.width}
           height={heroSectionPhotoMobile.height}
           className={styles.image_mobile}
