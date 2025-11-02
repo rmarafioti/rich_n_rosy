@@ -74,6 +74,10 @@
     color: var(--background);
     background-color: var(--button_color_dm);
   }
+  .name, .email, .message {
+    color: var(--foreground);
+  background-color: #3b3840;
+  }
 }
 
 [data-theme="dark"] :is(.name, .email, .message) {
@@ -86,9 +90,9 @@
   background-color: var(--button_color_dm);
 }
 
-@media (max-width: 600px) and (hover: none) {
+@media (max-width: 667px) and (hover: none) {
   .header {
-    font-size: 20px;
+    text-align: center;
   }
   .name_section {
     display: block;

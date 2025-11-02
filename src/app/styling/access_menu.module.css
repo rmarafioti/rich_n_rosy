@@ -140,12 +140,19 @@
   border: 1px solid var(--foreground);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 667px) {
   .accessIcon {
-    font-size: 50px;
+    background-color: var(--maroon);
+    color: var(--background);
+    font-size: 45px;
     padding: 0.5rem;
-    top: 98px;
+    top: 28px;
+    right: 80px;
+    width: 45.5px;
+  height: 45.5px;
+    border-radius: 25px;
     box-shadow: none;
+    transition: all 0.5s ease-in-out;
   }
   .accessMenu {
     top: 96px;
@@ -161,4 +168,9 @@
   [data-theme="dark"] .accessMenu {
     border: none;
   }
+  [data-theme="dark"] .accessIcon {
+    color: #680a14;
+    background-color: #ecd5cd;
+    border: none;
+}
 }
