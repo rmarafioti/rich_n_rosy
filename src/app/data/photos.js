@@ -1,3 +1,15 @@
+export const feature_photos = [
+  {
+    id: 1,
+    name: "watching_backs_of_heads",
+    photo:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1762127438/wedding_website/feature_photos/hero_section_x6c6sx.png",
+    alt: "engagement photo",
+    height: 1561,
+    width: 2912,
+  },
+];
+
 export const engagement_photos_pc = [
   {
     id: 1,
