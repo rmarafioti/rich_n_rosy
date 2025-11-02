@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import usePhotoGallery from "../components/usePhotoGallery";
+import useVisibilityObserver from "../components/useVisibilityObserver";
 import { engagement_photos_mobile, engagement_photos_pc } from "../data/photos";
 import { IoChevronForwardCircle } from "react-icons/io5";
 import { IoChevronBackCircle } from "react-icons/io5";
@@ -45,6 +46,22 @@ function HorizontalPhotoCard({ photo }) {
   );
 }
 
+function MobilePhotoCard({ photo }) {
+  const [ref, isVisible] = useVisibilityObserver(0.1);
+
+  return (
+    <div ref={ref} className={styles.mobile_photo_layout}>
+      <Image
+        src={photo.photo}
+        alt={photo.alt}
+        width={photo.width}
+        height={photo.height}
+        className={`${styles.mobile_photo} ${isVisible ? styles.visible : ""}`}
+      />
+    </div>
+  );
+}
+
 export default function SectionFour() {
   const { handleNext, handlePrev, currentImageObj, currentIndex } =
     usePhotoGallery(engagement_photos_mobile);
@@ -79,6 +96,14 @@ export default function SectionFour() {
         <button className={styles.gallery_button} onClick={handleNext}>
           <IoChevronForwardCircle />
         </button>
+      </section>
+      {/* mobile photo view */}
+      <section>
+        <div className={styles.mobile_gallery}>
+          {engagement_photos_mobile.map((photo) => (
+            <MobilePhotoCard key={photo.id} photo={photo} />
+          ))}
+        </div>
       </section>
     </main>
   );

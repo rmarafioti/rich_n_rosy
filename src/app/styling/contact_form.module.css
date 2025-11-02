@@ -74,6 +74,10 @@
     color: var(--background);
     background-color: var(--button_color_dm);
   }
+  .name, .email, .message {
+    color: var(--foreground);
+  background-color: #3b3840;
+  }
 }
 
 [data-theme="dark"] :is(.name, .email, .message) {

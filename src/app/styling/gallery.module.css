@@ -48,16 +48,38 @@
   background-color: transparent;
 }
 
+.mobile_gallery {
+  display: none;
+}
+
 @media (max-width: 667px) {
-  /* we need to create a pop up modal 
-  for the photos on mobile */
   .photo_container {
+    display: none;
+  }
+  .mobile_gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
   }
-  .photo {
+  .mobile_photo_layout {
+    margin: 0rem 0.2rem;
+  }
+  .mobile_photo {
     width: 100%;
     height: auto;
-    border-radius: 0px;
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.4s ease-out, transform 0.8s ease-out;
+    pointer-events: none;
+  }
+
+  .mobile_photo.visible {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 1.5s ease-in, transform 1s ease-in;
+    pointer-events: auto;
   }
   .button_container {
     width: 90%;
