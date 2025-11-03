@@ -28,6 +28,7 @@
 .email,
 .message,
 .send {
+  font-size: 20px;
   display: flex;
   padding: 0.5rem;
   margin-top: 0.2rem;
@@ -48,6 +49,7 @@
 }
 
 .send {
+  text-align: center;
   background-color: var(--maroon);
   font-family: var(--main-font);
   font-size: 18px;

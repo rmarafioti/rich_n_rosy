@@ -1,8 +1,47 @@
+.header_container {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  color: var(--blush);
+  text-align: left;
+  margin-top: 3rem;
+}
+
+.copy_container {
+  width: 680px;
+}
+
 .heading {
   font-family: var(--summer-of-love-font);
   font-size: 100px;
   font-weight: normal;
   word-spacing: 0.3em;
+}
+
+.mobile_gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 600px;
+}
+
+.mobile_photo_layout {
+  border: 2px solid #9b7d72;
+  margin: 1rem;
+}
+.mobile_photo_layout:hover {
+  border: 2px solid var(--blush);
+}
+
+.mobile_photo {
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+}
+
+.header_photo {
+  width: 100%;
+  height: auto;
 }
 .photo_container {
   display: flex;
@@ -48,22 +87,52 @@
   background-color: transparent;
 }
 
-.mobile_gallery {
-  display: none;
+@media (min-width: 1600px) {
+  .header_container {
+    margin-top: 10rem;
+  }
 }
 
 @media (max-width: 667px) {
+  .header_photo {
+    display: none;
+  }
+  .header_container {
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+  }
+  .copy_container {
+    width: auto;
+  }
+  .heading,
+  .copy {
+    color: var(--maroon);
+  }
+  .copy {
+    margin: 0rem 0.5rem 2rem 0.5rem;
+  }
+  .tap {
+    display: none;
+  }
   .photo_container {
     display: none;
   }
   .mobile_gallery {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    top: 0px;
+    right: 0px;
   }
   .mobile_photo_layout {
     margin: 0rem 0.2rem;
+    border: none;
   }
   .mobile_photo {
     width: 100%;
@@ -73,6 +142,11 @@
     transform: translateY(40px);
     transition: opacity 0.4s ease-out, transform 0.8s ease-out;
     pointer-events: none;
+    filter: blur(0px);
+  }
+
+  .mobile_photo:hover {
+    border: none;
   }
 
   .mobile_photo.visible {
@@ -84,4 +158,8 @@
   .button_container {
     width: 90%;
   }
+}
+
+[data-theme="dark"] :is(.heading, .copy, .tap) {
+  color: #ecd5cd;
 }

@@ -11,7 +11,8 @@
 .header_container {
   position: absolute;
   text-align: left;
-  top: 300px;
+  top: 240px;
+   color: var(--blush);
 }
 .title,
 .sub_title {
@@ -26,6 +27,11 @@
   font-family: var(--main-font);
   font-weight: 300;
   font-size: 38px;
+  margin-bottom: 1rem;
+}
+
+.copy {
+  width: 500px;
 }
 
 @media (max-width: 1300px) {
@@ -47,6 +53,7 @@
     position: relative;
     top: 0px;
     text-align: center;
+    width: 100%;
   }
   .title,
   .sub_title {
@@ -56,6 +63,11 @@
   .sub_title {
     font-size: 30px;
     margin-bottom: 1rem;
+  }
+  .copy {
+    color: var(--maroon);
+    width: auto;
+    margin: 0rem .5rem 2rem .5rem;
   }
 }
 
@@ -67,10 +79,7 @@
   }
 }
 
-[data-theme="dark"] .title {
+[data-theme="dark"] :is(.title, .sub_title, .copy) {
   color: #ecd5cd;
 }
 
-[data-theme="dark"] .sub_title {
-  color: #ecd5cd;
-}
