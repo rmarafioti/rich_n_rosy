@@ -91,7 +91,7 @@ main {
   text-align: center;
   /* ensure footer stays at the bottom of page*/
   min-height: 100vh;
-  margin: 6rem 0rem 4rem 0rem;
+  margin: 0rem 0rem 4rem 0rem;
   animation: fadeIn 2s ease-in-out;
 }
 
@@ -121,13 +121,15 @@ button {
 }
 
 /* responsive */
+@media (max-width: 1300px) {
+  nav {
+    padding-top: 0rem;
+  }
+}
 
 @media (max-width: 667px) {
   form {
     width: 90%;
-  }
-  nav {
-    padding-top: 0rem;
   }
   main {
     margin: 8rem 0rem 4rem 0rem;

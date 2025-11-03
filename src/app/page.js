@@ -1,13 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { engagement_photos_mobile, engagement_photos_pc } from "./data/photos";
+import { engagement_photos_mobile, feature_photos } from "./data/photos";
 import Contact_Form from "./components/Contact_Form";
 
 import styles from "./styling/landing_page.module.css";
 
 export default function Home() {
-  const heroSectionPhotoPC = engagement_photos_pc.find(
+  const heroSectionPhotoPC = feature_photos.find(
     (p) => p.name === "watching_backs_of_heads"
   );
   const heroSectionPhotoMobile = engagement_photos_mobile.find(
@@ -16,8 +16,18 @@ export default function Home() {
 
   return (
     <main>
-      <h1 className={styles.title}>Rosy & Rich Get Hitched.</h1>
-      <p className={styles.sub_title}>July 18th 2026</p>
+      <div className={styles.header_container}>
+        <h1 className={styles.title}>Rosy & Rich Get Hitched.</h1>
+        <p className={styles.sub_title}>July 18th 2026</p>
+        <p className={styles.copy}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur.
+        </p>
+      </div>
       {heroSectionPhotoPC && (
         <Image
           src={heroSectionPhotoPC.photo}
