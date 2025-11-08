@@ -69,7 +69,7 @@ a {
 
 nav,
 footer {
-  background-color: var(--lilac);
+  background-color: #c68da8;
   display: flex;
   flex-direction: row;
   padding: 1rem 0rem 0rem 0rem;
