@@ -69,7 +69,7 @@ a {
 
 nav,
 footer {
-  background-color: var(--lilac);
+  background-color: #c68da8;
   display: flex;
   flex-direction: row;
   padding: 1rem 0rem 0rem 0rem;
@@ -129,7 +129,7 @@ button {
 
 @media (max-width: 667px) {
   form {
-    width: 90%;
+    width: 100%;
   }
   main {
     margin: 8rem 0rem 4rem 0rem;

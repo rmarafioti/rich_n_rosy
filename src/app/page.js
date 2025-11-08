@@ -1,52 +1,95 @@
 "use client";
 
 import Image from "next/image";
-import { engagement_photos_mobile, feature_photos } from "./data/photos";
-import Contact_Form from "./components/Contact_Form";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import ResponsiveImage from "./components/Responsive_Image";
+import { icons, feature_photos } from "./data/photos";
 
-import styles from "./styling/landing_page.module.css";
+import styles from "./styling/auth_page.module.css";
 
-export default function Home() {
-  const heroSectionPhotoPC = feature_photos.find(
-    (p) => p.name === "watching_backs_of_heads"
-  );
-  const heroSectionPhotoMobile = engagement_photos_mobile.find(
-    (p) => p.name === "walking_with_marquee"
-  );
+export default function Auth() {
+  const icon = icons.find((p) => p.id === 2);
+  const iconMobile = icons.find((p) => p.id === 1);
+  const headerPhoto = feature_photos.find((p) => p.id === 5);
+
+  const [passcode, setPasscode] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [validationError, setValidationError] = useState({ auth: false });
+  const router = useRouter();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setValidationError({ auth: false });
+
+    try {
+      const response = await fetch("/api/verify-passcode", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ passcode }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        router.push("/home"); // Redirect to homepage after successful auth
+      } else {
+        setValidationError({ auth: true });
+        setPasscode("");
+      }
+    } catch (err) {
+      setValidationError({ auth: true });
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <main>
       <div className={styles.header_container}>
-        <h1 className={styles.title}>Rosy & Rich Get Hitched.</h1>
-        <p className={styles.sub_title}>July 18th 2026</p>
-        <p className={styles.copy}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
+        <div className={styles.icon_container}>
+          <ResponsiveImage
+            pcPhoto={icon}
+            mobilePhoto={iconMobile}
+            pcClass={styles.icon}
+            mobileClass={styles.icon_mobile}
+          />
+          <p className={styles.date}>July &#8226; 18th &#8226; 2026</p>
+        </div>
+        <h1 className={styles.header}>Welcome!</h1>
+        <p className={styles.instructions}>
+          Please enter passcode to access website
         </p>
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <div className={styles.input_section}>
+            <input
+              type="password"
+              value={passcode}
+              onChange={(e) => setPasscode(e.target.value)}
+              placeholder="Enter passcode"
+              disabled={loading}
+              className={styles.input}
+              required
+            />
+            <button type="submit" disabled={loading} className={styles.submit}>
+              {loading ? "Verifying..." : "Submit"}
+            </button>
+          </div>
+          {validationError.auth && (
+            <p className={styles.error_message}>
+              *Invalid passcode. Please try again.
+            </p>
+          )}
+        </form>
       </div>
-      {heroSectionPhotoPC && (
-        <Image
-          src={heroSectionPhotoPC.photo}
-          alt={heroSectionPhotoPC.alt}
-          width={heroSectionPhotoPC.width}
-          height={heroSectionPhotoPC.height}
-          className={styles.image}
-        />
-      )}
-      {heroSectionPhotoMobile && (
-        <Image
-          src={heroSectionPhotoMobile.photo}
-          alt={heroSectionPhotoMobile.alt}
-          width={heroSectionPhotoMobile.width}
-          height={heroSectionPhotoMobile.height}
-          className={styles.image_mobile}
-        />
-      )}
-      <Contact_Form />
+      <Image
+        src={headerPhoto.photo}
+        alt={headerPhoto.alt}
+        width={headerPhoto.width}
+        height={headerPhoto.height}
+        className={styles.header_photo}
+      />
     </main>
   );
 }

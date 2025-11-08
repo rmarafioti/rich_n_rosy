@@ -2,12 +2,12 @@
   font-size: 16px;
 }
 
-.menu_icon {
+.icon {
   width: 100px;
   height: auto;
 }
 
-.menu_icon_dm {
+.icon_dark {
   display: none;
 }
 
@@ -89,10 +89,10 @@
   .nav_link {
     border-bottom: 1px solid #3b3840;
   }
-  .menu_icon {
+  .icon {
     display: none;
   }
-  .menu_icon_dm {
+  .icon_dark {
     display: block;
     width: 100px;
     height: auto;
@@ -103,11 +103,11 @@
   border-bottom: 1px solid #3b3840;
 }
 
-[data-theme="dark"] .menu_icon {
+[data-theme="dark"] .icon {
   display: none;
 }
 
-[data-theme="dark"] .menu_icon_dm {
+[data-theme="dark"] .icon_dark {
   display: block;
   width: 100px;
   height: auto;

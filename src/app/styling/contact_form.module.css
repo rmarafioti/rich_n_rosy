@@ -93,6 +93,14 @@
 }
 
 @media (max-width: 667px) and (hover: none) {
+  .contact_form_container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+.form {
+  width: 100%;
+}
   .header {
     text-align: center;
   }
@@ -120,4 +128,9 @@
     color: var(--blush);
     background-color: var(--maroon);
   }
+  @media (prefers-color-scheme: dark) {
+  .copy {
+    color: #ecd5cd
+  }
+}
 }
