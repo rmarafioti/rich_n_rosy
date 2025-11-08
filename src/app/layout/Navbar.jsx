@@ -4,43 +4,12 @@ import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import ResponsiveImage from "../components/Responsive_Image";
 import { icons } from "../data/photos";
 
 /* naming conventions to define responsive design*/
 import pc from "../styling/navbar.module.css";
 import mobile from "../styling/mobile_nav.module.css";
-
-function IconLightMode({ styles = pc }) {
-  const iconLight = icons.find((p) => p.id === 1);
-  return (
-    <>
-      {/* Light theme image */}
-      <Image
-        src={iconLight.photo}
-        alt={iconLight.alt}
-        width={iconLight.width}
-        height={iconLight.height}
-        className={`${styles.icon} ${styles.icon_light}`}
-      />
-    </>
-  );
-}
-
-function IconDarkMode({ styles = pc }) {
-  const iconDark = icons.find((p) => p.id === 2);
-  return (
-    <>
-      {/* Dark theme image */}
-      <Image
-        src={iconDark.photo}
-        alt={iconDark.alt}
-        width={iconDark.width}
-        height={iconDark.height}
-        className={`${styles.icon} ${styles.icon_dark}`}
-      />
-    </>
-  );
-}
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -66,6 +35,9 @@ export default function Navbar() {
   const isActive = (href) =>
     pathname === href || pathname.startsWith(href + "/");
 
+  const iconLight = icons.find((p) => p.id === 1);
+  const iconDark = icons.find((p) => p.id === 2);
+
   return (
     <>
       <nav>
@@ -76,8 +48,12 @@ export default function Navbar() {
               isActive("/home") ? pc.active_link : ""
             }`}
           >
-            <IconLightMode styles={pc} />
-            <IconDarkMode styles={pc} />
+            <ResponsiveImage
+              pcPhoto={iconLight}
+              mobilePhoto={iconDark}
+              pcClass={`${pc.icon} ${pc.icon_light}`}
+              mobileClass={`${pc.icon} ${pc.icon_dark}`}
+            />
           </Link>
           <div className={pc.link_container}>
             {links
@@ -99,8 +75,12 @@ export default function Navbar() {
         {/* mobile navigation menu below */}
         <section className={pc.mobile_nav}>
           <Link href="/home">
-            <IconLightMode styles={mobile} />
-            <IconDarkMode styles={mobile} />
+            <ResponsiveImage
+              pcPhoto={iconLight}
+              mobilePhoto={iconDark}
+              pcClass={`${mobile.icon} ${mobile.icon_light}`}
+              mobileClass={`${mobile.icon} ${mobile.icon_dark}`}
+            />
           </Link>
           {/*hamburger menu*/}
           <div id={mobile.hamMenuContainer} onClick={toggleMenu}>

@@ -72,6 +72,11 @@
     width: auto;
     margin: 0rem .5rem 2rem .5rem;
   }
+  @media (prefers-color-scheme: dark) {
+  .copy{
+    color: #ecd5cd;
+  }
+}
 }
 
 /* dark mode stylings */

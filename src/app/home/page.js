@@ -9,7 +9,7 @@ import styles from "../styling/home.module.css";
 export default function Home() {
   const heroSectionPhotoPC = feature_photos.find((p) => p.id === 6);
   const heroSectionPhotoMobile = engagement_photos_mobile.find(
-    (p) => p.id === 6
+    (p) => p.id === 5
   );
 
   return (
