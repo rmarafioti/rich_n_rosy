@@ -24,11 +24,11 @@ export default function Navbar() {
   };
 
   const links = [
-    { href: "/home", label: "Home" },
-    { href: "/section_one", label: "Event" },
+    { href: "/", label: "Home" },
+    { href: "/event", label: "Event" },
     /*{ href: "/section_two", label: "Details" },*/
-    { href: "/section_three", label: "Our Story" },
-    { href: "/section_four", label: "Gallery" },
+    { href: "/our_story", label: "Our Story" },
+    { href: "/gallery", label: "Gallery" },
     /*{ href: "/section_five", label: "FAQs" },*/
   ];
 
@@ -43,10 +43,8 @@ export default function Navbar() {
       <nav>
         <div className={pc.nav_menu}>
           <Link
-            href="/home"
-            className={`${pc.menu_icon} ${
-              isActive("/home") ? pc.active_link : ""
-            }`}
+            href="/"
+            className={`${pc.menu_icon} ${isActive("/") ? pc.active_link : ""}`}
           >
             <ResponsiveImage
               pcPhoto={iconLight}
@@ -57,7 +55,7 @@ export default function Navbar() {
           </Link>
           <div className={pc.link_container}>
             {links
-              .filter((link) => link.href !== "/home")
+              .filter((link) => link.href !== "/")
               .map(({ href, label }) => (
                 <Link
                   key={href}
@@ -74,7 +72,7 @@ export default function Navbar() {
 
         {/* mobile navigation menu below */}
         <section className={pc.mobile_nav}>
-          <Link href="/home">
+          <Link href="/">
             <ResponsiveImage
               pcPhoto={iconLight}
               mobilePhoto={iconDark}
@@ -99,7 +97,7 @@ export default function Navbar() {
         aria-label="Mobile Navigation"
       >
         {links
-          .filter((link) => link.href !== "/home")
+          .filter((link) => link.href !== "/")
           .map(({ href, label }) => (
             <Link
               key={href}

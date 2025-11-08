@@ -5,13 +5,13 @@ export function middleware(request) {
   const { pathname } = request.nextUrl;
 
   // Allow access to root (login page) and API routes
-  if (pathname === "/" || pathname.startsWith("/api/")) {
+  if (pathname === "/auth" || pathname.startsWith("/api/")) {
     return NextResponse.next();
   }
 
   // Redirect to / if no valid cookie
   if (!siteAccess || siteAccess.value !== "granted") {
-    return NextResponse.redirect(new URL("/", request.url));
+    return NextResponse.redirect(new URL("/auth", request.url));
   }
 
   return NextResponse.next();
