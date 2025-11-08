@@ -1,6 +1,27 @@
-export const feature_photos = [
+export const icons = [
   {
     id: 1,
+    name: "icon_light_mode",
+    photo:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1761257615/wedding_website/icons/monogram_maroon_vmlyu6.svg",
+    alt: "website icon and home page button",
+    height: 118,
+    width: 179,
+  },
+  {
+    id: 2,
+    name: "icon_dark_mode",
+    photo:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1761257555/wedding_website/icons/monogram_blush_xospub.svg",
+    alt: "website icon and home page button",
+    height: 118,
+    width: 179,
+  },
+];
+
+export const feature_photos = [
+  {
+    id: 6,
     name: "watching_backs_of_heads",
     photo:
       "https://res.cloudinary.com/dzpne110u/image/upload/v1762127438/wedding_website/feature_photos/hero_section_x6c6sx.png",
@@ -30,7 +51,7 @@ export const engagement_photos_pc = [
     width: 2912,
   },
   {
-    id: 2,
+    id: 6,
     name: "watching_backs_of_heads",
     photo:
       "https://res.cloudinary.com/dzpne110u/image/upload/v1762033515/wedding_website/engagement_photos_pc_gallery/seats_watching_back_pc_em0wdt.png",

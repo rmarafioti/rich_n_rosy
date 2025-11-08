@@ -4,10 +4,43 @@ import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import { icons } from "../data/photos";
 
 /* naming conventions to define responsive design*/
 import pc from "../styling/navbar.module.css";
 import mobile from "../styling/mobile_nav.module.css";
+
+function IconLightMode({ styles = pc }) {
+  const iconLight = icons.find((p) => p.id === 1);
+  return (
+    <>
+      {/* Light theme image */}
+      <Image
+        src={iconLight.photo}
+        alt={iconLight.alt}
+        width={iconLight.width}
+        height={iconLight.height}
+        className={`${styles.icon} ${styles.icon_light}`}
+      />
+    </>
+  );
+}
+
+function IconDarkMode({ styles = pc }) {
+  const iconDark = icons.find((p) => p.id === 2);
+  return (
+    <>
+      {/* Dark theme image */}
+      <Image
+        src={iconDark.photo}
+        alt={iconDark.alt}
+        width={iconDark.width}
+        height={iconDark.height}
+        className={`${styles.icon} ${styles.icon_dark}`}
+      />
+    </>
+  );
+}
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -24,10 +57,10 @@ export default function Navbar() {
   const links = [
     { href: "/home", label: "Home" },
     { href: "/section_one", label: "Event" },
-    { href: "/section_two", label: "Details" },
+    /*{ href: "/section_two", label: "Details" },*/
     { href: "/section_three", label: "Our Story" },
     { href: "/section_four", label: "Gallery" },
-    { href: "/section_five", label: "FAQs" },
+    /*{ href: "/section_five", label: "FAQs" },*/
   ];
 
   const isActive = (href) =>
@@ -43,22 +76,8 @@ export default function Navbar() {
               isActive("/home") ? pc.active_link : ""
             }`}
           >
-            {/* Light theme image */}
-            <Image
-              src="https://res.cloudinary.com/dzpne110u/image/upload/v1761257615/wedding_website/icons/monogram_maroon_vmlyu6.svg"
-              alt="website icon and home page button"
-              width={179}
-              height={118}
-              className={`${pc.icon} ${pc.icon_light}`}
-            />
-            {/* Dark theme image */}
-            <Image
-              src="https://res.cloudinary.com/dzpne110u/image/upload/v1761257555/wedding_website/icons/monogram_blush_xospub.svg"
-              alt="website icon and home page button"
-              width={179}
-              height={118}
-              className={`${pc.icon} ${pc.icon_dark}`}
-            />
+            <IconLightMode styles={pc} />
+            <IconDarkMode styles={pc} />
           </Link>
           <div className={pc.link_container}>
             {links
@@ -78,24 +97,10 @@ export default function Navbar() {
         </div>
 
         {/* mobile navigation menu below */}
-
         <section className={pc.mobile_nav}>
           <Link href="/home">
-            <Image
-              src="https://res.cloudinary.com/dzpne110u/image/upload/v1761257615/wedding_website/icons/monogram_maroon_vmlyu6.svg"
-              alt="website icon and home page button"
-              width={179}
-              height={118}
-              className={mobile.menu_icon}
-            />
-            {/* Dark theme image */}
-            <Image
-              src="https://res.cloudinary.com/dzpne110u/image/upload/v1761257555/wedding_website/icons/monogram_blush_xospub.svg"
-              alt="website icon and home page button"
-              width={179}
-              height={118}
-              className={mobile.menu_icon_dm}
-            />
+            <IconLightMode styles={mobile} />
+            <IconDarkMode styles={mobile} />
           </Link>
           {/*hamburger menu*/}
           <div id={mobile.hamMenuContainer} onClick={toggleMenu}>
