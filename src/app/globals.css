@@ -129,7 +129,7 @@ button {
 
 @media (max-width: 667px) {
   form {
-    width: 90%;
+    width: 100%;
   }
   main {
     margin: 8rem 0rem 4rem 0rem;

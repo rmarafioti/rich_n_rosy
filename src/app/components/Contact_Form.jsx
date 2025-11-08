@@ -90,7 +90,7 @@ export default function Contact_Form() {
   };
 
   return (
-    <>
+    <div className={styles.contact_form_container}>
       <h2 className={styles.header}>Are you excited for the wedding?!?</h2>
       <p className={styles.sub_header}>Send us a message and let us know</p>
       <form ref={formRef} onSubmit={sendEmail}>
@@ -168,6 +168,6 @@ export default function Contact_Form() {
         isModalVisible={isModalVisible}
         closeModal={closeModal}
       />*/}
-    </>
+    </div>
   );
 }

@@ -45,15 +45,17 @@
     display: none;
   }
   .image_mobile {
+    position: initial;
     display: block;
+    margin-top: 8.5rem;
     width: 100%;
     height: auto;
   }
   .header_container {
-    position: relative;
-    top: 0px;
+    top: 120px;
     text-align: center;
     width: 100%;
+    z-index: 90;
   }
   .title,
   .sub_title {
@@ -61,11 +63,12 @@
     font-size: 76px;
   }
   .sub_title {
+    color: var(--blush);
     font-size: 30px;
     margin-bottom: 1rem;
   }
   .copy {
-    color: var(--maroon);
+    color: var(--blush);
     width: auto;
     margin: 0rem .5rem 2rem .5rem;
   }
