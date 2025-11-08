@@ -4,6 +4,8 @@ import localFont from "next/font/local";
 import { Fraunces } from "next/font/google";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+
 import Navbar from "../layout/Navbar";
 import Footer from "../layout/Footer";
 import Access_Menu from "../components/Access_Menu";
@@ -21,6 +23,9 @@ const summer_of_love = localFont({
 });
 
 export default function AppWrapper({ children }) {
+  const pathname = usePathname();
+  const isAuthPage = pathname === "/";
+
   const [accessibility, setAccessibility] = useState({
     isThemeDark: false,
     isRemoveFontStyle: false,
@@ -63,15 +68,19 @@ export default function AppWrapper({ children }) {
     });
   };
 
+  const showNavigation = !isAuthPage;
+
   return (
     <div>
-      <Navbar />
-      <Access_Menu
-        accessibility={accessibility}
-        toggleSetting={toggleSetting}
-        adjustFontSize={adjustFontSize}
-        resetAccessibility={resetAccessibility}
-      />
+      {showNavigation && <Navbar />}
+      {showNavigation && (
+        <Access_Menu
+          accessibility={accessibility}
+          toggleSetting={toggleSetting}
+          adjustFontSize={adjustFontSize}
+          resetAccessibility={resetAccessibility}
+        />
+      )}
       <article
         className={`
           appContainer
@@ -88,7 +97,7 @@ export default function AppWrapper({ children }) {
       >
         {children}
       </article>
-      <Footer />
+      {showNavigation && <Footer />}
     </div>
   );
 }

@@ -22,7 +22,7 @@ export default function Navbar() {
   };
 
   const links = [
-    { href: "/", label: "Home" },
+    { href: "/home", label: "Home" },
     { href: "/section_one", label: "Event" },
     { href: "/section_two", label: "Details" },
     { href: "/section_three", label: "Our Story" },
@@ -38,8 +38,10 @@ export default function Navbar() {
       <nav>
         <div className={pc.nav_menu}>
           <Link
-            href="/"
-            className={`${pc.menu_icon} ${isActive("/") ? pc.active_link : ""}`}
+            href="/home"
+            className={`${pc.menu_icon} ${
+              isActive("/home") ? pc.active_link : ""
+            }`}
           >
             {/* Light theme image */}
             <Image
@@ -60,7 +62,7 @@ export default function Navbar() {
           </Link>
           <div className={pc.link_container}>
             {links
-              .filter((link) => link.href !== "/")
+              .filter((link) => link.href !== "/home")
               .map(({ href, label }) => (
                 <Link
                   key={href}
@@ -78,7 +80,7 @@ export default function Navbar() {
         {/* mobile navigation menu below */}
 
         <section className={pc.mobile_nav}>
-          <Link href="/">
+          <Link href="/home">
             <Image
               src="https://res.cloudinary.com/dzpne110u/image/upload/v1761257615/wedding_website/icons/monogram_maroon_vmlyu6.svg"
               alt="website icon and home page button"
@@ -112,7 +114,7 @@ export default function Navbar() {
         aria-label="Mobile Navigation"
       >
         {links
-          .filter((link) => link.href !== "/")
+          .filter((link) => link.href !== "/home")
           .map(({ href, label }) => (
             <Link
               key={href}

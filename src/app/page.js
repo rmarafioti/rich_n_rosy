@@ -1,52 +1,60 @@
 "use client";
 
-import Image from "next/image";
-import { engagement_photos_mobile, feature_photos } from "./data/photos";
-import Contact_Form from "./components/Contact_Form";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
-import styles from "./styling/landing_page.module.css";
+export default function Auth() {
+  const [passcode, setPasscode] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
 
-export default function Home() {
-  const heroSectionPhotoPC = feature_photos.find(
-    (p) => p.name === "watching_backs_of_heads"
-  );
-  const heroSectionPhotoMobile = engagement_photos_mobile.find(
-    (p) => p.name === "walking_with_marquee"
-  );
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
+
+    try {
+      const response = await fetch("/api/verify-passcode", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ passcode }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        router.push("/home"); // Redirect to homepage after successful auth
+      } else {
+        setError("Invalid passcode. Please try again.");
+        setPasscode("");
+      }
+    } catch (err) {
+      setError("An error occurred. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <main>
-      <div className={styles.header_container}>
-        <h1 className={styles.title}>Rosy & Rich Get Hitched.</h1>
-        <p className={styles.sub_title}>July 18th 2026</p>
-        <p className={styles.copy}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
-        </p>
+      <div>
+        <h1>Auth Page</h1>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="password"
+            value={passcode}
+            onChange={(e) => setPasscode(e.target.value)}
+            placeholder="Enter passcode"
+            disabled={loading}
+            required
+          />
+          {error && <p>{error}</p>}
+          <button type="submit" disabled={loading}>
+            {loading ? "Verifying..." : "Submit"}
+          </button>
+        </form>
       </div>
-      {heroSectionPhotoPC && (
-        <Image
-          src={heroSectionPhotoPC.photo}
-          alt={heroSectionPhotoPC.alt}
-          width={heroSectionPhotoPC.width}
-          height={heroSectionPhotoPC.height}
-          className={styles.image}
-        />
-      )}
-      {heroSectionPhotoMobile && (
-        <Image
-          src={heroSectionPhotoMobile.photo}
-          alt={heroSectionPhotoMobile.alt}
-          width={heroSectionPhotoMobile.width}
-          height={heroSectionPhotoMobile.height}
-          className={styles.image_mobile}
-        />
-      )}
-      <Contact_Form />
     </main>
   );
 }
