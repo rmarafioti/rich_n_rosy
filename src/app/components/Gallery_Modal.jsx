@@ -10,7 +10,7 @@ import { FaCircle } from "react-icons/fa6";
 
 import styles from "../styling/modal.module.css";
 
-export default function Modal({
+export default function Gallery_Modal({
   isOpen,
   closeModal,
   onNext,

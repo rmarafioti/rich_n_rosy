@@ -2,6 +2,8 @@
 
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import Form_Modal from "./Form_Modal";
+import useModal from "./useModal";
 
 import styles from "../styling/contact_form.module.css";
 
@@ -9,6 +11,7 @@ export default function Contact_Form() {
   const formRef = useRef();
   const [isLoading, setIsLoading] = useState(false);
   const [messageStatus, setMessageStatus] = useState(null);
+  const { isOpen, openModal, closeModal } = useModal();
 
   const inputForm = {
     first_name: "",
@@ -79,7 +82,7 @@ export default function Contact_Form() {
         setValidationError({});
         formRef.current.reset();
         setFormValues(inputForm);
-        /* setIsModalVisible(true); */
+        openModal();
       },
       (error) => {
         console.error("MESSAGE FAILED", error?.text);
@@ -161,13 +164,8 @@ export default function Contact_Form() {
             *Message failed to send. Please try again
           </p>
         )}
-        {/* leave for now but modal will look better */}
-        {messageStatus === "success" && <p>Message Sent!</p>}
       </form>
-      {/*<MessageSentModal
-        isModalVisible={isModalVisible}
-        closeModal={closeModal}
-      />*/}
+      <Form_Modal isOpen={isOpen} closeModal={closeModal} />
     </div>
   );
 }
