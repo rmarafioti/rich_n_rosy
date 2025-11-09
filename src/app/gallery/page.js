@@ -31,11 +31,10 @@ export default function Gallery() {
     handlePrev,
     openModal,
     closeModal,
-    displayPhoto,
+    currentImageObj,
     currentIndex,
     isOpen,
-    isHorizontal,
-    totalPhotos,
+    photos,
   } = usePhotoGallery(engagement_photos_mobile);
   const headerPhoto = feature_photos.find((p) => p.id === 5);
 
@@ -73,14 +72,13 @@ export default function Gallery() {
         className={styles.header_photo}
       />
       <Modal
-        isModalVisible={isOpen}
+        isOpen={isOpen}
         closeModal={closeModal}
-        photo={displayPhoto}
         onNext={handleNext}
         onPrev={handlePrev}
         currentIndex={currentIndex}
-        totalPhotos={totalPhotos}
-        isHorizontal={isHorizontal}
+        currentImageObj={currentImageObj}
+        photos={photos}
       />
     </main>
   );

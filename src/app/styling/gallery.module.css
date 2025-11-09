@@ -93,7 +93,7 @@
   }
 }
 
-@media (max-width: 667px) {
+@media (max-width: 1300px) {
   .header_photo {
     display: none;
   }

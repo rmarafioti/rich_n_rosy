@@ -6,20 +6,20 @@ import Image from "next/image";
 import { IoCloseOutline } from "react-icons/io5";
 import { IoChevronForwardCircle } from "react-icons/io5";
 import { IoChevronBackCircle } from "react-icons/io5";
+import { FaCircle } from "react-icons/fa6";
 
 import styles from "../styling/modal.module.css";
 
 export default function Modal({
-  isModalVisible,
+  isOpen,
   closeModal,
-  photo,
   onNext,
   onPrev,
   currentIndex,
-  totalPhotos,
-  isHorizontal,
+  currentImageObj,
+  photos,
 }) {
-  if (!isModalVisible || !photo) return null;
+  if (!isOpen || !currentImageObj) return null;
 
   const handleBackdropClick = (e) => {
     if (e.target === e.currentTarget) {
@@ -41,31 +41,7 @@ export default function Modal({
       tabIndex={0}
     >
       <div className={styles.modalContent}>
-        <IoCloseOutline
-          onClick={closeModal}
-          className={styles.closeButton}
-          aria-label="close modal button"
-        />
-
-        <div className={styles.photo_container}>
-          <div
-            className={`${styles.single_photo_layout} ${
-              isHorizontal ? styles.horizontal : styles.vertical
-            }`}
-          >
-            <Image
-              src={photo.photo}
-              alt={photo.alt}
-              width={photo.width}
-              height={photo.height}
-              className={`${styles.photo} ${
-                isHorizontal ? styles.photo_horizontal : styles.photo_vertical
-              }`}
-              priority
-            />
-          </div>
-        </div>
-        <div className={styles.button_section}>
+        <div className={styles.section}>
           <button
             className={styles.gallery_button}
             onClick={onPrev}
@@ -73,9 +49,14 @@ export default function Modal({
           >
             <IoChevronBackCircle />
           </button>
-          <div className={styles.counter}>
-            {currentIndex + 1} / {totalPhotos}
-          </div>
+          <Image
+            src={currentImageObj.photo}
+            alt={currentImageObj.alt}
+            width={currentImageObj.width}
+            height={currentImageObj.height}
+            className={styles.photo}
+            priority
+          />
           <button
             className={styles.gallery_button}
             onClick={onNext}
@@ -83,6 +64,25 @@ export default function Modal({
           >
             <IoChevronForwardCircle />
           </button>
+          <div className={styles.close_container}>
+            <IoCloseOutline
+              onClick={closeModal}
+              className={styles.closeButton}
+              aria-label="close modal button"
+            />
+          </div>
+        </div>
+        <div className={styles.indicator_section}>
+          <div className={styles.indicators}>
+            {photos.map((photo, index) => (
+              <FaCircle
+                key={photo.id}
+                className={`${styles.indicator} ${
+                  index === currentIndex ? styles.active : ""
+                }`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>

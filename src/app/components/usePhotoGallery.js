@@ -1,22 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { engagement_photos_pc } from "../data/photos";
 
 const usePhotoGallery = (photos) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
 
   const currentImageObj = photos[currentIndex];
-
-  // Check if current photo is horizontal (use PC version if available)
-  const pcPhoto = engagement_photos_pc.find(
-    (p) => p.name === currentImageObj?.name
-  );
-  const isHorizontal = pcPhoto !== undefined;
-
-  // Get the appropriate photo to display (PC version for horizontal, mobile for vertical)
-  const displayPhoto = isHorizontal ? pcPhoto : currentImageObj;
 
   const openModal = (index) => {
     setCurrentIndex(index);
@@ -40,11 +30,10 @@ const usePhotoGallery = (photos) => {
     handlePrev,
     openModal,
     closeModal,
-    displayPhoto,
+    currentImageObj,
     currentIndex,
     isOpen,
-    isHorizontal,
-    totalPhotos: photos.length,
+    photos,
   };
 };
 
