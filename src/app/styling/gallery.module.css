@@ -15,7 +15,7 @@
   font-family: var(--summer-of-love-font);
   font-size: 100px;
   font-weight: normal;
-  word-spacing: 0.3em;
+  word-spacing: 0.1em;
 }
 
 .mobile_gallery {
@@ -87,6 +87,19 @@
   background-color: transparent;
 }
 
+[data-theme="dark"] .mobile_photo_layout:hover {
+  border: 2px solid #ecd5cd;
+}
+
+@media (prefers-color-scheme: dark) {
+  .mobile_photo_layout:hover {
+    border: 2px solid #ecd5cd;
+  }
+  .heading, .copy, .tap {
+    color: #ecd5cd
+  }
+}
+
 @media (min-width: 1600px) {
   .header_container {
     margin-top: 10rem;
@@ -97,6 +110,9 @@
   .header_photo {
     display: none;
   }
+  .heading {
+    font-size: 76px;
+  }
   .header_container {
     position: relative;
     flex-direction: column;
@@ -104,6 +120,7 @@
     top: 0px;
     right: 0px;
     width: 100%;
+    margin-top: 0rem;
   }
   .copy_container {
     width: auto;
