@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import Modal from "../components/Modal";
-import usePhotoGallery from "../components/usePhotoGallery";
-import useVisibilityObserver from "../components/useVisibilityObserver";
+import Gallery_Modal from "../components/Gallery_Modal";
+import usePhotoGallery from "../hooks/usePhotoGallery";
+import useVisibilityObserver from "../hooks/useVisibilityObserver";
 import { engagement_photos_mobile, feature_photos } from "../data/photos";
 
 import styles from "../styling/gallery.module.css";
@@ -71,7 +71,7 @@ export default function Gallery() {
         height={headerPhoto.height}
         className={styles.header_photo}
       />
-      <Modal
+      <Gallery_Modal
         isOpen={isOpen}
         closeModal={closeModal}
         onNext={handleNext}

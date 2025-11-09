@@ -83,6 +83,24 @@ width: 100%;
   color: #ecd5cd;
 }
 
+@media (prefers-color-scheme: dark) {
+    .gallery_button, .indicator.active {
+      color: #ecd5cd;
+    }
+    .closeButton, .indicators {
+      color: #680a14;
+    }
+  }
+
+[data-theme="dark"] :is(.gallery_button, .indicator.active) {
+  color: #ecd5cd;
+}
+
+[data-theme="dark"] :is(.closeButton, .indicators) {
+  color: #680a14;
+}
+
+
 @media (max-width: 1300px) {
   .modalContent {
     width: 90%;
@@ -90,11 +108,5 @@ width: 100%;
   .modalContent {
     flex-direction: column;
     padding: 1rem;
-  }
-  @media (prefers-color-scheme: dark) {
-    .formButton {
-      color: var(--foreground);
-       background-color: #ca5c3d;;
-    }
   }
 }
