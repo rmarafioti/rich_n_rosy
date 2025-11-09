@@ -11,36 +11,71 @@
   height: 100%;
   background: rgba(55, 77, 100, 0.8);
   backdrop-filter: blur(10px);
-  z-index: 1001;
+  z-index: 100;
 }
 
 .modalContent {
-  font-family: "IntroRust", Arial, sans-serif;
-  display: flex;
-  justify-content: space-between;
-  text-align: left;
-  padding: 1.5rem;
-  border-radius: 8px;
-  background: var(--background);
-}
-
-.modalSection {
+  position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
 }
 
-.modalSectionTop {
+.photo_container {
+  position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 85vh;
 }
 
 .closeButton {
-  color: var(--gbBlue);
   font-size: 40px;
   border-radius: 5px;
-  background-color: var(--gbGrayButton);
+  cursor: pointer;
+  align-self: end;
+}
+.button_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 440px;
+}
+.gallery_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  color: var(--blush);
+  font-size: 60px;
+ 
   cursor: pointer;
 }
+
+.photo {
+  max-width: 100%;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+}
+
+.photo_horizontal {
+  max-width: 90%;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+}
+
+.photo_vertical {
+  max-width: 100%;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+}
+
 
 @media (prefers-color-scheme: dark) {
   .modal {

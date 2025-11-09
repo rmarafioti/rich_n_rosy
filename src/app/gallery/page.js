@@ -1,56 +1,14 @@
 "use client";
 
 import Image from "next/image";
+import Modal from "../components/Modal";
 import usePhotoGallery from "../components/usePhotoGallery";
 import useVisibilityObserver from "../components/useVisibilityObserver";
-import {
-  engagement_photos_mobile,
-  engagement_photos_pc,
-  feature_photos,
-} from "../data/photos";
-import { IoChevronForwardCircle } from "react-icons/io5";
-import { IoChevronBackCircle } from "react-icons/io5";
+import { engagement_photos_mobile, feature_photos } from "../data/photos";
 
 import styles from "../styling/gallery.module.css";
 
-function VerticalPhotoCards({ currentPhoto, nextPhoto }) {
-  return (
-    <div className={styles.double_photo_layout}>
-      <Image
-        src={currentPhoto.photo}
-        alt={currentPhoto.alt}
-        width={currentPhoto.width}
-        height={currentPhoto.height}
-        className={styles.photo_vertical}
-      />
-      {nextPhoto && (
-        <Image
-          src={nextPhoto.photo}
-          alt={nextPhoto.alt}
-          width={nextPhoto.width}
-          height={nextPhoto.height}
-          className={styles.photo_vertical}
-        />
-      )}
-    </div>
-  );
-}
-
-function HorizontalPhotoCard({ photo }) {
-  return (
-    <div className={styles.single_photo_layout}>
-      <Image
-        src={photo.photo}
-        alt={photo.alt}
-        width={photo.width}
-        height={photo.height}
-        className={styles.photo_horizontal}
-      />
-    </div>
-  );
-}
-
-function MobilePhotoCard({ photo }) {
+function MobilePhotoCard({ photo, onClick }) {
   const [ref, isVisible] = useVisibilityObserver(0.1);
 
   return (
@@ -60,28 +18,26 @@ function MobilePhotoCard({ photo }) {
         alt={photo.alt}
         width={photo.width}
         height={photo.height}
+        onClick={onClick}
         className={`${styles.mobile_photo} ${isVisible ? styles.visible : ""}`}
       />
     </div>
   );
 }
 
-export default function SectionFour() {
-  const headerPhoto = feature_photos.find((p) => p.name === "full_theatre");
-
-  const { handleNext, handlePrev, currentImageObj, currentIndex } =
-    usePhotoGallery(engagement_photos_mobile);
-
-  const pcPhoto = engagement_photos_pc.find(
-    (p) => p.name === currentImageObj?.name
-  );
-
-  const isHorizontal = pcPhoto;
-
-  const nextImageObj =
-    !isHorizontal && currentIndex < engagement_photos_mobile.length - 1
-      ? engagement_photos_mobile[currentIndex + 1]
-      : null;
+export default function Gallery() {
+  const {
+    handleNext,
+    handlePrev,
+    openModal,
+    closeModal,
+    displayPhoto,
+    currentIndex,
+    isOpen,
+    isHorizontal,
+    totalPhotos,
+  } = usePhotoGallery(engagement_photos_mobile);
+  const headerPhoto = feature_photos.find((p) => p.id === 5);
 
   return (
     <main>
@@ -100,8 +56,12 @@ export default function SectionFour() {
           <p className={styles.tap}>tap photos to view</p>
         </div>
         <div className={styles.mobile_gallery}>
-          {engagement_photos_mobile.map((photo) => (
-            <MobilePhotoCard key={photo.id} photo={photo} />
+          {engagement_photos_mobile.map((photo, index) => (
+            <MobilePhotoCard
+              key={photo.id}
+              photo={photo}
+              onClick={() => openModal(index)}
+            />
           ))}
         </div>
       </div>
@@ -112,25 +72,16 @@ export default function SectionFour() {
         height={headerPhoto.height}
         className={styles.header_photo}
       />
-      {/*<section className={styles.photo_container}>
-        <button className={styles.gallery_button} onClick={handlePrev}>
-          <IoChevronBackCircle />
-        </button>
-        {/* Render vertical photos */}
-      {/*{!isHorizontal && currentImageObj && (
-          <VerticalPhotoCards
-            currentPhoto={currentImageObj}
-            nextPhoto={nextImageObj}
-          />
-        )}
-        {/* Render horizontal photo*/}
-      {/*{isHorizontal && pcPhoto && <HorizontalPhotoCard photo={pcPhoto} />}
-        <button className={styles.gallery_button} onClick={handleNext}>
-          <IoChevronForwardCircle />
-        </button>
-      </section>
-      {/* mobile photo view */}
-      <section></section>
+      <Modal
+        isModalVisible={isOpen}
+        closeModal={closeModal}
+        photo={displayPhoto}
+        onNext={handleNext}
+        onPrev={handlePrev}
+        currentIndex={currentIndex}
+        totalPhotos={totalPhotos}
+        isHorizontal={isHorizontal}
+      />
     </main>
   );
 }
