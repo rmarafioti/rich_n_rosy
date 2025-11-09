@@ -1,7 +1,3 @@
-body {
-  background-color: #0a0808;
-}
-
 .content {
   position: absolute;
   display: flex;
@@ -82,7 +78,6 @@ body {
   border: none;
   width: 280px;
   cursor: pointer;
-  transition: background 0.2s ease-in-out;
 }
 
 .submit:hover {
@@ -128,23 +123,29 @@ body {
 @media (max-width: 667px) {
   .content {
     margin-top: 0rem;
+    width: 100%
   }
   .header_container {
     position: relative;
     display: flex;
     flex-direction: column;
     text-align: left;
+    padding: 0rem 1rem 2rem 1rem;
     top: -200px;
-    left: -10px;
+    width: 100%;
+    background-color: #0a0808;
+  mask-image: linear-gradient(to top, transparent, black 30px);
   }
   .tag {
-    font-size: 24px;
-    margin-top: 0.5rem;
+    font-size: 46px;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
   }
   .date {
-    font-size: 20px;
+    font-size: 26px;
     margin-bottom: 0rem;
     margin-top: 0rem;
+    word-spacing: 1.3em;
   }
   .header_photo {
     display: none;
@@ -153,8 +154,6 @@ body {
     display: block;
     width: 100%;
     height: auto;
-    padding-bottom: 12rem;
-    mask-image: linear-gradient(to bottom, transparent, black 100px);
   }
   .icon {
     width: 100px;
@@ -163,7 +162,11 @@ body {
   .passcode_container {
     position: relative;
     width: 100%;
-    top: 280px;
+    height: 50vh;
+    top: 100px;
+    padding: 0rem 1rem 2rem 1rem;
+    background-color: #0a0808;
+     mask-image: linear-gradient(to bottom, transparent, black 10px);
   }
   .input_section {
     flex-direction: column;
