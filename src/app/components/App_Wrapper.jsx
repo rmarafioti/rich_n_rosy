@@ -24,7 +24,7 @@ const summer_of_love = localFont({
 
 export default function AppWrapper({ children }) {
   const pathname = usePathname();
-  const isAuthPage = pathname === "/";
+  const isAuthPage = pathname === "/auth";
 
   const [accessibility, setAccessibility] = useState({
     isThemeDark: false,
