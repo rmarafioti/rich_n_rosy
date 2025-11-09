@@ -3,7 +3,7 @@
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Form_Modal from "./Form_Modal";
-import useModal from "./useModal";
+import useModal from "../hooks/useModal";
 
 import styles from "../styling/contact_form.module.css";
 

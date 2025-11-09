@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import Gallery_Modal from "../components/Gallery_Modal";
-import usePhotoGallery from "../components/usePhotoGallery";
-import useVisibilityObserver from "../components/useVisibilityObserver";
+import usePhotoGallery from "../hooks/usePhotoGallery";
+import useVisibilityObserver from "../hooks/useVisibilityObserver";
 import { engagement_photos_mobile, feature_photos } from "../data/photos";
 
 import styles from "../styling/gallery.module.css";
