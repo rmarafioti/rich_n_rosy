@@ -19,6 +19,16 @@ export const icons = [
   },
 ];
 
+export const form_photo = {
+  id: 1,
+  name: "form_photo",
+  photo:
+    "https://res.cloudinary.com/dzpne110u/image/upload/v1762877205/wedding_website/feature_photos/seats_watching_web_mrpz0i.png",
+  alt: "form photo",
+  height: 974,
+  width: 1196,
+};
+
 export const feature_photos = [
   {
     id: 5,
