@@ -151,6 +151,9 @@
     margin: 0rem 0.2rem;
     border: none;
   }
+  .mobile_photo_layout:hover{
+    border: none;
+  }
   .mobile_photo {
     width: 100%;
     height: auto;
@@ -159,6 +162,7 @@
     transform: translateY(40px);
     transition: opacity 0.4s ease-out, transform 0.8s ease-out;
     pointer-events: none;
+    cursor: default;
     filter: blur(0px);
   }
 
@@ -170,11 +174,13 @@
     opacity: 1;
     transform: translateY(0px);
     transition: opacity 1.5s ease-in, transform 1s ease-in;
-    pointer-events: auto;
   }
   .button_container {
     width: 90%;
   }
+  [data-theme="dark"] .mobile_photo_layout:hover {
+  border: none;
+}
 }
 
 [data-theme="dark"] :is(.heading, .copy, .tap) {
