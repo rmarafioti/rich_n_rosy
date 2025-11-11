@@ -34,10 +34,10 @@ export const feature_photos = [
     id: 5,
     name: "full_theatre",
     photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1762131012/wedding_website/feature_photos/feature_photo_one_v1ioyl.png",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1762900255/wedding_website/feature_photos/feature_photo_one_zwydiz.png",
     alt: "engagement photo",
-    height: 1369,
-    width: 2912,
+    height: 1427,
+    width: 629,
   },
   {
     id: 6,

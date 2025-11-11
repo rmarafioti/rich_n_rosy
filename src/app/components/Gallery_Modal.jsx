@@ -8,7 +8,7 @@ import { IoChevronForwardCircle } from "react-icons/io5";
 import { IoChevronBackCircle } from "react-icons/io5";
 import { FaCircle } from "react-icons/fa6";
 
-import styles from "../styling/modal.module.css";
+import styles from "../styling/gallery_modal.module.css";
 
 export default function Gallery_Modal({
   isOpen,
