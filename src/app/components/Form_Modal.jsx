@@ -3,6 +3,8 @@
 import React from "react";
 import Image from "next/image";
 import { form_photo } from "../data/photos";
+import { IoCloseOutline } from "react-icons/io5";
+
 import styles from "../styling/form_modal.module.css";
 
 export default function Form_Modal({ isOpen, closeModal, children }) {
@@ -27,10 +29,21 @@ export default function Form_Modal({ isOpen, closeModal, children }) {
       tabIndex={0}
     >
       <div className={styles.success_modal}>
-        <h2 className={styles.heading}>Message Sent!</h2>
-        <p className={styles.message}>
-          We look forward to reading your message.
-        </p>
+        <section className={styles.copy_section}>
+          <div>
+            <h2 className={styles.heading}>Message Sent!</h2>
+            <p className={styles.message}>
+              We look forward to reading your message.
+            </p>
+          </div>
+          <div>
+            <IoCloseOutline
+              onClick={closeModal}
+              className={styles.closeButton}
+              aria-label="close modal button"
+            />
+          </div>
+        </section>
         <Image
           src={formPhoto.photo}
           alt={formPhoto.alt}
@@ -38,9 +51,6 @@ export default function Form_Modal({ isOpen, closeModal, children }) {
           height={formPhoto.height}
           className={styles.form_photo}
         />
-        <button onClick={closeModal} className={styles.close_button}>
-          Close
-        </button>
       </div>
       <div className={styles.modalContent}>{children}</div>
     </div>
