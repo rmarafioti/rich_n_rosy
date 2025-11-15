@@ -7,7 +7,6 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
 import Navbar from "../layout/Navbar";
-import Footer from "../layout/Footer";
 import Access_Menu from "../components/Access_Menu";
 
 const fraunces = Fraunces({
@@ -97,7 +96,6 @@ export default function AppWrapper({ children }) {
       >
         {children}
       </article>
-      {showNavigation && <Footer />}
     </div>
   );
 }
