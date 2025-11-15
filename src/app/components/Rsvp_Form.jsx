@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 import Form_Modal from "./Form_Modal";
 import useModal from "../hooks/useModal";
 
-import styles from "../styling/contact_form.module.css";
+import styles from "../styling/rsvp_form.module.css";
 
 export default function RSVP_Form() {
   const formRef = useRef();
@@ -84,6 +84,7 @@ export default function RSVP_Form() {
 
   return (
     <div className={styles.contact_form_container}>
+      <h1 className={styles.page_name}>Early Bird RSVP</h1>
       <h2 className={styles.header}>
         If you already know, please fill out the form below!
       </h2>

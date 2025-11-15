@@ -57,6 +57,15 @@ export const feature_photos = [
     height: 1472,
     width: 692,
   },
+  {
+    id: 8,
+    name: "walking_aisle",
+    photo:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1763240725/wedding_website/feature_photos/feature_photo_three_jdjhtl.png",
+    alt: "engagement photo",
+    height: 2093,
+    width: 1731,
+  },
 ];
 
 export const engagement_photos_pc = [
