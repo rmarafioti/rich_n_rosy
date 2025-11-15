@@ -36,8 +36,8 @@ export const feature_photos = [
     photo:
       "https://res.cloudinary.com/dzpne110u/image/upload/v1762900255/wedding_website/feature_photos/feature_photo_one_zwydiz.png",
     alt: "engagement photo",
-    height: 1427,
-    width: 629,
+    height: 1472,
+    width: 692,
   },
   {
     id: 6,
@@ -47,6 +47,15 @@ export const feature_photos = [
     alt: "engagement photo",
     height: 1561,
     width: 2912,
+  },
+  {
+    id: 7,
+    name: "seats_kissing_two",
+    photo:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1763217310/wedding_website/feature_photos/feature_photo_two_mpbx3s.png",
+    alt: "engagement photo",
+    height: 1472,
+    width: 692,
   },
 ];
 

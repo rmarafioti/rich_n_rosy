@@ -1,0 +1,95 @@
+.image {
+  width: 100%;
+  height: auto;
+  margin: 0rem 0rem 1rem 0rem;
+}
+
+.image_mobile {
+  display: none;
+}
+
+.header_container {
+  position: absolute;
+  align-self: flex-start;
+  text-align: left;
+  top: 240px;
+  margin-left: 2rem;
+  color: var(--blush);
+}
+
+.title,
+.sub_title {
+  color: var(--blush);
+  font-family: var(--summer-of-love-font);
+  font-size: 90px;
+  font-weight: normal;
+  word-spacing: 0.1em;
+}
+
+.sub_title {
+  font-family: var(--main-font);
+  font-weight: 300;
+  font-size: 38px;
+  margin-bottom: 1rem;
+}
+
+.copy {
+  width: 500px;
+}
+
+@media (max-width: 1300px) {
+  .header_container {
+    top: 270px;
+  }
+}
+
+@media (max-width: 667px) {
+  .image {
+    display: none;
+  }
+  .image_mobile {
+    position: initial;
+    display: block;
+    margin-top: 8.5rem;
+    width: 100%;
+    height: auto;
+  }
+  .header_container {
+    top: 120px;
+    text-align: center;
+    width: 100%;
+    z-index: 90;
+  }
+  .title,
+  .sub_title {
+    color: var(--maroon);
+    font-size: 76px;
+  }
+  .sub_title {
+    color: var(--blush);
+    font-size: 30px;
+    margin-bottom: 1rem;
+  }
+  .copy {
+    color: var(--blush);
+    width: auto;
+    margin: 0rem 0.5rem 2rem 0.5rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    .copy {
+      color: #ecd5cd;
+    }
+  }
+}
+
+/* dark mode stylings */
+@media (prefers-color-scheme: dark) {
+  .title,
+  .sub_title {
+    color: #ecd5cd;
+  }
+}
+
+[data-theme="dark"] :is(.title, .sub_title, .copy) {
+  color: #ecd5cd;
+}
