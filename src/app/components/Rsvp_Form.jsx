@@ -85,25 +85,19 @@ export default function RSVP_Form() {
   return (
     <div className={styles.contact_form_container}>
       <h1 className={styles.page_name}>Early Bird RSVP</h1>
-      <h2 className={styles.header}>
-        If you already know, please fill out the form below!
-      </h2>
-      <form ref={formRef} onSubmit={sendEmail}>
-        <div className={styles.name_section}>
-          <div className={styles.name_container_one}>
-            <label className={styles.label}>Name*</label>
-            <input
-              className={styles.name}
-              type="text"
-              name="name"
-              aria-label="name"
-              value={formValues.name}
-              onChange={handleInputChange}
-            />
-          </div>
-        </div>
+      <h2 className={styles.header}>Already know, fill out the form below!</h2>
+      <form className={styles.form} ref={formRef} onSubmit={sendEmail}>
+        <label className={styles.label}>Name*</label>
+        <input
+          className={styles.name}
+          type="text"
+          name="name"
+          aria-label="name"
+          value={formValues.name}
+          onChange={handleInputChange}
+        />
         <label className={styles.label}>
-          We're you invited with a guest guest?*
+          Were you invited with a guest guest?*
         </label>
         <div className={styles.radio_group}>
           <label className={styles.radio_label}>
@@ -113,6 +107,7 @@ export default function RSVP_Form() {
               value="yes"
               checked={formValues.guest === "yes"}
               onChange={handleInputChange}
+              className={styles.radio_button}
               aria-label="guest_yes"
             />
             Yes
@@ -124,6 +119,7 @@ export default function RSVP_Form() {
               value="no"
               checked={formValues.guest === "no"}
               onChange={handleInputChange}
+              className={styles.radio_button}
               aria-label="guest_no"
             />
             No
@@ -140,9 +136,10 @@ export default function RSVP_Form() {
               value="yes"
               checked={formValues.attendance === "yes"}
               onChange={handleInputChange}
+              className={styles.radio_button}
               aria-label="attendance_yes"
             />
-            Yes
+            See you there!
           </label>
           <label className={styles.radio_label}>
             <input
@@ -151,9 +148,10 @@ export default function RSVP_Form() {
               value="no"
               checked={formValues.attendance === "no"}
               onChange={handleInputChange}
+              className={styles.radio_button}
               aria-label="attendance_no"
             />
-            No
+            Can't make it
           </label>
         </div>
         <p className={styles.required}>*Required</p>

@@ -59,9 +59,9 @@ export const feature_photos = [
   },
   {
     id: 8,
-    name: "walking_aisle",
+    name: "walking_aisle_close_up",
     photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1763240725/wedding_website/feature_photos/feature_photo_three_jdjhtl.png",
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1763258181/wedding_website/feature_photos/feature_photo_three_kkkmez.png",
     alt: "engagement photo",
     height: 2093,
     width: 1731,
