@@ -61,7 +61,7 @@ export default function RSVP_Form() {
     setIsLoading(true);
 
     const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
-    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID_RSVP;
+    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
     const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_RSVP;
 
     emailjs.sendForm(serviceID, templateID, formRef.current, publicKey).then(
@@ -162,7 +162,8 @@ export default function RSVP_Form() {
           value={isLoading ? "Sending..." : "Send"}
           disabled={isLoading}
         />
-
+      </form>
+      <div className={styles.error_container}>
         {validationError.name && (
           <p className={styles.required_error}>*Please enter your name</p>
         )}
@@ -181,7 +182,7 @@ export default function RSVP_Form() {
             *Message failed to send. Please try again
           </p>
         )}
-      </form>
+      </div>
       <Form_Modal isOpen={isOpen} closeModal={closeModal} />
     </div>
   );

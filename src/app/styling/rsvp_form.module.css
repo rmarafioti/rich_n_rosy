@@ -77,6 +77,10 @@
   background-color: var(--rose);
 }
 
+.error_container {
+  width: 420px;
+}
+
 .required_error {
   padding-bottom: 0.5rem;
 }
@@ -116,15 +120,20 @@
   .contact_form_container {
     align-items: center;
     color: var(--maroon);
-    width: 90%;
+    width: 100%;
     top: 120px;
     text-align: center;
+    z-index: 99;
   }
   .page_name {
     font-size: 76px;
+    background-color: var(--blush);
+    width: 100%;
   }
   .form {
     width: 100%;
+    padding-bottom: 4rem;
+    padding: 0rem 1rem 0rem 1rem;
   }
   .header {
     color: #ecd5cd;
@@ -162,6 +171,12 @@
   .send:hover {
     color: var(--blush);
     background-color: var(--maroon);
+  }
+  .error_container {
+    background-color: black;
+    text-align: left;
+    width: 100%;
+    padding: 0rem 1rem 2rem 1rem;
   }
   @media (prefers-color-scheme: dark) {
     .copy {

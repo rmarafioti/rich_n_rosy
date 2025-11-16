@@ -10,7 +10,7 @@ export default function Rsvp() {
   const featurePhoto = feature_photos.find((p) => p.id === 8);
   const featurePhotoMobile = engagement_photos_mobile.find((p) => p.id === 10);
   return (
-    <main>
+    <main className={styles.page_body}>
       <article className={styles.header_container}>
         <RSVP_Form />
       </article>

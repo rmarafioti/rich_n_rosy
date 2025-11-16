@@ -13,6 +13,10 @@
 }
 
 @media (max-width: 667px) and (hover: none) {
+    .page_body {
+        background-color: black;
+        padding-bottom: 11rem;;
+    }
     .header_container {
     display: flex;
     justify-content: center;
@@ -26,9 +30,10 @@
    position: initial;
     display: block;
     margin-top: 8.5rem;
-    padding-bottom: 22rem;
+    padding-bottom: 0rem;
     background-color: black;
     height: auto;
     width: 100%;
+    mask-image: linear-gradient(to top, transparent, black 30px);
 }
 }
