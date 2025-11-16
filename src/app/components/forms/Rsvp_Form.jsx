@@ -3,9 +3,9 @@
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Form_Modal from "./Form_Modal";
-import useModal from "../hooks/useModal";
+import useModal from "../../hooks/useModal";
 
-import styles from "../styling/rsvp_form.module.css";
+import styles from "../../styling/rsvp_form.module.css";
 
 export default function RSVP_Form() {
   const formRef = useRef();
@@ -61,7 +61,7 @@ export default function RSVP_Form() {
     setIsLoading(true);
 
     const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
-    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID_RSVP;
+    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
     const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_RSVP;
 
     emailjs.sendForm(serviceID, templateID, formRef.current, publicKey).then(
@@ -85,7 +85,10 @@ export default function RSVP_Form() {
   return (
     <div className={styles.contact_form_container}>
       <h1 className={styles.page_name}>Early Bird RSVP</h1>
-      <h2 className={styles.header}>Already know, fill out the form below!</h2>
+      <div className={styles.header_container}>
+        <h2 className={styles.header}>Already know?</h2>
+        <h2 className={styles.header}>Fill out the form below!</h2>
+      </div>
       <form className={styles.form} ref={formRef} onSubmit={sendEmail}>
         <label className={styles.label}>Name*</label>
         <input
@@ -96,9 +99,7 @@ export default function RSVP_Form() {
           value={formValues.name}
           onChange={handleInputChange}
         />
-        <label className={styles.label}>
-          Were you invited with a guest guest?*
-        </label>
+        <label className={styles.label}>Were you invited with a guest?*</label>
         <div className={styles.radio_group}>
           <label className={styles.radio_label}>
             <input
@@ -162,7 +163,8 @@ export default function RSVP_Form() {
           value={isLoading ? "Sending..." : "Send"}
           disabled={isLoading}
         />
-
+      </form>
+      <div className={styles.error_container}>
         {validationError.name && (
           <p className={styles.required_error}>*Please enter your name</p>
         )}
@@ -173,7 +175,7 @@ export default function RSVP_Form() {
         )}
         {validationError.attendance && (
           <p className={styles.required_error}>
-            *Please let us know if you and your gurst will be attending
+            *Please let us know if you and your guest will be attending
           </p>
         )}
         {messageStatus === "error" && (
@@ -181,7 +183,7 @@ export default function RSVP_Form() {
             *Message failed to send. Please try again
           </p>
         )}
-      </form>
+      </div>
       <Form_Modal isOpen={isOpen} closeModal={closeModal} />
     </div>
   );

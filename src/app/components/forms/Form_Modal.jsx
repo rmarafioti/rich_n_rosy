@@ -2,10 +2,10 @@
 
 import React from "react";
 import Image from "next/image";
-import { form_photo } from "../data/photos";
+import { form_photo } from "../../data/photos";
 import { IoCloseOutline } from "react-icons/io5";
 
-import styles from "../styling/form_modal.module.css";
+import styles from "../../styling/form_modal.module.css";
 
 export default function Form_Modal({ isOpen, closeModal, children }) {
   const formPhoto = form_photo;
