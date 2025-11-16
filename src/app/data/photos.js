@@ -164,7 +164,7 @@ export const engagement_photos_mobile = [
   },
   {
     id: 8,
-    name: "aisle_etial",
+    name: "aisle_detial",
     photo:
       "https://res.cloudinary.com/dzpne110u/image/upload/v1761875325/wedding_website/engagement_photos_mobile_gallery/aisle_detail_1_wmjpkx.png",
     alt: "engagement photo",

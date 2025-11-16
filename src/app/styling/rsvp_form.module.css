@@ -1,9 +1,9 @@
 .contact_form_container {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   top: 240px;
-  position: absolute;
   color: var(--blush);
   width: 590px;
 }
@@ -11,7 +11,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 420px;
 }
 
 .page_name {
@@ -22,11 +22,12 @@
 }
 .header {
   margin: 2rem 0rem 2rem 0rem;
-  width: 400px;
+  width: 420px;
 }
 
 .label {
-margin-bottom: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 .name,
@@ -40,7 +41,7 @@ margin-bottom: 1rem;
 }
 
 .name {
-  margin-bottom: 3rem;;
+  margin-bottom: 3rem;
   width: 400px;
 }
 
@@ -53,7 +54,7 @@ margin-bottom: 1rem;
 }
 
 .radio_button {
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 .send {
@@ -86,45 +87,77 @@ margin-bottom: 1rem;
     color: var(--background);
     background-color: var(--button_color_dm);
   }
-  .name,
-  .email,
-  .message {
-    color: var(--foreground);
-    background-color: #3b3840;
+  .page_name,
+  .header,
+  .label,
+  .radio_label {
+    color: #ecd5cd;
   }
 }
 
-[data-theme="dark"] :is(.name, .email, .message) {
+[data-theme="dark"] :is(.page_name, .header, .label, .radio_label, .required_error) {
+  color: #ecd5cd;
+}
+
+[data-theme="dark"] .name {
   color: var(--foreground);
   background-color: #3b3840;
 }
 
 [data-theme="dark"] .send {
   color: var(--background);
+}
+
+[data-theme="dark"] .send:hover {
   background-color: var(--button_color_dm);
 }
 
 @media (max-width: 667px) and (hover: none) {
   .contact_form_container {
-    display: flex;
-    flex-direction: column;
+    align-items: center;
+    color: var(--maroon);
     width: 90%;
+    top: 120px;
+    text-align: center;
+  }
+  .page_name {
+    font-size: 76px;
   }
   .form {
     width: 100%;
   }
   .header {
+    color: #ecd5cd;
     text-align: center;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
   }
-
+  .label {
+    color: #ecd5cd;
+    width: 200px;
+    margin-bottom: 1rem;
+  }
+  .required_error, .required {
+   color: #ecd5cd;
+}
   .name,
-  .email,
-  .message,
+  .header,
   .send {
     width: 100%;
   }
+
+  .radio_group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  .radio_label {
+    color: #ecd5cd;
+    margin-bottom: 1rem;
+  }
   .send {
     text-align: center;
+    margin-bottom: 1rem;
   }
   .send:hover {
     color: var(--blush);
