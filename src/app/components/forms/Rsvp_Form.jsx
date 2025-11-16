@@ -3,9 +3,9 @@
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Form_Modal from "./Form_Modal";
-import useModal from "../hooks/useModal";
+import useModal from "../../hooks/useModal";
 
-import styles from "../styling/rsvp_form.module.css";
+import styles from "../../styling/rsvp_form.module.css";
 
 export default function RSVP_Form() {
   const formRef = useRef();

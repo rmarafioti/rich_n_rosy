@@ -2,7 +2,7 @@
 
 import { feature_photos, engagement_photos_mobile } from "../data/photos";
 import ResponsiveImage from "../components/Responsive_Image";
-import RSVP_Form from "../components/Rsvp_Form";
+import RSVP_Form from "../components/forms/Rsvp_Form";
 
 import styles from "../styling/rsvp.module.css";
 

@@ -3,7 +3,7 @@
 import { feature_photos, engagement_photos_mobile } from "../data/photos";
 import ResponsiveImage from "../components/Responsive_Image";
 
-import styles from "../styling/event.module.css";
+import styles from "../styling/big_day.module.css";
 
 export default function Event() {
   const featurePhoto = feature_photos.find((p) => p.id === 7);

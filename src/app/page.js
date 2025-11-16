@@ -2,7 +2,7 @@
 
 import { engagement_photos_mobile, feature_photos } from "./data/photos";
 import ResponsiveImage from "./components/Responsive_Image";
-import Contact_Form from "./components/Contact_Form";
+import Contact_Form from "./components/forms/Contact_Form";
 
 import styles from "./styling/home.module.css";
 

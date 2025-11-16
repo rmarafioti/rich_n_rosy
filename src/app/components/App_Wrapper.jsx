@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
 import Navbar from "../layout/Navbar";
-import Access_Menu from "../components/Access_Menu";
+import Access_Menu from "../components/accessibility/Access_Menu";
 
 const fraunces = Fraunces({
   variable: "--main-font",

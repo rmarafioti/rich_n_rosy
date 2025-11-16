@@ -1,4 +1,4 @@
-import styles from "../styling/toggle.module.css";
+import styles from "../../styling/toggle.module.css";
 
 export default function Toggle({ onToggle, isToggled }) {
   const handleToggle = () => {
