@@ -99,9 +99,7 @@ export default function RSVP_Form() {
           value={formValues.name}
           onChange={handleInputChange}
         />
-        <label className={styles.label}>
-          Were you invited with a guest guest?*
-        </label>
+        <label className={styles.label}>Were you invited with a guest?*</label>
         <div className={styles.radio_group}>
           <label className={styles.radio_label}>
             <input
@@ -177,7 +175,7 @@ export default function RSVP_Form() {
         )}
         {validationError.attendance && (
           <p className={styles.required_error}>
-            *Please let us know if you and your gurst will be attending
+            *Please let us know if you and your guest will be attending
           </p>
         )}
         {messageStatus === "error" && (
