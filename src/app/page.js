@@ -13,7 +13,7 @@ export default function Home() {
   );
 
   return (
-    <main>
+    <main className={styles.layout}>
       <div className={styles.header_container}>
         <h1 className={styles.title}>Rosy & Rich Get Hitched!</h1>
         <p className={styles.sub_title}>July 18th 2026</p>

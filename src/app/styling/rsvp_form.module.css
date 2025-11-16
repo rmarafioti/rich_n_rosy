@@ -1,0 +1,171 @@
+.contact_form_container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  top: 240px;
+  color: var(--blush);
+  width: 590px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 420px;
+}
+
+.page_name {
+  font-family: var(--summer-of-love-font);
+  font-size: 100px;
+  font-weight: normal;
+  word-spacing: 0.1em;
+}
+.header {
+  margin: 2rem 0rem 2rem 0rem;
+  width: 420px;
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.name,
+.send {
+  font-size: 20px;
+  display: flex;
+  padding: 0.5rem;
+  margin-top: 0.2rem;
+  border-radius: 5px;
+  border: 1px solid var(--foreground);
+}
+
+.name {
+  margin-bottom: 3rem;
+  width: 400px;
+}
+
+.radio_group {
+  margin-bottom: 3rem;
+}
+
+.radio_label {
+  margin-right: 2rem;
+}
+
+.radio_button {
+  margin-right: 0.5rem;
+}
+
+.send {
+  text-align: center;
+  background-color: var(--maroon);
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--blush);
+  padding: 0.8rem 0.5rem 0.8rem 0.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.send:hover {
+  color: var(--foreground);
+  background-color: var(--rose);
+}
+
+.required_error {
+  padding-bottom: 0.5rem;
+}
+
+/* dark mode stylings */
+@media (prefers-color-scheme: dark) {
+  .send:hover {
+    color: var(--background);
+    background-color: var(--button_color_dm);
+  }
+  .page_name,
+  .header,
+  .label,
+  .radio_label {
+    color: #ecd5cd;
+  }
+}
+
+[data-theme="dark"] :is(.page_name, .header, .label, .radio_label, .required_error) {
+  color: #ecd5cd;
+}
+
+[data-theme="dark"] .name {
+  color: var(--foreground);
+  background-color: #3b3840;
+}
+
+[data-theme="dark"] .send {
+  color: var(--background);
+}
+
+[data-theme="dark"] .send:hover {
+  background-color: var(--button_color_dm);
+}
+
+@media (max-width: 667px) and (hover: none) {
+  .contact_form_container {
+    align-items: center;
+    color: var(--maroon);
+    width: 90%;
+    top: 120px;
+    text-align: center;
+  }
+  .page_name {
+    font-size: 76px;
+  }
+  .form {
+    width: 100%;
+  }
+  .header {
+    color: #ecd5cd;
+    text-align: center;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+  }
+  .label {
+    color: #ecd5cd;
+    width: 200px;
+    margin-bottom: 1rem;
+  }
+  .required_error, .required {
+   color: #ecd5cd;
+}
+  .name,
+  .header,
+  .send {
+    width: 100%;
+  }
+
+  .radio_group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  .radio_label {
+    color: #ecd5cd;
+    margin-bottom: 1rem;
+  }
+  .send {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .send:hover {
+    color: var(--blush);
+    background-color: var(--maroon);
+  }
+  @media (prefers-color-scheme: dark) {
+    .copy {
+      color: #ecd5cd;
+    }
+  }
+}
