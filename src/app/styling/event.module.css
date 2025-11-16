@@ -42,6 +42,12 @@
   margin-bottom: 0rem;
 }
 
+.date {
+  font-weight: 600;
+  font-size: 36px;
+  margin-bottom: 2rem;
+}
+
 .copy {
   margin-top: 2rem;
 }
@@ -61,11 +67,10 @@
   .title,
   .copy,
   .intro,
-  .header_container,
   .image_mobile {
     width: 100%;
   }
-  .address_container {
+  .header_container, .address_container {
     width: 90%;
   }
   .image {
@@ -78,7 +83,7 @@
     height: auto;
   }
   .header_container {
-    top: 98px;
+    top: 110px;
     text-align: left;
     z-index: 90;
     text-align: left;
@@ -92,15 +97,21 @@
   }
   .title {
     color: var(--maroon);
-    font-size: 64px;
-    margin-bottom: 1rem;
+    font-size: 60px;
     text-shadow: none;
   }
   .sub_title {
     color: var(--blush);
-    font-size: 26px;
+    font-size: 24px;
     margin-bottom: 0rem;
   }
+  .date {
+  font-weight: 600;
+  font-size: 28px;
+  padding-left: .5rem;
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+}
   .copy {
     color: var(--blush);
     width: auto;
@@ -112,7 +123,7 @@
   }
   .details_section {
     position: absolute;
-    top: 640px;
+    top: 560px;
   }
   @media (prefers-color-scheme: dark) {
     .copy {
@@ -124,11 +135,13 @@
 /* dark mode stylings */
 @media (prefers-color-scheme: dark) {
   .title,
-  .sub_title {
+  .sub_title,
+  .copy,
+  .date {
     color: #ecd5cd;
   }
 }
 
-[data-theme="dark"] :is(.title, .sub_title, .copy) {
+[data-theme="dark"] :is(.title, .sub_title, .copy, .date) {
   color: #ecd5cd;
 }

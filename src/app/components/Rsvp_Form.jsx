@@ -85,7 +85,10 @@ export default function RSVP_Form() {
   return (
     <div className={styles.contact_form_container}>
       <h1 className={styles.page_name}>Early Bird RSVP</h1>
-      <h2 className={styles.header}>Already know, fill out the form below!</h2>
+      <div className={styles.header_container}>
+        <h2 className={styles.header}>Already know?</h2>
+        <h2 className={styles.header}>Fill out the form below!</h2>
+      </div>
       <form className={styles.form} ref={formRef} onSubmit={sendEmail}>
         <label className={styles.label}>Name*</label>
         <input
