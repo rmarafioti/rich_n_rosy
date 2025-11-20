@@ -150,12 +150,13 @@
   .header {
     color: #ecd5cd;
     margin: 0rem;
+    width: 100%;
   }
   .label {
     color: #ecd5cd;
     width: 230px;
     margin-bottom: 0.2rem;
-    text-shadow: 5px 0px 5px #030303;
+    text-shadow: 1px 2px 2px #030303;
   }
   .required_error,
   .required {
