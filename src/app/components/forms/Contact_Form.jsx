@@ -94,8 +94,13 @@ export default function Contact_Form() {
 
   return (
     <div className={styles.contact_form_container}>
-      <h2 className={styles.header}>Are you excited for the wedding?!?</h2>
-      <p className={styles.sub_header}>Send us a message and let us know</p>
+      <h2 className={styles.header}>Words of Wisdom</h2>
+      <p className={styles.sub_header}>
+        As we look towards this next chapter of our lives together, we are
+        grateful for all the love we see among our family and friends. If you
+        feel inclined, please share some well wishes and words of wisdom as we
+        take this big step together.
+      </p>
       <form ref={formRef} onSubmit={sendEmail}>
         <div className={styles.name_section}>
           <div className={styles.name_container_one}>
