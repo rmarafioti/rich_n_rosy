@@ -21,10 +21,10 @@ export default function Event() {
           <p className={styles.sub_title}>Chicago</p>
         </section>
         <section className={styles.details_section}>
-          <p className={styles.copy}>Ceremony with Reception to Follow</p>
           <p className={styles.copy}>
-            More details to come in XXXXX check back soon.
+            5pm outdoor ceremony with reception to follow
           </p>
+          <p className={styles.copy}>More information to come!</p>
         </section>
       </article>
       <ResponsiveImage
