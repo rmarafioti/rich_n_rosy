@@ -18,6 +18,11 @@
   word-spacing: 0.1em;
 }
 
+.copy,
+.copy_tag {
+  margin-bottom: 2rem;;
+} 
+
 .mobile_gallery {
   display: flex;
   flex-direction: row;
@@ -110,9 +115,6 @@
   .header_photo {
     display: none;
   }
-  .heading {
-    font-size: 76px;
-  }
   .header_container {
     position: relative;
     flex-direction: column;
@@ -123,14 +125,21 @@
     margin-top: 0rem;
   }
   .copy_container {
+    text-align: left;
     width: auto;
+  }
+   .heading {
+    text-align: center;
+    font-size: 76px;
   }
   .heading,
   .copy {
     color: var(--maroon);
   }
-  .copy {
-    margin: 0rem 0.5rem 2rem 0.5rem;
+  .copy,
+  .copy_tag {
+    color: var(--maroon);
+    margin: 0rem 1rem 2rem 1rem;
   }
   .tap {
     display: none;
