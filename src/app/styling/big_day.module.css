@@ -114,7 +114,7 @@
 }
   .copy {
     color: var(--blush);
-    width: auto;
+    width: 200px;
     margin-top: 1rem;
   }
   .address_container,
@@ -123,7 +123,7 @@
   }
   .details_section {
     position: absolute;
-    top: 560px;
+    top: 530px;
   }
   @media (prefers-color-scheme: dark) {
     .copy {
