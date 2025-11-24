@@ -4,6 +4,7 @@ import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Form_Modal from "./Form_Modal";
 import useModal from "../../hooks/useModal";
+import Link from "next/link";
 
 import styles from "../../styling/contact_form.module.css";
 
@@ -92,6 +93,9 @@ export default function Contact_Form() {
 
   return (
     <div className={styles.contact_form_container}>
+      <Link href="/rsvp" className={styles.rsvp_button}>
+        Early RSVP
+      </Link>
       <h2 className={styles.header}>Words of Wisdom</h2>
       <p className={styles.sub_header}>
         As we look towards this next chapter of our lives together, we are

@@ -12,7 +12,7 @@
   position: absolute;
   text-align: left;
   top: 120px;
-   color: var(--blush);
+  color: var(--blush);
 }
 .title,
 .sub_title {
@@ -67,7 +67,7 @@
     width: 100%;
     z-index: 90;
   }
-  .title{
+  .title {
     margin-bottom: 1rem;
   }
   .title,
@@ -79,7 +79,7 @@
     text-align: left;
     color: var(--blush);
     font-size: 30px;
-    padding-left: 1rem;;
+    padding-left: 1rem;
     margin-bottom: 1rem;
   }
   .copy {
@@ -89,22 +89,24 @@
     margin: 0rem 1rem 2rem 1rem;
   }
   .form_section {
-  justify-content: center;
-}
-  .form_photo {
-  display: none;
-}
-  @media (prefers-color-scheme: dark) {
-  .copy{
-    color: #ecd5cd;
+    justify-content: center;
   }
-}
+  .form_photo {
+    display: none;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .copy {
+      color: #ecd5cd;
+    }
+  }
 }
 
 /* dark mode stylings */
 @media (prefers-color-scheme: dark) {
   .title,
-  .sub_title {
+  .sub_title,
+  .copy {
     color: #ecd5cd;
   }
 }
@@ -112,4 +114,3 @@
 [data-theme="dark"] :is(.title, .sub_title, .copy) {
   color: #ecd5cd;
 }
-

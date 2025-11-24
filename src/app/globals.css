@@ -45,14 +45,15 @@ h2 {
   font-size: 2em;
 }
 
-p, label {
+p,
+label {
   font-size: 1.4em;
 }
 
 @media (max-width: 667px) {
   h2 {
-  font-size: 1.8em;
-}
+    font-size: 1.8em;
+  }
 }
 
 /* accessibility font style */
@@ -172,4 +173,3 @@ button {
 [data-theme="dark"] nav {
   background-color: #232227;
 }
-

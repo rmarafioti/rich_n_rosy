@@ -2,6 +2,11 @@
   text-align: left;
   margin-right: 2rem;
 }
+
+.rsvp_button {
+  display: none;
+}
+
 .header {
   margin: 0rem 0rem 0.5rem 0rem;
 }
@@ -80,6 +85,18 @@
     flex-direction: column;
     width: 90%;
     margin-right: 0rem;
+  }
+  .rsvp_button {
+    text-align: center;
+    background-color: var(--maroon);
+    color: var(--blush);
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    padding: 0.8rem 0.5rem 0.8rem 0.5rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
   }
   .header {
     margin-top: 1rem;
