@@ -45,7 +45,11 @@
 .date {
   font-weight: 600;
   font-size: 36px;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+.note {
+  margin-bottom: 4rem;
 }
 
 .copy {
@@ -102,29 +106,32 @@
   }
   .sub_title {
     color: var(--blush);
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 0rem;
   }
   .date {
   font-weight: 600;
-  font-size: 28px;
+  font-size: 24px;
   padding-left: .5rem;
   margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+.note {
+  font-size: 18px;
+  padding-left: .5rem;
   margin-bottom: 1rem;
 }
   .copy {
-    color: var(--blush);
-    width: 200px;
-    margin-top: 1rem;
-  }
-  .address_container,
-  .details_section {
-    margin: 0rem 0.5rem 1rem 0.5rem;
-  }
-  .details_section {
     position: absolute;
-    top: 530px;
+    top: 620px;
+    color: var(--blush);
+    padding-left: .5rem;
+    width: 200px;
   }
+  .address_container {
+    margin: 0rem 0.5rem 0rem 0.5rem;
+  }
+
   @media (prefers-color-scheme: dark) {
     .copy {
       color: #ecd5cd;
