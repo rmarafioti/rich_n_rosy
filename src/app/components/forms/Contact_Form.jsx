@@ -14,8 +14,7 @@ export default function Contact_Form() {
   const { isOpen, openModal, closeModal } = useModal();
 
   const inputForm = {
-    first_name: "",
-    last_name: "",
+    full_name: "",
     email: "",
     message: "",
   };
@@ -23,8 +22,7 @@ export default function Contact_Form() {
   const [formValues, setFormValues] = useState(inputForm);
 
   const inputValidationError = {
-    first_name: false,
-    last_name: false,
+    full_name: false,
     email: false,
     message: false,
   };
@@ -102,30 +100,15 @@ export default function Contact_Form() {
         take this big step together.
       </p>
       <form ref={formRef} onSubmit={sendEmail}>
-        <div className={styles.name_section}>
-          <div className={styles.name_container_one}>
-            <label className={styles.label}>First name*</label>
-            <input
-              className={styles.name}
-              type="text"
-              name="first_name"
-              aria-label="first_name"
-              value={formValues.first_name}
-              onChange={handleInputChange}
-            />
-          </div>
-          <div className={styles.name_container_two}>
-            <label className={styles.label}>Last name*</label>
-            <input
-              className={styles.name}
-              type="text"
-              name="last_name"
-              aria-label="last_name"
-              value={formValues.last_name}
-              onChange={handleInputChange}
-            />
-          </div>
-        </div>
+        <label className={styles.label}>Full name*</label>
+        <input
+          className={styles.name}
+          type="text"
+          name="full_name"
+          aria-label="full_name"
+          value={formValues.full_name}
+          onChange={handleInputChange}
+        />
         <label className={styles.label}>Email*</label>
         <input
           className={styles.email}
@@ -153,10 +136,7 @@ export default function Contact_Form() {
         />
 
         {validationError.first_name && (
-          <p className={styles.required_error}>*Please enter your first name</p>
-        )}
-        {validationError.last_name && (
-          <p className={styles.required_error}>*Please enter your last name</p>
+          <p className={styles.required_error}>*Please enter your full name</p>
         )}
         {validationError.email && (
           <p className={styles.required_error}>*Please enter your email</p>

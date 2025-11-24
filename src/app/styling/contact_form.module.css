@@ -10,25 +10,6 @@
   margin-bottom: 2rem;
 }
 
-.name_section {
-  display: flex;
-  justify-content: space-between;
-  margin: 1rem 0rem 1rem 0rem;
-}
-
-.label,
-.required,
-.required_error,
-.message {
-  font-family: Arial, Verdana, sans-serif;
-}
-
-.name_container_one,
-.name_container_two {
-  display: flex;
-  flex-direction: column;
-}
-
 .name,
 .email,
 .message,
@@ -42,6 +23,7 @@
   border: 1px solid var(--foreground);
 }
 
+.name,
 .email,
 .message,
 .send {
