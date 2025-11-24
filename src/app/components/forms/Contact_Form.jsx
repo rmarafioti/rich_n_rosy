@@ -135,7 +135,7 @@ export default function Contact_Form() {
           disabled={isLoading}
         />
 
-        {validationError.first_name && (
+        {validationError.full_name && (
           <p className={styles.required_error}>*Please enter your full name</p>
         )}
         {validationError.email && (

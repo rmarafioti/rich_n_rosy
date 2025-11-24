@@ -1,8 +1,9 @@
 .contact_form_container {
   text-align: left;
-  
-}.header {
-  margin: 2rem 0rem 0.5rem 0rem;
+  margin-right: 2rem;
+}
+.header {
+  margin: 0rem 0rem 0.5rem 0rem;
 }
 
 .sub_header {
@@ -17,18 +18,10 @@
   font-size: 20px;
   display: flex;
   padding: 0.5rem;
-  margin-top: 0.2rem;
-  width: 280px;
+  margin: 0.2rem 0rem 1rem 0rem;
   border-radius: 5px;
   border: 1px solid var(--foreground);
-}
-
-.name,
-.email,
-.message,
-.send {
   width: 100%;
-  margin-bottom: 1rem;
 }
 
 .message {
@@ -86,6 +79,7 @@
     display: flex;
     flex-direction: column;
     width: 90%;
+    margin-right: 0rem;
   }
   .header {
     margin-top: 1rem;

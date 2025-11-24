@@ -34,6 +34,16 @@
   width: 500px;
 }
 
+.form_section {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.form_photo {
+  width: auto;
+  height: 640px;
+}
+
 @media (max-width: 1300px) {
   .header_container {
     top: 270px;
@@ -78,6 +88,12 @@
     width: auto;
     margin: 0rem 1rem 2rem 1rem;
   }
+  .form_section {
+  justify-content: center;
+}
+  .form_photo {
+  display: none;
+}
   @media (prefers-color-scheme: dark) {
   .copy{
     color: #ecd5cd;

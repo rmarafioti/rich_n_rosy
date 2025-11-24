@@ -3,6 +3,7 @@
 import { engagement_photos_mobile, feature_photos } from "./data/photos";
 import ResponsiveImage from "./components/Responsive_Image";
 import Contact_Form from "./components/forms/Contact_Form";
+import Image from "next/image";
 
 import styles from "./styling/home.module.css";
 
@@ -11,6 +12,7 @@ export default function Home() {
   const heroSectionPhotoMobile = engagement_photos_mobile.find(
     (p) => p.id === 5
   );
+  const formPhoto = engagement_photos_mobile.find((p) => p.id === 12);
 
   return (
     <main className={styles.layout}>
@@ -30,7 +32,16 @@ export default function Home() {
         pcClass={styles.image}
         mobileClass={styles.image_mobile}
       />
-      <Contact_Form />
+      <section className={styles.form_section}>
+        <Contact_Form />
+        <Image
+          src={formPhoto.photo}
+          alt={formPhoto.alt}
+          width={formPhoto.width}
+          height={formPhoto.height}
+          className={styles.form_photo}
+        />
+      </section>
     </main>
   );
 }
