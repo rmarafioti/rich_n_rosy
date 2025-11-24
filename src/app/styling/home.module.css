@@ -11,7 +11,7 @@
 .header_container {
   position: absolute;
   text-align: left;
-  top: 240px;
+  top: 120px;
    color: var(--blush);
 }
 .title,
@@ -52,10 +52,13 @@
     height: auto;
   }
   .header_container {
-    top: 120px;
+    top: -20px;
     text-align: center;
     width: 100%;
     z-index: 90;
+  }
+  .title{
+    margin-bottom: 1rem;
   }
   .title,
   .sub_title {

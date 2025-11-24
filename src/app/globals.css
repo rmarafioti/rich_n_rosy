@@ -27,9 +27,7 @@ body {
 }
 
 body {
-  /* main text color */
   color: var(--maroon);
-  /* main background color*/
   background: var(--blush);
 }
 
@@ -67,32 +65,23 @@ a {
   text-decoration: none;
 }
 
-nav,
-footer {
+nav {
   background-color: #c68da8;
   display: flex;
   flex-direction: row;
   padding: 1rem 0rem 0rem 0rem;
 }
 
-footer {
-  justify-content: center;
-  padding: 2rem 0rem 2rem 0rem;
-  border-bottom: none;
-  background-color: var(--blush);
-  border-top: 0px solid var(--background);
-}
-
 main {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-items: center;
   text-align: center;
-  /* ensure footer stays at the bottom of page*/
-  min-height: 100vh;
-  margin: 0rem 0rem 4rem 0rem;
   animation: fadeIn 2s ease-in-out;
+  width: 100%;
+  min-height: 100vh;
 }
 
 @keyframes fadeIn {

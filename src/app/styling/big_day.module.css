@@ -12,7 +12,7 @@
   position: absolute;
   align-self: flex-start;
   text-align: left;
-  top: 240px;
+  top: 60px;
   width: 500px;
   margin-left: 6rem;
   color: var(--blush);
@@ -83,7 +83,7 @@
     height: auto;
   }
   .header_container {
-    top: 110px;
+    top: -20px;
     text-align: left;
     z-index: 90;
     text-align: left;
