@@ -18,6 +18,10 @@
   word-spacing: 0.1em;
 }
 
+.kern {
+  letter-spacing: -0.03em;
+}
+
 .copy,
 .copy_tag {
   margin-bottom: 2rem;;

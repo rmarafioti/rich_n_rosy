@@ -17,7 +17,10 @@ export default function Home() {
   return (
     <main className={styles.layout}>
       <div className={styles.header_container}>
-        <h1 className={styles.title}>Rosy & Rich Get Hitched!</h1>
+        <h1 className={styles.title}>
+          <span className={styles.kern}>R</span>osy &{" "}
+          <span className={styles.kern_two}>R</span>ich Get Hitched!
+        </h1>
         <p className={styles.sub_title}>July 18th 2026</p>
         <p className={styles.copy}>
           Welcome to our wedding website! As we get closer to the big day,

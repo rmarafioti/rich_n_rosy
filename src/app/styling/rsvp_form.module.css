@@ -21,6 +21,10 @@
   word-spacing: 0.1em;
 }
 
+.kern {
+  letter-spacing: -0.03em;
+}
+
 .header_container {
   margin: 2rem 0rem 2rem 0rem;
 }

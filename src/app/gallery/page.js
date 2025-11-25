@@ -42,7 +42,9 @@ export default function Gallery() {
     <main>
       <div className={styles.header_container}>
         <div className={styles.copy_container}>
-          <h1 className={styles.heading}>Photo Gallery</h1>
+          <h1 className={styles.heading}>
+            <span className={styles.kern}>P</span>hoto Gallery
+          </h1>
           <p className={styles.copy}>
             <a href="https://www.musicboxtheatre.com/" target="_blank">
               The Music Box Theatre

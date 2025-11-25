@@ -23,6 +23,13 @@
   word-spacing: 0.1em;
 }
 
+.kern {
+  letter-spacing: -0.04em;
+}
+.kern_two {
+  letter-spacing: -0.02em;
+}
+
 .sub_title {
   font-family: var(--main-font);
   font-weight: 300;

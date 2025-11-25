@@ -35,6 +35,13 @@
   text-shadow: 5px 0px 5px #030303;
 }
 
+.kern {
+  letter-spacing: -0.04em;
+}
+.kern_two {
+  letter-spacing: -0.02em;
+}
+
 .sub_title {
   font-family: var(--main-font);
   font-weight: 300;
