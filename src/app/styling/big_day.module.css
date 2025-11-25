@@ -71,12 +71,10 @@
   .title,
   .copy,
   .intro,
-  .image_mobile {
-    width: 100%;
-  }
+  .image_mobile,
   .header_container,
   .address_container {
-    width: 90%;
+    width: 100%;
   }
   .image {
     display: none;
@@ -89,18 +87,19 @@
   }
   .header_container {
     top: -20px;
-    text-align: left;
+    align-self: center;
     z-index: 90;
-    text-align: left;
     margin: 0rem 0.5rem 0rem 0.5rem;
     color: var(--blush);
   }
   .intro {
+    text-align: center;
     font-weight: 600;
     color: var(--maroon);
     margin-bottom: 0.5rem;
   }
   .title {
+    text-align: center;
     color: var(--maroon);
     font-size: 60px;
     text-shadow: none;
@@ -113,24 +112,24 @@
   .date {
     font-weight: 600;
     font-size: 24px;
-    padding-left: 0.5rem;
+    padding-left: 1rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
   }
   .note {
     font-size: 18px;
-    padding-left: 0.5rem;
+    padding-left: 1rem;
     margin-bottom: 1rem;
   }
   .copy {
     position: absolute;
     top: 620px;
     color: var(--blush);
-    padding-left: 0.5rem;
+    padding-left: 1rem;
     width: 200px;
   }
   .address_container {
-    margin: 0rem 0.5rem 0rem 0.5rem;
+    padding-left: 1rem;
   }
 
   @media (prefers-color-scheme: dark) {

@@ -87,6 +87,7 @@
     margin-right: 0rem;
   }
   .rsvp_button {
+    text-decoration: none;
     text-align: center;
     background-color: var(--maroon);
     color: var(--blush);

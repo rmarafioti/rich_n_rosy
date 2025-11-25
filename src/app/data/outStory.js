@@ -2,7 +2,7 @@ export const ourStory = [
   {
     id: 1,
     date: "June 2021:",
-    text: "Our first date! It was a hot summer night and we spent hours on Rich&apos;s patio talking and getting to know each other. We knew right away that we were in for something special.",
+    text: "Our first date! It was a hot summer night and we spent hours on Rich's patio talking and getting to know each other. We knew right away that we were in for something special.",
   },
   {
     id: 2,
@@ -12,17 +12,17 @@ export const ourStory = [
   {
     id: 3,
     date: "April 2022:",
-    text: "Rosy&apos;s first trip to New York! We enjoyed a boat ride in Central Park, incredible art museums, and a perfect New York slice in the city that shaped Rich.",
+    text: "Rosy's first trip to New York! We enjoyed a boat ride in Central Park, incredible art museums, and a perfect New York slice in the city that shaped Rich.",
   },
   {
     id: 4,
     date: "August 2022:",
-    text: " We bought our dream home by the lake, a block away from Thorndale Beach, where we first said “I love you”. Since then, we&apos;ve filled our home with color, vintage treasures, and so many joyful memories.",
+    text: " We bought our dream home by the lake, a block away from Thorndale Beach, where we first said “I love you”. Since then, we've filled our home with color, vintage treasures, and so many joyful memories.",
   },
   {
     id: 5,
     date: "March 2023:",
-    text: "Rich&apos;s first Bruce Springsteen concert! Our relationship wouldn&apos;t be complete without Rich fully embracing The Boss.",
+    text: "Rich's first Bruce Springsteen concert! Our relationship wouldn't be complete without Rich fully embracing The Boss.",
   },
   {
     id: 6,
@@ -32,7 +32,7 @@ export const ourStory = [
   {
     id: 7,
     date: "2024/2025:",
-    text: "Lots of big changes! Rich closed his business, Wild Wind Tattoo, after 10 successful years to transition into a career in tech. Rosy continued her education and will receive her Master&apos;s in Learning Sciences right before the wedding. Owen became a pre-teen and discovered new hobbies and talents, in addition to making the honor roll. Stevie learned to sit and thrived at day care. Through it all, they supported each other as a family and grew closer than ever.",
+    text: "Lots of big changes! Rich closed his business, Wild Wind Tattoo, after 10 successful years to transition into a career in tech. Rosy continued her education and will receive her Master's in Learning Sciences right before the wedding. Owen became a pre-teen and discovered new hobbies and talents, in addition to making the honor roll. Stevie learned to sit and thrived at day care. Through it all, they supported each other as a family and grew closer than ever.",
   },
   {
     id: 8,
@@ -42,6 +42,6 @@ export const ourStory = [
   {
     id: 9,
     date: "July 2026:",
-    text: "We say “I do!”. We can&apos;t wait to celebrate with you as we begin the next chapter of our lives together.",
+    text: "We say “I do!”. We can't wait to celebrate with you as we begin the next chapter of our lives together.",
   },
 ];

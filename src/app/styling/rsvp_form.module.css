@@ -126,7 +126,7 @@
     align-items: center;
     color: var(--maroon);
     width: 100%;
-    top: 0px;
+    top: -20px;
     text-align: center;
     z-index: 99;
   }
