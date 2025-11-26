@@ -1,0 +1,47 @@
+.icon {
+  width: 164px;
+  height: auto;
+  margin-left: 4rem;
+  margin-right: 2rem;
+}
+.icon_light {
+    display: block;
+}
+
+.copy {
+    padding-bottom: .5rem;
+}
+
+/* Hide dark theme icon by default */
+.icon_dark {
+  display: none;
+}
+
+[data-theme="dark"] .icon_light {
+  display: none;
+}
+
+[data-theme="dark"] .icon_dark {
+  display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+.icon_light {
+    display: none;
+}
+.icon_dark {
+    display: block;
+}
+}
+
+@media (max-width: 667px) {
+  .icon {
+    margin-left: 1rem;
+    width: 100px;
+    height: auto;
+  }
+  .copy {
+    font-size: 16px;
+    padding-bottom: .2rem;
+  }
+}

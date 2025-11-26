@@ -151,11 +151,12 @@
   .title,
   .sub_title,
   .copy,
-  .date {
+  .date,
+  .note {
     color: #ecd5cd;
   }
 }
 
-[data-theme="dark"] :is(.title, .sub_title, .copy, .date) {
+[data-theme="dark"] :is(.title, .sub_title, .copy, .date, .note) {
   color: #ecd5cd;
 }

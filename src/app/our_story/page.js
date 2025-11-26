@@ -28,7 +28,7 @@ export default function Our_Story() {
   return (
     <main className={styles.our_story_page}>
       <h1 className={styles.title}>Our Story</h1>
-      {/*<div className={styles.story_card_container}>
+      <div className={styles.story_card_container}>
         {ourStory.map((story) => (
           <StoryCard key={story.id} date={story.date} text={story.text} />
         ))}
@@ -39,7 +39,7 @@ export default function Our_Story() {
         width={ourStoryBackground.width}
         height={ourStoryBackground.height}
         className={styles.our_story_bg}
-      />*/}
+      />
     </main>
   );
 }

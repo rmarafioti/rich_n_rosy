@@ -169,7 +169,7 @@
     border: none;
   }
   [data-theme="dark"] .accessIcon {
-    color: #680a14;
+    color: var(--background);
     background-color: #ecd5cd;
     border: none;
 }
