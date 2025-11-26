@@ -16,6 +16,7 @@
   margin-left: 28rem;
 }
 
+
 .story_card {
   position: relative;
   top: 360px;
@@ -33,6 +34,11 @@
   opacity: 1;
   transform: translateX(0px);
   transition: opacity 1.5s ease-in, transform 1s ease-in;
+}
+
+/*styles each card independantly*/
+.card_1 {
+  top: 400px;
 }
 
 .date {

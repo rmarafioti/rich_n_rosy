@@ -7,13 +7,15 @@ import Image from "next/image";
 
 import styles from "../styling/our_story.module.css";
 
-function StoryCard({ date, text }) {
+function StoryCard({ date, text, cardId }) {
   const [ref, isVisible] = useVisibilityObserver(0.1);
 
   return (
     <div
       ref={ref}
-      className={`${styles.story_card} ${isVisible ? styles.visible : ""}`}
+      className={`${styles.story_card} ${styles[`card_${cardId}`]} ${
+        isVisible ? styles.visible : ""
+      }`}
     >
       <p className={styles.date}>{date}</p>
       <p>{text}</p>
@@ -29,8 +31,13 @@ export default function Our_Story() {
     <main className={styles.our_story_page}>
       <h1 className={styles.title}>Our Story</h1>
       <div className={styles.story_card_container}>
-        {ourStory.map((story) => (
-          <StoryCard key={story.id} date={story.date} text={story.text} />
+        {ourStory.map((story, index) => (
+          <StoryCard
+            key={story.id}
+            date={story.date}
+            text={story.text}
+            cardId={story.id}
+          />
         ))}
       </div>
       <Image
