@@ -208,3 +208,12 @@ export const engagement_photos_mobile = [
     width: 1464,
   },
 ];
+
+export const our_story_background = {
+  id: 1,
+  photo:
+    "https://res.cloudinary.com/dzpne110u/image/upload/v1764116623/wedding_website/our_story/our_story_mock_nvb4pg.png",
+  alt: "our story background",
+  height: 7072,
+  width: 1932,
+};
