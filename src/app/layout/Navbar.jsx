@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import ResponsiveImage from "../components/Responsive_Image";
 import { icons } from "../data/photos";
 

@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  top: 240px;
+  top: 120px;
   color: var(--blush);
   width: 590px;
 }
@@ -19,6 +19,10 @@
   font-size: 100px;
   font-weight: normal;
   word-spacing: 0.1em;
+}
+
+.kern {
+  letter-spacing: -0.03em;
 }
 
 .header_container {
@@ -126,7 +130,7 @@
     align-items: center;
     color: var(--maroon);
     width: 100%;
-    top: 120px;
+    top: -20px;
     text-align: center;
     z-index: 99;
   }
@@ -144,7 +148,7 @@
     text-align: left;
     padding-left: 1rem;
     margin-top: 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: .5rem;
     width: 100%;
   }
   .header {

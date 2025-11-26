@@ -13,19 +13,20 @@ export default function Event() {
     <main>
       <article className={styles.header_container}>
         <p className={styles.intro}>Come celebrate the wedding of</p>
-        <h2 className={styles.title}>Rosy Phinick & Rich Marafioti</h2>
+        <h2 className={styles.title}>
+          <span className={styles.kern}>R</span>osy Phinick &{" "}
+          <span className={styles.kern_two}>R</span>ich Marafioti
+        </h2>
         <p className={styles.date}>Saturday, July 18th 2026</p>
+        <p className={styles.note}>
+          5pm outdoor ceremony with reception to follow
+        </p>
         <section className={styles.address_container}>
           <p className={styles.sub_title}>Colvin House</p>
           <p className={styles.sub_title}>5940 N Sheridan Rd.</p>
           <p className={styles.sub_title}>Chicago</p>
         </section>
-        <section className={styles.details_section}>
-          <p className={styles.copy}>
-            5pm outdoor ceremony with reception to follow
-          </p>
-          <p className={styles.copy}>More information to come!</p>
-        </section>
+        <p className={styles.copy}>More information to come!</p>
       </article>
       <ResponsiveImage
         pcPhoto={featurePhoto}

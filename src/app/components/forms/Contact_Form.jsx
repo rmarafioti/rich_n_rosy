@@ -4,6 +4,7 @@ import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Form_Modal from "./Form_Modal";
 import useModal from "../../hooks/useModal";
+import Link from "next/link";
 
 import styles from "../../styling/contact_form.module.css";
 
@@ -14,8 +15,7 @@ export default function Contact_Form() {
   const { isOpen, openModal, closeModal } = useModal();
 
   const inputForm = {
-    first_name: "",
-    last_name: "",
+    full_name: "",
     email: "",
     message: "",
   };
@@ -23,8 +23,7 @@ export default function Contact_Form() {
   const [formValues, setFormValues] = useState(inputForm);
 
   const inputValidationError = {
-    first_name: false,
-    last_name: false,
+    full_name: false,
     email: false,
     message: false,
   };
@@ -94,6 +93,9 @@ export default function Contact_Form() {
 
   return (
     <div className={styles.contact_form_container}>
+      <Link href="/rsvp" className={styles.rsvp_button}>
+        Early RSVP
+      </Link>
       <h2 className={styles.header}>Words of Wisdom</h2>
       <p className={styles.sub_header}>
         As we look towards this next chapter of our lives together, we are
@@ -102,30 +104,15 @@ export default function Contact_Form() {
         take this big step together.
       </p>
       <form ref={formRef} onSubmit={sendEmail}>
-        <div className={styles.name_section}>
-          <div className={styles.name_container_one}>
-            <label className={styles.label}>First name*</label>
-            <input
-              className={styles.name}
-              type="text"
-              name="first_name"
-              aria-label="first_name"
-              value={formValues.first_name}
-              onChange={handleInputChange}
-            />
-          </div>
-          <div className={styles.name_container_two}>
-            <label className={styles.label}>Last name*</label>
-            <input
-              className={styles.name}
-              type="text"
-              name="last_name"
-              aria-label="last_name"
-              value={formValues.last_name}
-              onChange={handleInputChange}
-            />
-          </div>
-        </div>
+        <label className={styles.label}>Full name*</label>
+        <input
+          className={styles.name}
+          type="text"
+          name="full_name"
+          aria-label="full_name"
+          value={formValues.full_name}
+          onChange={handleInputChange}
+        />
         <label className={styles.label}>Email*</label>
         <input
           className={styles.email}
@@ -152,11 +139,8 @@ export default function Contact_Form() {
           disabled={isLoading}
         />
 
-        {validationError.first_name && (
-          <p className={styles.required_error}>*Please enter your first name</p>
-        )}
-        {validationError.last_name && (
-          <p className={styles.required_error}>*Please enter your last name</p>
+        {validationError.full_name && (
+          <p className={styles.required_error}>*Please enter your full name</p>
         )}
         {validationError.email && (
           <p className={styles.required_error}>*Please enter your email</p>

@@ -1,32 +1,19 @@
 .contact_form_container {
   text-align: left;
-  
-}.header {
-  margin: 2rem 0rem 0.5rem 0rem;
+  margin-right: 2rem;
+}
+
+.rsvp_button {
+  display: none;
+}
+
+.header {
+  margin: 0rem 0rem 0.5rem 0rem;
 }
 
 .sub_header {
   width: 600px;
   margin-bottom: 2rem;
-}
-
-.name_section {
-  display: flex;
-  justify-content: space-between;
-  margin: 1rem 0rem 1rem 0rem;
-}
-
-.label,
-.required,
-.required_error,
-.message {
-  font-family: Arial, Verdana, sans-serif;
-}
-
-.name_container_one,
-.name_container_two {
-  display: flex;
-  flex-direction: column;
 }
 
 .name,
@@ -36,17 +23,10 @@
   font-size: 20px;
   display: flex;
   padding: 0.5rem;
-  margin-top: 0.2rem;
-  width: 280px;
+  margin: 0.2rem 0rem 1rem 0rem;
   border-radius: 5px;
   border: 1px solid var(--foreground);
-}
-
-.email,
-.message,
-.send {
   width: 100%;
-  margin-bottom: 1rem;
 }
 
 .message {
@@ -104,6 +84,20 @@
     display: flex;
     flex-direction: column;
     width: 90%;
+    margin-right: 0rem;
+  }
+  .rsvp_button {
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--maroon);
+    color: var(--blush);
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    padding: 0.8rem 0.5rem 0.8rem 0.5rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
   }
   .header {
     margin-top: 1rem;

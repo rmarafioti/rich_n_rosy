@@ -42,20 +42,28 @@ export default function Gallery() {
     <main>
       <div className={styles.header_container}>
         <div className={styles.copy_container}>
-          <h1 className={styles.heading}>Photo Gallery</h1>
+          <h1 className={styles.heading}>
+            <span className={styles.kern}>P</span>hoto Gallery
+          </h1>
           <p className={styles.copy}>
-            The Music Box Theatre, first opened in 1929, is a Chicago
-            institution that has stood the test of time. This historic theater
-            has premiered our favorite movies, welcomed our favorite filmmakers,
-            and become one of our favorite date spots. If you asked us to
-            describe our perfect night, we&apos;d be at the Music Box with fresh
-            popcorn, the sound of the organ, and experiencing the magic of the
-            movies together. Shooting our engagement photos in this iconic place
-            that we hold so close to our hearts was a dream come true.
+            <a href="https://www.musicboxtheatre.com/" target="_blank">
+              The Music Box Theatre
+            </a>
+            , first opened in 1929, is a Chicago institution that has stood the
+            test of time. This historic theater has premiered our favorite
+            movies, welcomed our favorite filmmakers, and become one of our
+            favorite date spots. If you asked us to describe our perfect night,
+            we&apos;d be at the Music Box with fresh popcorn, the sound of the
+            organ, and experiencing the magic of the movies together. Shooting
+            our engagement photos in this iconic place that we hold so close to
+            our hearts was a dream come true.
           </p>
           <p className={styles.copy_tag}>
-            Thank you to The Music Box Theatre and Jeff Perlman for this
-            unforgettable experience.
+            Thank you to The Music Box Theatre and photographer{" "}
+            <a href="https://www.jeffperlmancreative.com/" target="_blank">
+              Jeff Perlman
+            </a>{" "}
+            for this unforgettable experience.
           </p>
           <p className={styles.tap}>tap photos to view</p>
         </div>

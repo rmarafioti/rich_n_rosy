@@ -11,8 +11,8 @@
 .header_container {
   position: absolute;
   text-align: left;
-  top: 240px;
-   color: var(--blush);
+  top: 120px;
+  color: var(--blush);
 }
 .title,
 .sub_title {
@@ -21,6 +21,13 @@
   font-size: 100px;
   font-weight: normal;
   word-spacing: 0.1em;
+}
+
+.kern {
+  letter-spacing: -0.04em;
+}
+.kern_two {
+  letter-spacing: -0.02em;
 }
 
 .sub_title {
@@ -32,6 +39,16 @@
 
 .copy {
   width: 500px;
+}
+
+.form_section {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.form_photo {
+  width: auto;
+  height: 640px;
 }
 
 @media (max-width: 1300px) {
@@ -52,10 +69,13 @@
     height: auto;
   }
   .header_container {
-    top: 120px;
+    top: -20px;
     text-align: center;
     width: 100%;
     z-index: 90;
+  }
+  .title {
+    margin-bottom: 1rem;
   }
   .title,
   .sub_title {
@@ -66,7 +86,7 @@
     text-align: left;
     color: var(--blush);
     font-size: 30px;
-    padding-left: 1rem;;
+    padding-left: 1rem;
     margin-bottom: 1rem;
   }
   .copy {
@@ -75,17 +95,25 @@
     width: auto;
     margin: 0rem 1rem 2rem 1rem;
   }
-  @media (prefers-color-scheme: dark) {
-  .copy{
-    color: #ecd5cd;
+  .form_section {
+    justify-content: center;
   }
-}
+  .form_photo {
+    display: none;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .copy {
+      color: #ecd5cd;
+    }
+  }
 }
 
 /* dark mode stylings */
 @media (prefers-color-scheme: dark) {
   .title,
-  .sub_title {
+  .sub_title,
+  .copy {
     color: #ecd5cd;
   }
 }
@@ -93,4 +121,3 @@
 [data-theme="dark"] :is(.title, .sub_title, .copy) {
   color: #ecd5cd;
 }
-
