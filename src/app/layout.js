@@ -5,6 +5,9 @@ import "./globals.css";
 export const metadata = {
   title: "Rosy & Rich Get Hitched",
   description: "All you need to know about our wedding July 2026",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({ children }) {
