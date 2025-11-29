@@ -29,7 +29,13 @@ export default function Our_Story() {
 
   return (
     <main>
-      <h1 className={styles.title}>Our Story</h1>
+      <div className={styles.header_container}>
+        <h1 className={styles.title}>Our Story</h1>
+        <p className={styles.sub_title}>Hop on the love train and</p>
+        <p className={styles.sub_title}>
+          discover our journey to tieing the knot!
+        </p>
+      </div>
       <div className={styles.story_card_container}>
         {ourStory.map((story, index) => (
           <StoryCard
