@@ -4,11 +4,15 @@ import { ourStory } from "../data/outStory";
 import useVisibilityObserver from "../hooks/useVisibilityObserver";
 import { our_story_background } from "../data/photos";
 import Image from "next/image";
+import { FaCircleArrowDown } from "react-icons/fa6";
 
 import styles from "../styling/our_story.module.css";
 
 function StoryCard({ date, text, cardId }) {
   const [ref, isVisible] = useVisibilityObserver(0.1);
+
+  const nextStopId = cardId + 1;
+  const nextStopData = ourStory.find((card) => card.id === nextStopId);
 
   return (
     <div
@@ -17,9 +21,12 @@ function StoryCard({ date, text, cardId }) {
         isVisible ? styles.visible : ""
       }`}
     >
-      <p className={styles.date}>{date}</p>
+      <p className={styles.date}>{date}:</p>
       <p>{text}</p>
-      <p className={styles.next_stop}>keep scrolling for the next stop</p>
+      <div className={styles.scroll_section}>
+        <p className={styles.next_stop}>Next stop: {nextStopData?.date}</p>
+        <FaCircleArrowDown className={styles.scroll_icon} />
+      </div>
     </div>
   );
 }

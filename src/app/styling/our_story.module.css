@@ -38,6 +38,17 @@
   transition: opacity 1.5s ease-in, transform 1s ease-in;
 }
 
+.scroll_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.scroll_icon {
+  font-size: 30px;
+}
+
 /*styles each card independantly*/
 .card_1 {
   margin-bottom: 21rem;
@@ -85,10 +96,6 @@
 .date {
   font-weight: 600;
   padding-bottom: 1rem;
-}
-
-.next_stop {
-  margin-top: 2rem;
 }
 
 .our_story_bg {
