@@ -132,12 +132,13 @@
     color: var(--maroon);
     width: 100%;
     top: 0px;
-    text-align: center;
+    text-align: left;
     z-index: 99;
   }
   .page_name {
-    font-size: 76px;
+    font-size: 78px;
     background-color: var(--blush);
+    padding-left: 1rem;
     width: 100%;
   }
   .form {

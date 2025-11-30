@@ -22,6 +22,9 @@ export default function Event() {
           <p className={styles.sub_title}>
             Colvin House &#8226; 5940 N Sheridan Rd. &#8226; Chicago
           </p>
+          <p className={styles.mobile_sub_title}>Colvin House</p>
+          <p className={styles.mobile_sub_title}>5940 N Sheridan Rd.</p>
+          <p className={styles.mobile_sub_title}>Chicago</p>
         </section>
         <p className={styles.note}>
           5pm outdoor ceremony with reception to follow
@@ -34,6 +37,10 @@ export default function Event() {
         pcClass={styles.image}
         mobileClass={styles.image_mobile}
       />
+      <p className={styles.mobile_note}>
+        5pm outdoor ceremony with reception to follow
+      </p>
+      <p className={styles.mobile_copy}>More information to come!</p>
     </main>
   );
 }

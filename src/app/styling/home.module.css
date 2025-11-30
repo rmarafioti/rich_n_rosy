@@ -32,7 +32,7 @@
 
 .sub_title {
   font-family: var(--main-font);
-  font-weight: 300;
+  font-weight: 600;
   font-size: 38px;
   margin-bottom: 1rem;
 }
@@ -86,7 +86,7 @@
   .sub_title {
     text-align: left;
     color: var(--blush);
-    font-size: 30px;
+    font-size: 28px;
     padding-left: 1rem;
     margin-bottom: 1rem;
   }
