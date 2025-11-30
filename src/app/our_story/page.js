@@ -1,8 +1,12 @@
 "use client";
 
-import { ourStory } from "../data/outStory";
+import { ourStory } from "../data/ourStory";
 import useVisibilityObserver from "../hooks/useVisibilityObserver";
-import { our_story_background } from "../data/photos";
+import {
+  our_story_background,
+  our_story_background_mobile,
+} from "../data/photos";
+import ResponsiveImage from "../components/Responsive_Image";
 import Image from "next/image";
 import { FaCircleArrowDown } from "react-icons/fa6";
 
@@ -49,13 +53,14 @@ function StoryCard({ date, text, dateTwo, textTwo, cardId }) {
 
 export default function Our_Story() {
   const ourStoryBackground = our_story_background;
+  const ourStoryBackgroundMobile = our_story_background_mobile;
 
   return (
     <main>
       <div className={styles.header_container}>
         <h1 className={styles.title}>Hop On The Love Train!</h1>
         <p className={styles.sub_title}>
-          Take a ride & discover our journey to tieing the knot!
+          Take a ride & discover our journey to tying the knot!
         </p>
       </div>
       <div className={styles.story_card_container}>
@@ -70,13 +75,11 @@ export default function Our_Story() {
           />
         ))}
       </div>
-      <Image
-        src={ourStoryBackground.photo}
-        alt={ourStoryBackground.alt}
-        width={ourStoryBackground.width}
-        height={ourStoryBackground.height}
-        className={styles.our_story_bg}
-        priority
+      <ResponsiveImage
+        pcPhoto={ourStoryBackground}
+        mobilePhoto={ourStoryBackgroundMobile}
+        pcClass={styles.our_story_bg}
+        mobileClass={styles.our_story_bg_mobile}
       />
     </main>
   );
