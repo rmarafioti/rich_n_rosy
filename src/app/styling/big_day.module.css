@@ -22,8 +22,7 @@
   margin-bottom: 1rem;
 }
 
-.title,
-.sub_title {
+.title {
   color: var(--blush);
   font-family: var(--summer-of-love-font);
   font-size: 90px;
@@ -45,7 +44,6 @@
 .sub_title {
   font-family: var(--main-font);
   font-weight: 300;
-  font-size: 38px;
   margin-bottom: 0rem;
 }
 
@@ -55,15 +53,13 @@
   margin-bottom: 1rem;
 }
 
-.note {
-  margin-bottom: 4rem;
-}
-
 .copy {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .address_container {
+  border-bottom: 1px solid #ecd5cd;
+  padding-bottom: 1rem;
   margin-bottom: 2rem;
   width: 500px;
 }
@@ -94,49 +90,46 @@
   }
   .header_container {
     top: -20px;
-    align-self: center;
+    align-self: left;
     z-index: 90;
-    margin: 0rem 0.5rem 0rem 0.5rem;
+    padding-left: 1rem;
+    margin: 0rem 0rem 0rem 0rem;
     color: var(--blush);
   }
   .intro {
-    text-align: center;
-    font-weight: 600;
+    font-size: 22px;;
     color: var(--maroon);
     margin-bottom: 0.5rem;
   }
   .title {
-    text-align: center;
     color: var(--maroon);
-    font-size: 60px;
+    font-size: 62px;
     text-shadow: none;
   }
   .sub_title {
-    color: var(--blush);
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 0rem;
   }
   .date {
     font-weight: 600;
     font-size: 24px;
-    padding-left: 1rem;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     margin-bottom: 0.5rem;
   }
   .note {
-    font-size: 18px;
-    padding-left: 1rem;
     margin-bottom: 1rem;
+    width: 90%;
   }
   .copy {
+    margin-top: 20.5rem;
     position: absolute;
-    top: 620px;
     color: var(--blush);
-    padding-left: 1rem;
-    width: 200px;
+    width: 100%;
   }
   .address_container {
-    padding-left: 1rem;
+    padding-bottom: .5rem;
+    margin-bottom: .5rem;
+    width: 300px;
   }
 
   @media (prefers-color-scheme: dark) {

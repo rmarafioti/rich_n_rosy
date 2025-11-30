@@ -11,15 +11,17 @@ export default function Rsvp() {
   const featurePhotoMobile = engagement_photos_mobile.find((p) => p.id === 10);
   return (
     <main className={styles.page_body}>
-      <article className={styles.header_container}>
-        <RSVP_Form />
-      </article>
-      <ResponsiveImage
-        pcPhoto={featurePhoto}
-        mobilePhoto={featurePhotoMobile}
-        pcClass={styles.image}
-        mobileClass={styles.image_mobile}
-      />
+      <div className={styles.content_wrapper}>
+        <article className={styles.header_container}>
+          <RSVP_Form />
+        </article>
+        <ResponsiveImage
+          pcPhoto={featurePhoto}
+          mobilePhoto={featurePhotoMobile}
+          pcClass={styles.image}
+          mobileClass={styles.image_mobile}
+        />
+      </div>
     </main>
   );
 }

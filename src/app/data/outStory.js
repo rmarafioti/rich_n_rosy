@@ -38,10 +38,8 @@ export const ourStory = [
     id: 8,
     date: "August 2025",
     text: "We planned an impromptu weekend trip at the end of the summer to visit House on the Rock in Wisconsin. We began the trip at the Milwaukee Art Museum, enjoying new exhibits and seeing some old favorites. When we arrived at Zeta, Rich asked Rosy if this was her favorite one. She said yes and then she said yes! Rich proposed in front of this beautiful piece of artwork that meant so much to us.",
-  },
-  {
-    id: 9,
-    date: "July 2026",
-    text: "We say “I do!”. We can't wait to celebrate with you as we begin the next chapter of our lives together.",
+    dateTwo: "July 2026",
+    textTwo:
+      "We say “I do!”. We can't wait to celebrate with you as we begin the next chapter of our lives together.",
   },
 ];
