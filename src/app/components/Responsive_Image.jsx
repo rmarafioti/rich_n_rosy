@@ -17,6 +17,7 @@ export default function ResponsiveImage({
           width={pcPhoto.width}
           height={pcPhoto.height}
           className={pcClass}
+          priority
         />
       )}
       {mobilePhoto && (
