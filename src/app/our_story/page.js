@@ -59,6 +59,7 @@ export default function Our_Story() {
         width={ourStoryBackground.width}
         height={ourStoryBackground.height}
         className={styles.our_story_bg}
+        priority
       />
     </main>
   );
