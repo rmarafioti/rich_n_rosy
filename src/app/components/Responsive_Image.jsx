@@ -27,6 +27,7 @@ export default function ResponsiveImage({
           width={mobilePhoto.width}
           height={mobilePhoto.height}
           className={mobileClass}
+          priority
         />
       )}
     </>

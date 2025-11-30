@@ -217,3 +217,12 @@ export const our_story_background = {
   height: 11245,
   width: 1204,
 };
+
+export const our_story_background_mobile = {
+  id: 1,
+  photo:
+    "https://res.cloudinary.com/dzpne110u/image/upload/v1764542251/wedding_website/our_story/our_story_mobile_map_ndhq3t.svg",
+  alt: "our story background",
+  height: 25385,
+  width: 2788,
+};
