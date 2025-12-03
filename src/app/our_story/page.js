@@ -13,7 +13,17 @@ import { FaCircleArrowDown } from "react-icons/fa6";
 
 import styles from "../styling/our_story.module.css";
 
-function StoryCard({ date, text, dateTwo, textTwo, cardId }) {
+function StoryCard({
+  date,
+  text,
+  src,
+  alt,
+  width,
+  height,
+  dateTwo,
+  textTwo,
+  cardId,
+}) {
   const [ref, isVisible] = useVisibilityObserver(0.1);
 
   const nextStopId = cardId + 1;
@@ -28,8 +38,17 @@ function StoryCard({ date, text, dateTwo, textTwo, cardId }) {
         isVisible ? styles.visible : ""
       }`}
     >
-      <p className={styles.date}>{date}:</p>
-      <p>{text}</p>
+      <div className={styles.date_section}>
+        <p className={styles.date}>{date}:</p>
+        <Image
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
+          className={styles.our_story_icons_mobile}
+        />
+        <p className={styles.text}>{text}</p>
+      </div>
       {notLastCard && (
         <section className={styles.scroll_section}>
           <p className={styles.next_stop}>Next stop: </p>
@@ -71,6 +90,10 @@ export default function Our_Story() {
             key={story.id}
             date={story.date}
             text={story.text}
+            src={story.src}
+            alt={story.alt}
+            width={story.width}
+            height={story.height}
             dateTwo={story.dateTwo}
             textTwo={story.textTwo}
             cardId={story.id}
