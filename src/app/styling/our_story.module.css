@@ -141,14 +141,48 @@
   object-fit: contain;
 }
 
+.our_story_bg_mobile,
+.our_story_bg_dark,
+.our_story_icons_mobile {
+  display: none;
+}
+
 @media (prefers-color-scheme: dark) {
   .story_card {
     background-color: #3b3840;
+  }
+  .our_story_bg {
+    display: none;
+  }
+  .our_story_bg_dark {
+    margin-top: 6rem;
+    position: absolute;
+    width: 1000px;
+    height: 8500px;
+    z-index: 1;
+    pointer-events: none;
+    display: block;
+    object-fit: contain;
   }
 }
 
 [data-theme="dark"] .story_card {
   background-color: #3b3840;
+}
+
+[data-theme="dark"] .our_story_bg {
+  display: none;
+}
+
+[data-theme="dark"] .our_story_bg_dark {
+  margin-top: 6rem;
+  position: absolute;
+  width: 1000px;
+  height: 8500px;
+  z-index: 1;
+  pointer-events: none;
+  display: block;
+  object-fit: contain;
 }
 
 @media (max-width: 667px) {
@@ -166,14 +200,15 @@
   .story_card_container {
     width: 100%;
   }
-  .our_story_bg {
+  .our_story_bg,
+  .our_story_bg_dark {
     display: none;
   }
   .our_story_bg_mobile {
     margin-top: 13rem;
     position: absolute;
     height: auto;
-    width: 105%;
+    width: 115%;
     display: block;
   }
   .story_card_container {
@@ -185,6 +220,22 @@
     font-size: 14px;
     z-index: 90;
     border-radius: 0px;
+  }
+  .date_section {
+    overflow: auto;
+  }
+  .date {
+    display: inline; /* Makes the date stay on the same line */
+    padding-bottom: 0rem;
+    margin-right: 8px;
+  }
+  .text {
+    margin-top: 1rem;
+  }
+  .our_story_icons_mobile {
+    display: block;
+    float: right;
+    margin-left: 1rem;
   }
   .card_1,
   .card_2,
@@ -198,7 +249,38 @@
     right: 0px;
     width: 100%;
   }
+  .card_2 .our_story_icons_mobile {
+    width: 170px;
+    height: auto;
+  }
+  .card_3 .our_story_icons_mobile {
+    width: 140px;
+    height: auto;
+  }
+  .card_4 .our_story_icons_mobile {
+    width: 140px;
+    height: auto;
+  }
+  .card_5 .our_story_icons_mobile {
+    width: 160px;
+    height: auto;
+  }
+  .card_6 .our_story_icons_mobile {
+    width: 160px;
+    height: auto;
+  }
+  .card_7 .our_story_icons_mobile {
+    width: 150px;
+    height: auto;
+  }
+  .card_8 .our_story_icons_mobile {
+    width: 160px;
+    height: auto;
+  }
   .card_8 {
     margin-bottom: 0rem;
+  }
+  [data-theme="dark"] .our_story_bg_dark {
+    display: none;
   }
 }

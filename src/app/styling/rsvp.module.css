@@ -7,6 +7,10 @@
   display: none;
 }
 
+.page_name {
+  display: none;
+}
+
 .header_container {
   text-align: left;
   margin-right: 8rem;
@@ -21,8 +25,20 @@
     background-color: black;
     padding-bottom: 2rem;
   }
+  .page_name {
+    display: block;
+    font-family: var(--summer-of-love-font);
+    font-size: 80px;
+    font-weight: normal;
+    word-spacing: 0.1em;
+    background-color: var(--blush);
+    margin-right: 0rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+  }
 
-   .content_wrapper {
+  .content_wrapper {
     display: block;
     position: relative;
   }
@@ -41,7 +57,7 @@
 
   .image_mobile {
     position: absolute;
-    top: 140;
+    top: 0;
     display: block;
     margin-top: 0rem;
     padding-bottom: 0rem;
