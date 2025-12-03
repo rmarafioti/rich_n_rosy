@@ -114,7 +114,9 @@
   .image_mobile {
     position: initial;
     display: block;
-    margin-top: 8.5rem;
+    margin-top: 9rem;
+    padding-bottom: 1rem;
+    background-color: black;
     height: auto;
   }
   .header_container {
@@ -132,7 +134,7 @@
   }
   .title {
     color: var(--maroon);
-    font-size: 62px;
+    font-size: 64px;
     text-shadow: none;
   }
   .date {
