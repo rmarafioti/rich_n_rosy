@@ -40,6 +40,7 @@ function StoryCard({
     >
       <div className={styles.date_section}>
         <p className={styles.date}>{date}:</p>
+        {/* now use responsive image component to load in the dark theme icons */}
         <Image
           src={src}
           alt={alt}

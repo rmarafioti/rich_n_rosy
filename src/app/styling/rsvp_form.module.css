@@ -14,23 +14,20 @@
   width: 420px;
 }
 
-.page_name {
-  font-family: var(--summer-of-love-font);
-  font-size: 100px;
-  font-weight: normal;
-  word-spacing: 0.1em;
-}
-
-.kern {
-  letter-spacing: -0.03em;
-}
-
 .header_container {
   margin: 2rem 0rem 2rem 0rem;
 }
 
 .header {
   width: 420px;
+}
+
+.page_name {
+  font-family: var(--summer-of-love-font);
+  margin-right: 1.5rem;
+  font-size: 100px;
+  font-weight: normal;
+  word-spacing: 0.1em;
 }
 
 .label {
@@ -136,10 +133,7 @@
     z-index: 99;
   }
   .page_name {
-    font-size: 78px;
-    background-color: var(--blush);
-    padding-left: 1rem;
-    width: 100%;
+    display: none;
   }
   .form {
     width: 100%;
@@ -149,7 +143,7 @@
     text-align: left;
     padding-left: 1rem;
     margin-top: 1rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     width: 100%;
   }
   .header {
@@ -171,9 +165,9 @@
   .send {
     width: 100%;
   }
-.name {
-  margin-bottom: 6rem;
-}
+  .name {
+    margin-bottom: 6rem;
+  }
   .radio_group {
     display: flex;
     flex-direction: column;

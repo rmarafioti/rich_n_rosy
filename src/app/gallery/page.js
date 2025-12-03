@@ -83,6 +83,7 @@ export default function Gallery() {
         width={headerPhoto.width}
         height={headerPhoto.height}
         className={styles.header_photo}
+        sizes="100vw"
       />
       <Image_Gallery_Modal
         isOpen={isOpen}

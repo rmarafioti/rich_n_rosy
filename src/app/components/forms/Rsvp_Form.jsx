@@ -84,9 +84,7 @@ export default function RSVP_Form() {
 
   return (
     <div className={styles.contact_form_container}>
-      <h1 className={styles.page_name}>
-        Early <span className={styles.kern}>B</span>ird RSVP
-      </h1>
+      <h1 className={styles.page_name}>Early RSVP</h1>
       <div className={styles.header_container}>
         <h2 className={styles.header}>Already know?</h2>
         <h2 className={styles.header}>Fill out the form below!</h2>
