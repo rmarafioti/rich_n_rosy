@@ -212,10 +212,19 @@ export const engagement_photos_mobile = [
 export const our_story_background = {
   id: 1,
   photo:
-    "https://res.cloudinary.com/dzpne110u/image/upload/v1764467557/wedding_website/our_story/Frame_1_4_gjt9xn.png",
+    "https://res.cloudinary.com/dzpne110u/image/upload/v1764723416/wedding_website/our_story/our_story_bg_pc_light_gonazn.png",
   alt: "our story background",
-  height: 11245,
-  width: 1204,
+  height: 8556,
+  width: 916,
+};
+
+export const our_story_background_dark = {
+  id: 1,
+  photo:
+    "https://res.cloudinary.com/dzpne110u/image/upload/v1764723443/wedding_website/our_story/our_story_bg_pc_dark_hubgmd.png",
+  alt: "our story background",
+  height: 8557,
+  width: 916,
 };
 
 export const our_story_background_mobile = {

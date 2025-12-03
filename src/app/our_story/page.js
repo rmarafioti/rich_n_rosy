@@ -4,6 +4,7 @@ import { ourStory } from "../data/ourStory";
 import useVisibilityObserver from "../hooks/useVisibilityObserver";
 import {
   our_story_background,
+  our_story_background_dark,
   our_story_background_mobile,
 } from "../data/photos";
 import ResponsiveImage from "../components/Responsive_Image";
@@ -53,6 +54,7 @@ function StoryCard({ date, text, dateTwo, textTwo, cardId }) {
 
 export default function Our_Story() {
   const ourStoryBackground = our_story_background;
+  const ourStoryBackgroundDark = our_story_background_dark;
   const ourStoryBackgroundMobile = our_story_background_mobile;
 
   return (
@@ -80,6 +82,14 @@ export default function Our_Story() {
         mobilePhoto={ourStoryBackgroundMobile}
         pcClass={styles.our_story_bg}
         mobileClass={styles.our_story_bg_mobile}
+      />
+      <Image
+        src={ourStoryBackgroundDark.photo}
+        alt={ourStoryBackgroundDark.alt}
+        width={ourStoryBackgroundDark.width}
+        height={ourStoryBackgroundDark.height}
+        className={styles.our_story_bg_dark}
+        priority
       />
     </main>
   );
