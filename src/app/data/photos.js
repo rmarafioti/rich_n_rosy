@@ -235,3 +235,24 @@ export const our_story_background_mobile = {
   height: 25385,
   width: 2788,
 };
+
+export const footer_icons = [
+  {
+    id: 1,
+    name: "footer_heart_light_mode",
+    photo:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1764724774/wedding_website/our_story/heart_maroon_h8yyoc.svg",
+    alt: "footer icon",
+    width: 146,
+    height: 136,
+  },
+  {
+    id: 2,
+    name: "footer_heart_dark_mode",
+    photo:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1764808935/wedding_website/our_story/heart_blush_ra7hnw.svg",
+    alt: "footer icon",
+    width: 146,
+    height: 136,
+  },
+];
