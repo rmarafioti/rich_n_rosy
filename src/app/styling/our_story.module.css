@@ -1,7 +1,7 @@
 .header_container {
   align-self: flex-start;
   text-align: left;
-  padding-left: 4rem;
+  padding-left: 6rem;
   margin-top: 3rem;
 }
 .title {
@@ -186,6 +186,12 @@
   object-fit: contain;
 }
 
+@media (min-width: 1540px) {
+  .header_container {
+    padding-left: 36rem;
+  }
+}
+
 @media (max-width: 667px) {
   .header_container {
     padding-left: 1rem;
@@ -315,9 +321,9 @@
       display: none;
     }
     .our_story_icons_mobile_dark {
-       display: block;
-    float: right;
-    margin-left: 1rem;
+      display: block;
+      float: right;
+      margin-left: 1rem;
     }
     .card_2 .our_story_icons_mobile_dark {
       width: 170px;

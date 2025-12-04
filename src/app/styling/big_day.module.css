@@ -12,7 +12,7 @@
   position: absolute;
   align-self: flex-start;
   text-align: left;
-  top: 60px;
+  margin-top: 4rem;
   width: 500px;
   margin-left: 6rem;
   color: var(--blush);
@@ -70,9 +70,9 @@
   display: none;
 }
 
-@media (max-width: 1300px) {
+@media (min-width: 1540px) {
   .header_container {
-    top: 270px;
+  margin-left: 28rem;
   }
 }
 
