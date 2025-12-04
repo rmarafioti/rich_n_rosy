@@ -45,8 +45,14 @@
     width: 100px;
     height: auto;
   }
+  .heart {
+  height: 78px;
+  width: auto;
+  margin-left: 2rem;
+  margin-right: 1rem;
+}
   .copy {
-    font-size: 16px;
+    font-size: 10px;
     padding-bottom: .2rem;
   }
 }
