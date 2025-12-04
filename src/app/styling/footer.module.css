@@ -4,7 +4,12 @@
   margin-left: 4rem;
   margin-right: 2rem;
 }
-.icon_light {
+.heart {
+  height: 120px;
+  width: auto;
+  margin-left: 2rem;
+}
+.icon_light, .heart_light {
     display: block;
 }
 
@@ -13,23 +18,23 @@
 }
 
 /* Hide dark theme icon by default */
-.icon_dark {
+.icon_dark, .heart_dark {
   display: none;
 }
 
-[data-theme="dark"] .icon_light {
+[data-theme="dark"] :is(.icon_light, .heart_light) {
   display: none;
 }
 
-[data-theme="dark"] .icon_dark {
+[data-theme="dark"] :is(.icon_dark, .heart_dark) {
   display: block;
 }
 
 @media (prefers-color-scheme: dark) {
-.icon_light {
+.icon_light, .heart_light {
     display: none;
 }
-.icon_dark {
+.icon_dark, .heart_dark {
     display: block;
 }
 }
@@ -40,8 +45,14 @@
     width: 100px;
     height: auto;
   }
+  .heart {
+  height: 78px;
+  width: auto;
+  margin-left: 2rem;
+  margin-right: 1rem;
+}
   .copy {
-    font-size: 16px;
+    font-size: 10px;
     padding-bottom: .2rem;
   }
 }

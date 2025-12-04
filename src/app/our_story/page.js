@@ -17,6 +17,7 @@ function StoryCard({
   date,
   text,
   src,
+  src_dark,
   alt,
   width,
   height,
@@ -47,6 +48,13 @@ function StoryCard({
           width={width}
           height={height}
           className={styles.our_story_icons_mobile}
+        />
+        <Image
+          src={src_dark}
+          alt={alt}
+          width={width}
+          height={height}
+          className={styles.our_story_icons_mobile_dark}
         />
         <p className={styles.text}>{text}</p>
       </div>
@@ -92,6 +100,7 @@ export default function Our_Story() {
             date={story.date}
             text={story.text}
             src={story.src}
+            src_dark={story.src_dark}
             alt={story.alt}
             width={story.width}
             height={story.height}

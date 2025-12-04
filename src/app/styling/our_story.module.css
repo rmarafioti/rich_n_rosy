@@ -1,7 +1,7 @@
 .header_container {
   align-self: flex-start;
   text-align: left;
-  padding-left: 4rem;
+  padding-left: 6rem;
   margin-top: 3rem;
 }
 .title {
@@ -143,7 +143,8 @@
 
 .our_story_bg_mobile,
 .our_story_bg_dark,
-.our_story_icons_mobile {
+.our_story_icons_mobile,
+.our_story_icons_mobile_dark {
   display: none;
 }
 
@@ -183,6 +184,12 @@
   pointer-events: none;
   display: block;
   object-fit: contain;
+}
+
+@media (min-width: 1540px) {
+  .header_container {
+    padding-left: 36rem;
+  }
 }
 
 @media (max-width: 667px) {
@@ -280,7 +287,71 @@
   .card_8 {
     margin-bottom: 0rem;
   }
-  [data-theme="dark"] .our_story_bg_dark {
+  [data-theme="dark"] :is(.our_story_bg_dark, .our_story_icons_mobile) {
     display: none;
+  }
+  [data-theme="dark"] .our_story_icons_mobile_dark {
+    display: block;
+    float: right;
+    margin-left: 1rem;
+  }
+  [data-theme="dark"] .card_2 .our_story_icons_mobile_dark {
+    width: 170px;
+    height: auto;
+  }
+  [data-theme="dark"] .card_3 .our_story_icons_mobile_dark,
+  [data-theme="dark"] .card_4 .our_story_icons_mobile_dark {
+    width: 140px;
+    height: auto;
+  }
+
+  [data-theme="dark"] .card_5 .our_story_icons_mobile_dark,
+  [data-theme="dark"] .card_8 .our_story_icons_mobile_dark {
+    width: 160px;
+    height: auto;
+  }
+
+  [data-theme="dark"] .card_7 .our_story_icons_mobile_dark {
+    width: 150px;
+    height: auto;
+  }
+  @media (prefers-color-scheme: dark) {
+    .our_story_bg_dark,
+    .our_story_icons_mobile {
+      display: none;
+    }
+    .our_story_icons_mobile_dark {
+      display: block;
+      float: right;
+      margin-left: 1rem;
+    }
+    .card_2 .our_story_icons_mobile_dark {
+      width: 170px;
+      height: auto;
+    }
+    .card_3 .our_story_icons_mobile_dark {
+      width: 140px;
+      height: auto;
+    }
+    .card_4 .our_story_icons_mobile_dark {
+      width: 140px;
+      height: auto;
+    }
+    .card_5 .our_story_icons_mobile_dark {
+      width: 160px;
+      height: auto;
+    }
+    .card_6 .our_story_icons_mobile_dark {
+      width: 160px;
+      height: auto;
+    }
+    .card_7 .our_story_icons_mobile_dark {
+      width: 150px;
+      height: auto;
+    }
+    .card_8 .our_story_icons_mobile_dark {
+      width: 160px;
+      height: auto;
+    }
   }
 }
