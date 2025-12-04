@@ -2,6 +2,8 @@ export const ourStory = [
   {
     id: 1,
     src: "https://res.cloudinary.com/dzpne110u/image/upload/v1764724774/wedding_website/our_story/heart_maroon_h8yyoc.svg",
+    src_dark:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1764808935/wedding_website/our_story/heart_blush_ra7hnw.svg",
     alt: "our story icon",
     width: 146,
     height: 136,
@@ -11,6 +13,8 @@ export const ourStory = [
   {
     id: 2,
     src: "https://res.cloudinary.com/dzpne110u/image/upload/v1764724744/wedding_website/our_story/art_museum_maroon_pljan0.svg",
+    src_dark:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1764809557/wedding_website/our_story/art_museum_blush_ibmulq.svg",
     alt: "our story icon",
     width: 138,
     height: 138,
@@ -20,6 +24,8 @@ export const ourStory = [
   {
     id: 3,
     src: "https://res.cloudinary.com/dzpne110u/image/upload/v1764724798/wedding_website/our_story/ny_coffee_maroon_w7wwof.svg",
+    src_dark:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1764809595/wedding_website/our_story/ny_coffee_blush_huinbv.svg",
     alt: "our story icon",
     width: 127,
     height: 137,
@@ -29,15 +35,19 @@ export const ourStory = [
   {
     id: 4,
     src: "https://res.cloudinary.com/dzpne110u/image/upload/v1764724783/wedding_website/our_story/keys_maroon_bmqd4x.svg",
+    src_dark:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1764809586/wedding_website/our_story/keys_blush_mpts3g.svg",
     alt: "our story icon",
     width: 92,
     height: 159,
     date: "August 2022",
-    text: " We bought our dream home by the lake, a block away from Thorndale Beach, where we first said “I love you”. Since then, we've filled our home with color, vintage treasures, and so many joyful memories.",
+    text: "We bought our dream home by the lake, a block away from Thorndale Beach, where we first said “I love you”. Since then, we've filled our home with color, vintage treasures, and so many joyful memories.",
   },
   {
     id: 5,
     src: "https://res.cloudinary.com/dzpne110u/image/upload/v1764724834/wedding_website/our_story/the_boss_maroon_rsi85o.svg",
+    src_dark:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1764809622/wedding_website/our_story/the_boss_blush_ijmlji.svg",
     alt: "our story icon",
     width: 137,
     height: 167,
@@ -47,6 +57,8 @@ export const ourStory = [
   {
     id: 6,
     src: "https://res.cloudinary.com/dzpne110u/image/upload/v1764724824/wedding_website/our_story/stevie_maroon_ip2jbr.svg",
+    src_dark:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1764809613/wedding_website/our_story/stevie_blush_akd4nr.svg",
     alt: "our story icon",
     width: 93,
     height: 162,
@@ -56,6 +68,8 @@ export const ourStory = [
   {
     id: 7,
     src: "https://res.cloudinary.com/dzpne110u/image/upload/v1764724765/wedding_website/our_story/bulb_maroon_btizuh.svg",
+    src_dark:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1764809572/wedding_website/our_story/bulb_blush_qmxgos.svg",
     alt: "our story icon",
     width: 83,
     height: 139,
@@ -65,6 +79,8 @@ export const ourStory = [
   {
     id: 8,
     src: "https://res.cloudinary.com/dzpne110u/image/upload/v1764724808/wedding_website/our_story/ring_maroon_s832pq.svg",
+    src_dark:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1764809605/wedding_website/our_story/ring_blush_apa6f7.svg",
     alt: "our story icon",
     width: 118,
     height: 147,
