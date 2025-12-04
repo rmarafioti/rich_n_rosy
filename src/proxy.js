@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-export function middleware(request) {
+export default function proxy(request) {
   const siteAccess = request.cookies.get("site-access");
   const { pathname } = request.nextUrl;
 
