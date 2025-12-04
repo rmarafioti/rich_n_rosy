@@ -97,7 +97,7 @@ export default function AppWrapper({ children }) {
       >
         {children}
       </article>
-      {showNavigation && <Footer />}
+      <Footer />
     </div>
   );
 }
