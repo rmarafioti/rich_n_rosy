@@ -14,7 +14,6 @@ import styles from "../styling/auth_page.module.css";
 
 export default function Auth() {
   const icon = icons.find((p) => p.id === 2);
-  const iconMobile = icons.find((p) => p.id === 1);
   const headerPhoto = feature_photos.find((p) => p.id === 5);
   const headerPhotoMobile = engagement_photos_mobile.find((p) => p.id === 6);
 
