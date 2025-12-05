@@ -1,6 +1,6 @@
 "use client";
 
-import { ourStory } from "../data/ourStory";
+import { ourStory, train_icon } from "../data/ourStory";
 import useVisibilityObserver from "../hooks/useVisibilityObserver";
 import {
   our_story_background,
@@ -41,7 +41,6 @@ function StoryCard({
     >
       <div className={styles.date_section}>
         <p className={styles.date}>{date}:</p>
-        {/* now use responsive image component to load in the dark theme icons */}
         <Image
           src={src}
           alt={alt}
@@ -85,13 +84,24 @@ export default function Our_Story() {
   const ourStoryBackgroundDark = our_story_background_dark;
   const ourStoryBackgroundMobile = our_story_background_mobile;
 
+  const trainIconLight = train_icon.find((p) => p.id === 1);
+  const trainIconDark = train_icon.find((p) => p.id === 2);
+
   return (
     <main>
       <div className={styles.header_container}>
         <h1 className={styles.title}>Hop On The Love Train!</h1>
-        <p className={styles.sub_title}>
-          Take a ride & discover our journey to tying the knot!
-        </p>
+        <div className={styles.train_container}>
+          <ResponsiveImage
+            pcPhoto={trainIconLight}
+            mobilePhoto={trainIconDark}
+            pcClass={styles.train_icon_light}
+            mobileClass={styles.train_icon_dark}
+          />
+          <p className={styles.sub_title}>
+            Take a ride & discover our journey to tying the knot!
+          </p>
+        </div>
       </div>
       <div className={styles.story_card_container}>
         {ourStory.map((story) => (
