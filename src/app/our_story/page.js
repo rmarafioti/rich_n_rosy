@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { ourStory, train_icon } from "../data/ourStory";
 import useVisibilityObserver from "../hooks/useVisibilityObserver";
 import {
@@ -80,12 +81,40 @@ function StoryCard({
 }
 
 export default function Our_Story() {
+  const [isLoading, setIsLoading] = useState(true);
+
   const ourStoryBackground = our_story_background;
   const ourStoryBackgroundDark = our_story_background_dark;
   const ourStoryBackgroundMobile = our_story_background_mobile;
 
   const trainIconLight = train_icon.find((p) => p.id === 1);
   const trainIconDark = train_icon.find((p) => p.id === 2);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className={styles.loading_container}>
+        <div className={styles.loader}>
+          <ResponsiveImage
+            pcPhoto={trainIconLight}
+            mobilePhoto={trainIconDark}
+            pcClass={styles.train_icon_light}
+            mobileClass={styles.train_icon_dark}
+          />
+          <p className={styles.arrival_message}>
+            The Love Train will arrive shortly...
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <main>

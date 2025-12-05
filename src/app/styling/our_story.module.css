@@ -1,3 +1,24 @@
+.loading_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.loader {
+  display: flex;
+  text-align: left;
+  font-weight: 600;
+}
+
+.arrival_message {
+  font-family: var(--summer-of-love-font);
+  font-weight: normal;
+  font-size: 100px;
+  width: 700px;
+}
+
 .header_container {
   align-self: flex-start;
   text-align: left;
@@ -219,6 +240,23 @@
 }
 
 @media (max-width: 667px) {
+  .loader {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-weight: 600;
+    width: 100%;
+    margin: 0rem 1rem 0rem 1rem;
+  }
+
+  .arrival_message {
+    font-family: var(--summer-of-love-font);
+    font-weight: normal;
+    font-size: 58px;
+    margin-top: 1rem;
+    width: 100%;
+  }
   .header_container {
     padding-left: 1rem;
     padding-right: 1rem;
