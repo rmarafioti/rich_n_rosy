@@ -1,3 +1,24 @@
+export const train_icon = [
+  {
+    id: 1,
+    name: "train icon light",
+    photo:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1764897049/wedding_website/our_story/cta_maroon_wu9bpk.svg",
+    alt: "Chicago CTA train icon",
+    width: 102,
+    height: 108,
+  },
+  {
+    id: 2,
+    name: "train icon dark",
+    photo:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1764897041/wedding_website/our_story/cta_blush_xypk20.svg",
+    alt: "Chicago CTA train icon",
+    width: 102,
+    height: 108,
+  },
+];
+
 export const ourStory = [
   {
     id: 1,
