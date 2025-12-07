@@ -15,10 +15,10 @@ export default function Footer() {
     <>
       <footer>
         <ResponsiveImage
-          pcPhoto={iconLight}
-          mobilePhoto={iconDark}
-          pcClass={`${styles.icon} ${styles.icon_light}`}
-          mobileClass={`${styles.icon} ${styles.icon_dark}`}
+          initialPhoto={iconLight}
+          secondaryPhoto={iconDark}
+          initialClass={`${styles.icon} ${styles.icon_light}`}
+          secondaryClass={`${styles.icon} ${styles.icon_dark}`}
         />
         <div>
           <p className={styles.copy}>Rosy & Rich Get Hitched</p>
@@ -26,10 +26,10 @@ export default function Footer() {
           <p className={styles.copy}>Website by Marf Inc.</p>
         </div>
         <ResponsiveImage
-          pcPhoto={illustrationLight}
-          mobilePhoto={illustrationDark}
-          pcClass={`${styles.heart} ${styles.heart_light}`}
-          mobileClass={`${styles.heart} ${styles.heart_dark}`}
+          initialPhoto={illustrationLight}
+          secondaryPhoto={illustrationDark}
+          initialClass={`${styles.heart} ${styles.heart_light}`}
+          secondaryClass={`${styles.heart} ${styles.heart_dark}`}
         />
       </footer>
     </>

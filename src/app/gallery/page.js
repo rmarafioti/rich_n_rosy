@@ -14,7 +14,7 @@ function MobilePhotoCard({ photo, onClick }) {
   return (
     <div ref={ref} className={styles.mobile_photo_layout}>
       <Image
-        src={photo.photo}
+        src={photo.src}
         alt={photo.alt}
         width={photo.width}
         height={photo.height}
@@ -78,7 +78,7 @@ export default function Gallery() {
         </div>
       </div>
       <Image
-        src={headerPhoto.photo}
+        src={headerPhoto.src}
         alt={headerPhoto.alt}
         width={headerPhoto.width}
         height={headerPhoto.height}

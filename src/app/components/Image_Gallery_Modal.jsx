@@ -50,7 +50,7 @@ export default function Gallery_Modal({
             <IoChevronBackCircle />
           </button>
           <Image
-            src={currentImageObj.photo}
+            src={currentImageObj.src}
             alt={currentImageObj.alt}
             width={currentImageObj.width}
             height={currentImageObj.height}

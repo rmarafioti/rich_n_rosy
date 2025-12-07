@@ -47,10 +47,10 @@ export default function Navbar() {
             className={`${pc.menu_icon} ${isActive("/") ? pc.active_link : ""}`}
           >
             <ResponsiveImage
-              pcPhoto={iconLight}
-              mobilePhoto={iconDark}
-              pcClass={`${pc.icon} ${pc.icon_light}`}
-              mobileClass={`${pc.icon} ${pc.icon_dark}`}
+              initialPhoto={iconLight}
+              secondaryPhoto={iconDark}
+              initialClass={`${pc.icon} ${pc.icon_light}`}
+              secondaryClass={`${pc.icon} ${pc.icon_dark}`}
             />
           </Link>
           <div className={pc.link_container}>
@@ -74,10 +74,10 @@ export default function Navbar() {
         <section className={pc.mobile_nav}>
           <Link href="/">
             <ResponsiveImage
-              pcPhoto={iconLight}
-              mobilePhoto={iconDark}
-              pcClass={`${mobile.icon} ${mobile.icon_light}`}
-              mobileClass={`${mobile.icon} ${mobile.icon_dark}`}
+              initialPhoto={iconLight}
+              secondaryPhoto={iconDark}
+              initialClass={`${mobile.icon} ${mobile.icon_light}`}
+              secondaryClass={`${mobile.icon} ${mobile.icon_dark}`}
             />
           </Link>
           {/*hamburger menu*/}

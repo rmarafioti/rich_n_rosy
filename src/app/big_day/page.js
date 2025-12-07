@@ -32,10 +32,10 @@ export default function Event() {
         <p className={styles.copy}>More information to come!</p>
       </article>
       <ResponsiveImage
-        pcPhoto={featurePhoto}
-        mobilePhoto={featurePhotoMobile}
-        pcClass={styles.image}
-        mobileClass={styles.image_mobile}
+        initialPhoto={featurePhoto}
+        secondaryPhoto={featurePhotoMobile}
+        initialClass={styles.image}
+        secondaryClass={styles.image_mobile}
       />
       <p className={styles.mobile_note}>
         5pm outdoor ceremony with reception to follow

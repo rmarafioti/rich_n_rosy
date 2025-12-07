@@ -14,6 +14,7 @@
   top: 120px;
   color: var(--blush);
 }
+
 .title,
 .sub_title {
   color: var(--blush);
@@ -51,66 +52,6 @@
   height: 640px;
 }
 
-@media (max-width: 1300px) {
-  .header_container {
-    top: 270px;
-  }
-}
-
-@media (max-width: 667px) {
-  .image {
-    display: none;
-  }
-  .image_mobile {
-    position: initial;
-    display: block;
-    margin-top: 8.5rem;
-    width: 100%;
-    height: auto;
-  }
-  .header_container {
-    top: -20px;
-    text-align: left;
-    width: 100%;
-    z-index: 90;
-  }
-  .title {
-    padding-left: 1rem;
-    margin-bottom: 1rem;
-  }
-  .title,
-  .sub_title {
-    color: var(--maroon);
-    font-size: 76px;
-  }
-  .sub_title {
-    text-align: left;
-    color: var(--blush);
-    font-size: 28px;
-    padding-left: 1rem;
-    margin-bottom: 1rem;
-  }
-  .copy {
-    text-align: left;
-    color: var(--blush);
-    width: auto;
-    margin: 0rem 1rem 2rem 1rem;
-  }
-  .form_section {
-    justify-content: center;
-  }
-  .form_photo {
-    display: none;
-  }
-  
-  @media (prefers-color-scheme: dark) {
-    .copy {
-      color: #ecd5cd;
-    }
-  }
-}
-
-/* dark mode stylings */
 @media (prefers-color-scheme: dark) {
   .title,
   .sub_title,
@@ -121,4 +62,61 @@
 
 [data-theme="dark"] :is(.title, .sub_title, .copy) {
   color: #ecd5cd;
+}
+
+@media (max-width: 1300px) {
+  .header_container {
+    top: 270px;
+  }
+}
+
+@media (max-width: 667px) {
+  .header_container {
+    top: -20px;
+    text-align: left;
+    width: 100%;
+    z-index: 90;
+  }
+  .title {
+    padding-left: 1rem;
+  }
+  .title,
+  .sub_title {
+    color: var(--maroon);
+    font-size: 76px;
+    margin-bottom: 1rem;
+  }
+  .sub_title {
+    text-align: left;
+    color: var(--blush);
+    font-size: 28px;
+    padding-left: 1rem;
+  }
+  .copy {
+    text-align: left;
+    color: var(--blush);
+    width: auto;
+    margin: 0rem 1rem 2rem 1rem;
+  }
+  .image {
+    display: none;
+  }
+  .image_mobile {
+    position: initial;
+    display: block;
+    margin-top: 8.5rem;
+    width: 100%;
+    height: auto;
+  }
+  .form_section {
+    justify-content: center;
+  }
+  .form_photo {
+    display: none;
+  }
+  @media (prefers-color-scheme: dark) {
+    .copy {
+      color: #ecd5cd;
+    }
+  }
 }

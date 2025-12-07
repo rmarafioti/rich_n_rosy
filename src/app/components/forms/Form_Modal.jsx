@@ -45,7 +45,7 @@ export default function Form_Modal({ isOpen, closeModal, children }) {
           </div>
         </section>
         <Image
-          src={formPhoto.photo}
+          src={formPhoto.src}
           alt={formPhoto.alt}
           width={formPhoto.width}
           height={formPhoto.height}

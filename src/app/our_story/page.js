@@ -103,10 +103,10 @@ export default function Our_Story() {
       <div className={styles.loading_container}>
         <div className={styles.loader}>
           <ResponsiveImage
-            pcPhoto={trainIconLight}
-            mobilePhoto={trainIconDark}
-            pcClass={styles.train_icon_light}
-            mobileClass={styles.train_icon_dark}
+            initialPhoto={trainIconLight}
+            secondaryPhoto={trainIconDark}
+            initialClass={styles.train_icon_light}
+            secondaryClass={styles.train_icon_dark}
           />
           <p className={styles.arrival_message}>
             The Love Train will arrive shortly...
@@ -122,10 +122,10 @@ export default function Our_Story() {
         <h1 className={styles.title}>Hop On The Love Train!</h1>
         <div className={styles.train_container}>
           <ResponsiveImage
-            pcPhoto={trainIconLight}
-            mobilePhoto={trainIconDark}
-            pcClass={styles.train_icon_light}
-            mobileClass={styles.train_icon_dark}
+            initialPhoto={trainIconLight}
+            secondaryPhoto={trainIconDark}
+            initialClass={styles.train_icon_light}
+            secondaryClass={styles.train_icon_dark}
           />
           <p className={styles.sub_title}>
             Take a ride & discover our journey to tying the knot!
@@ -150,13 +150,13 @@ export default function Our_Story() {
         ))}
       </div>
       <ResponsiveImage
-        pcPhoto={ourStoryBackground}
-        mobilePhoto={ourStoryBackgroundMobile}
-        pcClass={styles.our_story_bg}
-        mobileClass={styles.our_story_bg_mobile}
+        initialPhoto={ourStoryBackground}
+        secondaryPhoto={ourStoryBackgroundMobile}
+        initialClass={styles.our_story_bg}
+        secondaryClass={styles.our_story_bg_mobile}
       />
       <Image
-        src={ourStoryBackgroundDark.photo}
+        src={ourStoryBackgroundDark.src}
         alt={ourStoryBackgroundDark.alt}
         width={ourStoryBackgroundDark.width}
         height={ourStoryBackgroundDark.height}
