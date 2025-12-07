@@ -14,17 +14,19 @@ export default function Footer() {
   return (
     <>
       <footer>
-        <ResponsiveImage
-          initialPhoto={iconLight}
-          secondaryPhoto={iconDark}
-          initialClass={`${styles.icon} ${styles.icon_light}`}
-          secondaryClass={`${styles.icon} ${styles.icon_dark}`}
-        />
-        <div>
-          <p className={styles.copy}>Rosy & Rich Get Hitched</p>
-          <p className={styles.copy}>July 2026 Chicago</p>
-          <p className={styles.copy}>Website by Marf Inc.</p>
-        </div>
+        <section className={styles.left_section}>
+          <ResponsiveImage
+            initialPhoto={iconLight}
+            secondaryPhoto={iconDark}
+            initialClass={`${styles.icon} ${styles.icon_light}`}
+            secondaryClass={`${styles.icon} ${styles.icon_dark}`}
+          />
+          <div>
+            <p className={styles.copy}>Rosy & Rich Get Hitched</p>
+            <p className={styles.copy}>July 2026 Chicago</p>
+            <p className={styles.copy}>Website by Marf Inc.</p>
+          </div>
+        </section>
         <ResponsiveImage
           initialPhoto={illustrationLight}
           secondaryPhoto={illustrationDark}

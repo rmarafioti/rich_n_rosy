@@ -1,3 +1,7 @@
+.left_section {
+  display: flex;
+  align-items: center;
+}
 .icon {
   width: 164px;
   height: auto;
@@ -7,7 +11,7 @@
 .heart {
   height: 120px;
   width: auto;
-  margin-left: 2rem;
+  margin-right: 2rem;
 }
 .icon_light, .heart_light {
     display: block;
@@ -48,7 +52,6 @@
   .heart {
   height: 78px;
   width: auto;
-  margin-left: 2rem;
   margin-right: 1rem;
 }
   .copy {

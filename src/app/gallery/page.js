@@ -36,12 +36,13 @@ export default function Gallery() {
     isOpen,
     photos,
   } = usePhotoGallery(engagement_photos_mobile);
-  const headerPhoto = feature_photos.find((p) => p.id === 5);
+
+  const backgroundPhoto = feature_photos.find((p) => p.id === 5);
 
   return (
     <main>
-      <div className={styles.header_container}>
-        <div className={styles.copy_container}>
+      <article className={styles.header_container}>
+        <section className={styles.copy_container}>
           <h1 className={styles.heading}>
             <span className={styles.kern}>P</span>hoto Gallery
           </h1>
@@ -52,11 +53,14 @@ export default function Gallery() {
             , first opened in 1929, is a Chicago institution that has stood the
             test of time. This historic theater has premiered our favorite
             movies, welcomed our favorite filmmakers, and become one of our
-            favorite date spots. If you asked us to describe our perfect night,
-            we&apos;d be at the Music Box with fresh popcorn, the sound of the
-            organ, and experiencing the magic of the movies together. Shooting
-            our engagement photos in this iconic place that we hold so close to
-            our hearts was a dream come true.
+            favorite date spots.
+          </p>
+          <p className={styles.copy}>
+            If you asked us to describe our perfect night, we&apos;d be at the
+            Music Box with fresh popcorn, the sound of the organ, and
+            experiencing the magic of the movies together. Shooting our
+            engagement photos in this iconic place that we hold so close to our
+            hearts was a dream come true.
           </p>
           <p className={styles.copy_tag}>
             Thank you to The Music Box Theatre and photographer{" "}
@@ -66,8 +70,8 @@ export default function Gallery() {
             for this unforgettable experience.
           </p>
           <p className={styles.tap}>tap photos to view</p>
-        </div>
-        <div className={styles.mobile_gallery}>
+        </section>
+        <section className={styles.mobile_gallery}>
           {engagement_photos_mobile.map((photo, index) => (
             <MobilePhotoCard
               key={photo.id}
@@ -75,14 +79,14 @@ export default function Gallery() {
               onClick={() => openModal(index)}
             />
           ))}
-        </div>
-      </div>
+        </section>
+      </article>
       <Image
-        src={headerPhoto.src}
-        alt={headerPhoto.alt}
-        width={headerPhoto.width}
-        height={headerPhoto.height}
-        className={styles.header_photo}
+        src={backgroundPhoto.src}
+        alt={backgroundPhoto.alt}
+        width={backgroundPhoto.width}
+        height={backgroundPhoto.height}
+        className={styles.background_photo}
         sizes="100vw"
       />
       <Image_Gallery_Modal
