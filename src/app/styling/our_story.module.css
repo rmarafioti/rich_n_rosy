@@ -65,7 +65,7 @@
   position: relative;
   background-color: rgba(255, 255, 255, 0.89);
   padding: 1rem;
-  margin-top: 7rem;
+  margin-top: 5rem;
   border-radius: 5px;
   opacity: 0;
   transform: translateX(40px);
@@ -123,28 +123,28 @@
 
 /*styles each card independantly*/
 .card_1 {
-  margin-bottom: 18rem;
+  margin-bottom: 18.5rem;
   right: 140px;
 }
 
 .card_2 {
-  margin-bottom: 42rem;
+  margin-bottom: 46rem;
   right: -140px;
   width: 300px;
 }
 
 .card_3 {
-  margin-bottom: 54rem;
+  margin-bottom: 53.5rem;
   right: 500px;
 }
 
 .card_4 {
-  margin-bottom: 34rem;
+  margin-bottom: 36rem;
   right: 60px;
 }
 
 .card_5 {
-  margin-bottom: 44rem;
+  margin-bottom: 48rem;
   right: 340px;
   width: 300px;
 }
@@ -155,7 +155,7 @@
 }
 
 .card_7 {
-  margin-bottom: 78rem;
+  margin-bottom: 80rem;
   right: 480px;
 }
 
@@ -278,10 +278,10 @@
     display: none;
   }
   .our_story_bg_mobile {
-    margin-top: 14rem;
+    margin-top: 17rem;
     position: absolute;
     height: auto;
-    width: 115%;
+    width: 123%;
     display: block;
   }
   .story_card_container {
