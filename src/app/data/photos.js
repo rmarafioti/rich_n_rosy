@@ -2,8 +2,7 @@ export const icons = [
   {
     id: 1,
     name: "icon_light_mode",
-    photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1761257615/wedding_website/icons/monogram_maroon_vmlyu6.svg",
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1761257615/wedding_website/icons/monogram_maroon_vmlyu6.svg",
     alt: "website icon and home page button",
     height: 118,
     width: 179,
@@ -11,8 +10,7 @@ export const icons = [
   {
     id: 2,
     name: "icon_dark_mode",
-    photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1761257555/wedding_website/icons/monogram_blush_xospub.svg",
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1761257555/wedding_website/icons/monogram_blush_xospub.svg",
     alt: "website icon and home page button",
     height: 118,
     width: 179,
@@ -22,8 +20,7 @@ export const icons = [
 export const form_photo = {
   id: 1,
   name: "form_photo",
-  photo:
-    "https://res.cloudinary.com/dzpne110u/image/upload/v1762877205/wedding_website/feature_photos/seats_watching_web_mrpz0i.png",
+  src: "https://res.cloudinary.com/dzpne110u/image/upload/v1762877205/wedding_website/feature_photos/seats_watching_web_mrpz0i.png",
   alt: "form photo",
   height: 974,
   width: 1196,
@@ -33,8 +30,7 @@ export const feature_photos = [
   {
     id: 5,
     name: "full_theatre",
-    photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1762900255/wedding_website/feature_photos/feature_photo_one_zwydiz.png",
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1762900255/wedding_website/feature_photos/feature_photo_one_zwydiz.png",
     alt: "engagement photo",
     height: 1472,
     width: 692,
@@ -42,8 +38,7 @@ export const feature_photos = [
   {
     id: 6,
     name: "watching_backs_of_heads",
-    photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1762127438/wedding_website/feature_photos/hero_section_x6c6sx.png",
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1762127438/wedding_website/feature_photos/hero_section_x6c6sx.png",
     alt: "engagement photo",
     height: 1561,
     width: 2912,
@@ -51,8 +46,7 @@ export const feature_photos = [
   {
     id: 7,
     name: "seats_kissing_two",
-    photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1763217310/wedding_website/feature_photos/feature_photo_two_mpbx3s.png",
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1763217310/wedding_website/feature_photos/feature_photo_two_mpbx3s.png",
     alt: "engagement photo",
     height: 1472,
     width: 692,
@@ -60,8 +54,7 @@ export const feature_photos = [
   {
     id: 8,
     name: "walking_aisle_close_up",
-    photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1763258181/wedding_website/feature_photos/feature_photo_three_kkkmez.png",
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1763258181/wedding_website/feature_photos/feature_photo_three_kkkmez.png",
     alt: "engagement photo",
     height: 2093,
     width: 1731,
@@ -72,8 +65,7 @@ export const engagement_photos_pc = [
   {
     id: 4,
     name: "full_theatre",
-    photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1762033545/wedding_website/engagement_photos_pc_gallery/full_theatre_pc_cf3mxd.png",
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1762033545/wedding_website/engagement_photos_pc_gallery/full_theatre_pc_cf3mxd.png",
     alt: "engagement photo",
     height: 1942,
     width: 2912,
@@ -81,8 +73,7 @@ export const engagement_photos_pc = [
   {
     id: 5,
     name: "watching_backs_of_heads",
-    photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1762033515/wedding_website/engagement_photos_pc_gallery/seats_watching_back_pc_em0wdt.png",
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1762033515/wedding_website/engagement_photos_pc_gallery/seats_watching_back_pc_em0wdt.png",
     alt: "engagement photo",
     height: 1942,
     width: 2912,
@@ -90,8 +81,7 @@ export const engagement_photos_pc = [
   {
     id: 6,
     name: "seats_kissing",
-    photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1762033576/wedding_website/engagement_photos_pc_gallery/seats_kissing_pc_pqth7u.png",
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1762033576/wedding_website/engagement_photos_pc_gallery/seats_kissing_pc_pqth7u.png",
     alt: "engagement photo",
     height: 1942,
     width: 2912,
@@ -102,8 +92,7 @@ export const engagement_photos_mobile = [
   {
     id: 1,
     name: "marque_full_front",
-    photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1761875520/wedding_website/engagement_photos_mobile_gallery/marquee_full_shot_1_sa32cv.png",
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1761875520/wedding_website/engagement_photos_mobile_gallery/marquee_full_shot_1_sa32cv.png",
     alt: "engagement photo",
     height: 2195,
     width: 1464,
@@ -111,8 +100,7 @@ export const engagement_photos_mobile = [
   {
     id: 2,
     name: "marque_photo",
-    photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1761875438/wedding_website/engagement_photos_mobile_gallery/marquee_close_up_1_yl5tco.png",
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1761875438/wedding_website/engagement_photos_mobile_gallery/marquee_close_up_1_yl5tco.png",
     alt: "engagement photo",
     height: 2195,
     width: 1464,
@@ -120,8 +108,7 @@ export const engagement_photos_mobile = [
   {
     id: 3,
     name: "close_up_with_marquee",
-    photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1761875553/wedding_website/engagement_photos_mobile_gallery/marquee_kiss_three_1_ru7ac9.png",
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1761875553/wedding_website/engagement_photos_mobile_gallery/marquee_kiss_three_1_ru7ac9.png",
     alt: "engagement photo",
     height: 2195,
     width: 1464,
@@ -129,8 +116,7 @@ export const engagement_photos_mobile = [
   {
     id: 4,
     name: "full_theatre",
-    photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1761875485/wedding_website/engagement_photos_mobile_gallery/full_theatre_1_ygw1ih.png",
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1761875485/wedding_website/engagement_photos_mobile_gallery/full_theatre_1_ygw1ih.png",
     alt: "engagement photo",
     height: 2195,
     width: 1464,
@@ -138,8 +124,7 @@ export const engagement_photos_mobile = [
   {
     name: "watching_backs_of_heads",
     id: 5,
-    photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1761875685/wedding_website/engagement_photos_mobile_gallery/seats_watching_back_1_hjwtio.png",
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1761875685/wedding_website/engagement_photos_mobile_gallery/seats_watching_back_1_hjwtio.png",
     alt: "engagement photo",
     height: 2195,
     width: 1464,
@@ -147,8 +132,7 @@ export const engagement_photos_mobile = [
   {
     id: 6,
     name: "seats_kissing",
-    photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1761875964/wedding_website/engagement_photos_mobile_gallery/seats_kiss_two_1_vttinu.png",
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1761875964/wedding_website/engagement_photos_mobile_gallery/seats_kiss_two_1_vttinu.png",
     alt: "engagement photo",
     height: 2195,
     width: 1464,
@@ -156,8 +140,7 @@ export const engagement_photos_mobile = [
   {
     id: 7,
     name: "ring_close_up",
-    photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1761875601/wedding_website/engagement_photos_mobile_gallery/ring_1_sfolzb.png",
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1761875601/wedding_website/engagement_photos_mobile_gallery/ring_1_sfolzb.png",
     alt: "engagement photo",
     height: 2195,
     width: 1464,
@@ -165,8 +148,7 @@ export const engagement_photos_mobile = [
   {
     id: 8,
     name: "aisle_detial",
-    photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1761875325/wedding_website/engagement_photos_mobile_gallery/aisle_detail_1_wmjpkx.png",
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1761875325/wedding_website/engagement_photos_mobile_gallery/aisle_detail_1_wmjpkx.png",
     alt: "engagement photo",
     height: 2195,
     width: 1464,
@@ -174,8 +156,7 @@ export const engagement_photos_mobile = [
   {
     id: 9,
     name: "theatre_steps",
-    photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1761875711/wedding_website/engagement_photos_mobile_gallery/theatre_steps_two_1_qiu4pa.png",
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1761875711/wedding_website/engagement_photos_mobile_gallery/theatre_steps_two_1_qiu4pa.png",
     alt: "engagement photo",
     height: 2195,
     width: 1464,
@@ -183,8 +164,7 @@ export const engagement_photos_mobile = [
   {
     id: 10,
     name: "walking_aisle",
-    photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1761875753/wedding_website/engagement_photos_mobile_gallery/theatre_walking_two_1_eeiisl.png",
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1761875753/wedding_website/engagement_photos_mobile_gallery/theatre_walking_two_1_eeiisl.png",
     alt: "engagement photo",
     height: 2195,
     width: 1464,
@@ -192,8 +172,7 @@ export const engagement_photos_mobile = [
   {
     id: 11,
     name: "walking_aisle_close_up",
-    photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1761875733/wedding_website/engagement_photos_mobile_gallery/theatre_walking_one_1_ryzrh2.png",
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1761875733/wedding_website/engagement_photos_mobile_gallery/theatre_walking_one_1_ryzrh2.png",
     alt: "engagement photo",
     height: 2195,
     width: 1464,
@@ -201,8 +180,7 @@ export const engagement_photos_mobile = [
   {
     id: 12,
     name: "walking_with_marquee",
-    photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1761875575/wedding_website/engagement_photos_mobile_gallery/marquee_walking_1_exnyud.png",
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1761875575/wedding_website/engagement_photos_mobile_gallery/marquee_walking_1_exnyud.png",
     alt: "engagement photo",
     height: 2195,
     width: 1464,
@@ -211,8 +189,7 @@ export const engagement_photos_mobile = [
 
 export const our_story_background = {
   id: 1,
-  photo:
-    "https://res.cloudinary.com/dzpne110u/image/upload/v1764723416/wedding_website/our_story/our_story_bg_pc_light_gonazn.png",
+  src: "https://res.cloudinary.com/dzpne110u/image/upload/v1764723416/wedding_website/our_story/our_story_bg_pc_light_gonazn.png",
   alt: "our story background",
   height: 8556,
   width: 916,
@@ -220,8 +197,7 @@ export const our_story_background = {
 
 export const our_story_background_dark = {
   id: 1,
-  photo:
-    "https://res.cloudinary.com/dzpne110u/image/upload/v1764723443/wedding_website/our_story/our_story_bg_pc_dark_hubgmd.png",
+  src: "https://res.cloudinary.com/dzpne110u/image/upload/v1764723443/wedding_website/our_story/our_story_bg_pc_dark_hubgmd.png",
   alt: "our story background",
   height: 8557,
   width: 916,
@@ -229,8 +205,7 @@ export const our_story_background_dark = {
 
 export const our_story_background_mobile = {
   id: 1,
-  photo:
-    "https://res.cloudinary.com/dzpne110u/image/upload/v1764542251/wedding_website/our_story/our_story_mobile_map_ndhq3t.svg",
+  src: "https://res.cloudinary.com/dzpne110u/image/upload/v1764542251/wedding_website/our_story/our_story_mobile_map_ndhq3t.svg",
   alt: "our story background",
   height: 25385,
   width: 2788,
@@ -240,8 +215,7 @@ export const footer_icons = [
   {
     id: 1,
     name: "footer_heart_light_mode",
-    photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1764724774/wedding_website/our_story/heart_maroon_h8yyoc.svg",
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1764724774/wedding_website/our_story/heart_maroon_h8yyoc.svg",
     alt: "footer icon",
     width: 146,
     height: 136,
@@ -249,8 +223,7 @@ export const footer_icons = [
   {
     id: 2,
     name: "footer_heart_dark_mode",
-    photo:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1764808935/wedding_website/our_story/heart_blush_ra7hnw.svg",
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1764808935/wedding_website/our_story/heart_blush_ra7hnw.svg",
     alt: "footer icon",
     width: 146,
     height: 136,

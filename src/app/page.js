@@ -15,8 +15,8 @@ export default function Home() {
   const formPhoto = engagement_photos_mobile.find((p) => p.id === 12);
 
   return (
-    <main className={styles.layout}>
-      <div className={styles.header_container}>
+    <main>
+      <article className={styles.header_container}>
         <h1 className={styles.title}>
           <span className={styles.kern}>R</span>osy &{" "}
           <span className={styles.kern_two}>R</span>ich Get Hitched!
@@ -28,17 +28,17 @@ export default function Home() {
           reception, travel tips, and more. We are so excited to celebrate with
           you!
         </p>
-      </div>
+      </article>
       <ResponsiveImage
-        pcPhoto={heroSectionPhotoPC}
-        mobilePhoto={heroSectionPhotoMobile}
-        pcClass={styles.image}
-        mobileClass={styles.image_mobile}
+        initialPhoto={heroSectionPhotoPC}
+        secondaryPhoto={heroSectionPhotoMobile}
+        initialClass={styles.image}
+        secondaryClass={styles.image_mobile}
       />
       <section className={styles.form_section}>
         <Contact_Form />
         <Image
-          src={formPhoto.photo}
+          src={formPhoto.src}
           alt={formPhoto.alt}
           width={formPhoto.width}
           height={formPhoto.height}

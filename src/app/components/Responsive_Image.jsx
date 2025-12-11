@@ -3,31 +3,31 @@
 import Image from "next/image";
 
 export default function ResponsiveImage({
-  pcPhoto,
-  mobilePhoto,
-  pcClass,
-  mobileClass,
+  initialPhoto,
+  secondaryPhoto,
+  initialClass,
+  secondaryClass,
 }) {
   return (
     <>
-      {pcPhoto && (
+      {initialPhoto && (
         <Image
-          src={pcPhoto.photo}
-          alt={pcPhoto.alt}
-          width={pcPhoto.width}
-          height={pcPhoto.height}
-          className={pcClass}
+          src={initialPhoto.src}
+          alt={initialPhoto.alt}
+          width={initialPhoto.width}
+          height={initialPhoto.height}
+          className={initialClass}
           sizes="100vw"
           priority
         />
       )}
-      {mobilePhoto && (
+      {secondaryPhoto && (
         <Image
-          src={mobilePhoto.photo}
-          alt={mobilePhoto.alt}
-          width={mobilePhoto.width}
-          height={mobilePhoto.height}
-          className={mobileClass}
+          src={secondaryPhoto.src}
+          alt={secondaryPhoto.alt}
+          width={secondaryPhoto.width}
+          height={secondaryPhoto.height}
+          className={secondaryClass}
           priority
         />
       )}

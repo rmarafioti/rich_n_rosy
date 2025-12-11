@@ -55,7 +55,7 @@ export default function Auth() {
         <article className={styles.content}>
           <section className={styles.header_container}>
             <Image
-              src={icon.photo}
+              src={icon.src}
               alt={icon.alt}
               height={icon.height}
               width={icon.width}
@@ -97,10 +97,10 @@ export default function Auth() {
           </section>
         </article>
         <ResponsiveImage
-          pcPhoto={headerPhoto}
-          mobilePhoto={headerPhotoMobile}
-          pcClass={styles.header_photo}
-          mobileClass={styles.header_photo_mobile}
+          initialPhoto={headerPhoto}
+          secondaryPhoto={headerPhotoMobile}
+          initialClass={styles.header_photo}
+          secondaryClass={styles.header_photo_mobile}
         />
       </div>
     </main>

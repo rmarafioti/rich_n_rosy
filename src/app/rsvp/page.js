@@ -17,10 +17,10 @@ export default function Rsvp() {
           <RSVP_Form />
         </article>
         <ResponsiveImage
-          pcPhoto={featurePhoto}
-          mobilePhoto={featurePhotoMobile}
-          pcClass={styles.image}
-          mobileClass={styles.image_mobile}
+          initialPhoto={featurePhoto}
+          secondaryPhoto={featurePhotoMobile}
+          initialClass={styles.image}
+          secondaryClass={styles.image_mobile}
         />
       </div>
     </main>

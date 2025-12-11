@@ -24,8 +24,14 @@
 
 .copy,
 .copy_tag {
-  margin-bottom: 2rem;;
+  margin-bottom: 1rem;;
 } 
+
+.tap {
+  text-align: right;
+  padding-top: 5rem;
+  margin-right: 2rem;
+}
 
 .mobile_gallery {
   display: flex;
@@ -48,7 +54,7 @@
   cursor: pointer;
 }
 
-.header_photo {
+.background_photo {
   width: 100%;
   height: auto;
 }
@@ -104,7 +110,7 @@
   .mobile_photo_layout:hover {
     border: 2px solid #ecd5cd;
   }
-  .heading, .copy, .tap {
+  .heading, .copy, .copy_tag, .tap {
     color: #ecd5cd
   }
 }
@@ -116,7 +122,7 @@
 }
 
 @media (max-width: 1300px) {
-  .header_photo {
+  .background_photo {
     display: none;
   }
   .header_container {
@@ -197,6 +203,6 @@
 }
 }
 
-[data-theme="dark"] :is(.heading, .copy, .tap) {
+[data-theme="dark"] :is(.heading, .copy, .copy_tag, .tap) {
   color: #ecd5cd;
 }
