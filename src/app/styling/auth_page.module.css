@@ -121,8 +121,12 @@
     color: #ecd5cd;
   }
   .input {
-    border: 1px solid var(--orange);
+    border: 1px solid #ecd5cd;
     border-right: none;
+  }
+  .submit {
+     border: 1px solid #ecd5cd;
+    background-color: #680a14;
   }
   .submit:hover {
     color: #680a14;
