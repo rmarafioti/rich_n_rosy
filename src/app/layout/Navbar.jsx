@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import ResponsiveImage from "../components/Responsive_Image";
+import Responsive_Image_Theme from "../components/Responsive_Image_Theme";
 import { icons } from "../data/photos";
 
 /* naming conventions to define responsive design*/
@@ -35,9 +35,6 @@ export default function Navbar() {
   const isActive = (href) =>
     pathname === href || pathname.startsWith(href + "/");
 
-  const iconLight = icons.find((p) => p.id === 1);
-  const iconDark = icons.find((p) => p.id === 2);
-
   return (
     <>
       <nav>
@@ -46,12 +43,7 @@ export default function Navbar() {
             href="/"
             className={`${pc.menu_icon} ${isActive("/") ? pc.active_link : ""}`}
           >
-            <ResponsiveImage
-              initialPhoto={iconLight}
-              secondaryPhoto={iconDark}
-              initialClass={`${pc.icon} ${pc.icon_light}`}
-              secondaryClass={`${pc.icon} ${pc.icon_dark}`}
-            />
+            <Responsive_Image_Theme photoData={icons} />
           </Link>
           <div className={pc.link_container}>
             {links
@@ -73,12 +65,7 @@ export default function Navbar() {
         {/* mobile navigation menu below */}
         <section className={pc.mobile_nav}>
           <Link href="/">
-            <ResponsiveImage
-              initialPhoto={iconLight}
-              secondaryPhoto={iconDark}
-              initialClass={`${mobile.icon} ${mobile.icon_light}`}
-              secondaryClass={`${mobile.icon} ${mobile.icon_dark}`}
-            />
+            <Responsive_Image_Theme photoData={icons} />
           </Link>
           {/*hamburger menu*/}
           <div id={mobile.hamMenuContainer} onClick={toggleMenu}>

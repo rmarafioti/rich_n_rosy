@@ -1,13 +1,12 @@
 "use client";
 
+import Responsive_Image_Theme from "../components/Responsive_Image_Theme";
 import ResponsiveImage from "../components/Responsive_Image";
 import { icons, footer_icons } from "../data/photos";
 
 import styles from "../styling/footer.module.css";
 
 export default function Footer() {
-  const iconLight = icons.find((p) => p.id === 1);
-  const iconDark = icons.find((p) => p.id === 2);
   const illustrationLight = footer_icons.find((p) => p.id === 1);
   const illustrationDark = footer_icons.find((p) => p.id === 2);
 
@@ -15,12 +14,7 @@ export default function Footer() {
     <>
       <footer>
         <section className={styles.left_section}>
-          <ResponsiveImage
-            initialPhoto={iconLight}
-            secondaryPhoto={iconDark}
-            initialClass={`${styles.icon} ${styles.icon_light}`}
-            secondaryClass={`${styles.icon} ${styles.icon_dark}`}
-          />
+          <Responsive_Image_Theme photoData={icons} />
           <div>
             <p className={styles.copy}>Rosy & Rich Get Hitched</p>
             <p className={styles.copy}>July 2026 Chicago</p>

@@ -1,21 +1,12 @@
-export const icons = [
-  {
-    id: 1,
-    name: "icon_light_mode",
-    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1761257615/wedding_website/icons/monogram_maroon_vmlyu6.svg",
-    alt: "website icon and home page button",
-    height: 118,
-    width: 179,
-  },
-  {
-    id: 2,
-    name: "icon_dark_mode",
-    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1761257555/wedding_website/icons/monogram_blush_xospub.svg",
-    alt: "website icon and home page button",
-    height: 118,
-    width: 179,
-  },
-];
+export const icons = {
+  alt: "website icon and home page button",
+  src_light:
+    "https://res.cloudinary.com/dzpne110u/image/upload/v1761257615/wedding_website/icons/monogram_maroon_vmlyu6.svg",
+  src_dark:
+    "https://res.cloudinary.com/dzpne110u/image/upload/v1761257555/wedding_website/icons/monogram_blush_xospub.svg",
+  height: 118,
+  width: 179,
+};
 
 export const form_photo = {
   id: 1,
@@ -24,6 +15,20 @@ export const form_photo = {
   alt: "form photo",
   height: 974,
   width: 1196,
+};
+
+export const hero_section_photo = {
+  alt: "Wedding Photo",
+  desktop: {
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1762127438/wedding_website/feature_photos/hero_section_x6c6sx.png",
+    height: 1561,
+    width: 2912,
+  },
+  mobile: {
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1761875685/wedding_website/engagement_photos_mobile_gallery/seats_watching_back_1_hjwtio.png",
+    height: 2195,
+    width: 1464,
+  },
 };
 
 export const feature_photos = [
