@@ -25,11 +25,9 @@ export default function Navbar() {
   const links = [
     { href: "/", label: "Home" },
     { href: "/big_day", label: "The Big Day" },
-    /*{ href: "/section_two", label: "Details" },*/
     { href: "/our_story", label: "Our Story" },
     { href: "/gallery", label: "Gallery" },
-    { href: "/rsvp", label: "Early RSVP" },
-    /*{ href: "/section_five", label: "FAQs" },*/
+    { href: "/rsvp", label: "RSVP" },
   ];
 
   const isActive = (href) =>

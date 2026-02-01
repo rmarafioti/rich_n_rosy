@@ -13,7 +13,6 @@ import {
 import styles from "../styling/auth_page.module.css";
 
 export default function Auth() {
-  const icon = icons.find((p) => p.id === 2);
   const headerPhoto = feature_photos.find((p) => p.id === 5);
   const headerPhotoMobile = engagement_photos_mobile.find((p) => p.id === 6);
 
@@ -55,10 +54,10 @@ export default function Auth() {
         <article className={styles.content}>
           <section className={styles.header_container}>
             <Image
-              src={icon.src}
-              alt={icon.alt}
-              height={icon.height}
-              width={icon.width}
+              src={icons.src_dark}
+              alt={icons.alt}
+              height={icons.height}
+              width={icons.width}
               className={styles.icon}
             />
             <p className={styles.tag}>Rosy & Rich Get Hitched!</p>
