@@ -2,7 +2,7 @@
 
 import styles from "../styling/responsive_image.module.css";
 
-export default function Responsive_Image_Theme({ photoData }) {
+export default function Responsive_Image_Theme({ photoData, className = "" }) {
   const { src_light, src_dark, alt, height, width } = photoData;
 
   return (
@@ -13,7 +13,7 @@ export default function Responsive_Image_Theme({ photoData }) {
         width={width}
         height={height}
         alt={alt}
-        className={styles.image_theme}
+        className={className}
       />
     </picture>
   );

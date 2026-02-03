@@ -4,10 +4,6 @@
   margin: 0rem 0rem 1rem 0rem;
 }
 
-.image_mobile {
-  display: none;
-}
-
 .header_container {
   position: absolute;
   text-align: left;
@@ -99,9 +95,6 @@
     margin: 0rem 1rem 2rem 1rem;
   }
   .image {
-    display: none;
-  }
-  .image_mobile {
     position: initial;
     display: block;
     margin-top: 8.5rem;

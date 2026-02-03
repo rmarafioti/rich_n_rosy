@@ -25,7 +25,10 @@ export default function Home() {
           you!
         </p>
       </article>
-      <Responsive_Image_Layout photoData={hero_section_photo} />
+      <Responsive_Image_Layout
+        photoData={hero_section_photo}
+        className={styles.image}
+      />
       <section className={styles.form_section}>
         <Contact_Form />
         <Image

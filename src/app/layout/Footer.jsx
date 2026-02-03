@@ -14,7 +14,7 @@ export default function Footer() {
     <>
       <footer>
         <section className={styles.left_section}>
-          <Responsive_Image_Theme photoData={icons} />
+          <Responsive_Image_Theme photoData={icons} className={styles.icon} />
           <div>
             <p className={styles.copy}>Rosy & Rich Get Hitched</p>
             <p className={styles.copy}>July 2026 Chicago</p>

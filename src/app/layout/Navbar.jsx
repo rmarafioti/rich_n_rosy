@@ -41,7 +41,7 @@ export default function Navbar() {
             href="/"
             className={`${pc.menu_icon} ${isActive("/") ? pc.active_link : ""}`}
           >
-            <Responsive_Image_Theme photoData={icons} />
+            <Responsive_Image_Theme photoData={icons} className={pc.icon} />
           </Link>
           <div className={pc.link_container}>
             {links
@@ -63,7 +63,7 @@ export default function Navbar() {
         {/* mobile navigation menu below */}
         <section className={pc.mobile_nav}>
           <Link href="/">
-            <Responsive_Image_Theme photoData={icons} />
+            <Responsive_Image_Theme photoData={icons} className={mobile.icon} />
           </Link>
           {/*hamburger menu*/}
           <div id={mobile.hamMenuContainer} onClick={toggleMenu}>

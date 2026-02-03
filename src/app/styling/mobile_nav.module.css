@@ -7,10 +7,6 @@
   height: auto;
 }
 
-.icon_dark {
-  display: none;
-}
-
 #hamMenuContainer {
   display: flex;
   justify-content: center;
@@ -89,14 +85,6 @@
 @media (prefers-color-scheme: dark) {
   .nav_link {
     border-bottom: 1px solid #3b3840;
-  }
-  .icon {
-    display: none;
-  }
-  .icon_dark {
-    display: block;
-    width: 100px;
-    height: auto;
   }
 }
 

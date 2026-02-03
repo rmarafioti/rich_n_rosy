@@ -60,16 +60,6 @@
   top: -40px;
 }
 
-/* Hide dark theme icon by default */
-.icon_dark {
-  display: none;
-}
-
-.icon_light {
-  display: block;
-  left: 48px;
-}
-
 .nav_link {
   text-decoration: none;
 }
@@ -142,14 +132,6 @@
   .menu_icon:hover,
   .active_link {
     background: #0a0a0a;
-  }
-  .icon_light {
-    display: none;
-  }
-
-  .icon_dark {
-    display: block;
-    left: 48px;
   }
 }
 

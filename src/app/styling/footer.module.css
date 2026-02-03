@@ -13,7 +13,7 @@
   width: auto;
   margin-right: 2rem;
 }
-.icon_light, .heart_light {
+.heart_light {
     display: block;
 }
 
@@ -35,10 +35,10 @@
 }
 
 @media (prefers-color-scheme: dark) {
-.icon_light, .heart_light {
+.heart_light {
     display: none;
 }
-.icon_dark, .heart_dark {
+.heart_dark {
     display: block;
 }
 }
