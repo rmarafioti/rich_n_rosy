@@ -87,14 +87,14 @@ export default function Contact_Form() {
         console.error("MESSAGE FAILED", error?.text);
         setMessageStatus("error");
         setIsLoading(false);
-      }
+      },
     );
   };
 
   return (
     <div className={styles.contact_form_container}>
       <Link href="/rsvp" className={styles.rsvp_button}>
-        Early RSVP
+        RSVP
       </Link>
       <h2 className={styles.header}>Words of Wisdom</h2>
       <p className={styles.sub_header}>

@@ -65,7 +65,11 @@
 }
 
 .nav_link:hover,
-.menu_icon:hover,
+.menu_icon:hover {
+  color: var(--forground);
+  background-color: #e9b6a5;
+}
+
 .active_link {
   color: var(--forground);
   background: var(--blush);
@@ -115,7 +119,6 @@
     position: fixed;
     flex-direction: column;
     text-align: center;
-    height: 64vh;
     z-index: 1000;
     margin-top: 6rem;
   }
