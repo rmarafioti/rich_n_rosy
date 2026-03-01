@@ -13,8 +13,11 @@
   margin-left: 5rem;
   color: var(--blush);
   padding: 1rem;
+}
+
+.header {
   background-color: rgba(24, 23, 23, 0.8);
-  border-radius: 25px;
+  border-radius: 10px;
 }
 
 .intro {
@@ -38,14 +41,23 @@
   letter-spacing: -0.02em;
 }
 
-.schedule > p {
-  margin-bottom: .5rem;
+.schedule {
+  background-color: rgba(130, 124, 124, 0.8);
+  border-radius: 10px;
+  padding: .5rem;
+  margin-bottom: 1rem;
+}
+
+.info > p {
+  margin: 0rem 0rem .5rem 1rem;
 }
 
 .date {
   font-weight: 600;
   font-size: 24px;
-  margin-bottom: 1rem;
+  padding-bottom: .5rem;
+  margin: .5rem 1rem 1rem 1rem;
+  border-bottom: 1px solid var(--blush);
 }
 
 /* dark mode stylings */
