@@ -8,6 +8,16 @@ export const icons = {
   width: 179,
 };
 
+export const footer_icons = {
+  alt: "footer icon",
+  src_light:
+    "https://res.cloudinary.com/dzpne110u/image/upload/v1764724774/wedding_website/our_story/heart_maroon_h8yyoc.svg",
+  src_dark:
+    "https://res.cloudinary.com/dzpne110u/image/upload/v1764808935/wedding_website/our_story/heart_blush_ra7hnw.svg",
+  width: 146,
+  height: 136,
+};
+
 export const form_photo = {
   id: 1,
   name: "form_photo",
@@ -26,6 +36,20 @@ export const hero_section_photo = {
   },
   mobile: {
     src: "https://res.cloudinary.com/dzpne110u/image/upload/v1761875685/wedding_website/engagement_photos_mobile_gallery/seats_watching_back_1_hjwtio.png",
+    height: 2195,
+    width: 1464,
+  },
+};
+
+export const big_day_photo = {
+  alt: "Wedding Photo",
+  desktop: {
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1763217310/wedding_website/feature_photos/feature_photo_two_mpbx3s.png",
+    height: 1472,
+    width: 692,
+  },
+  mobile: {
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1761875964/wedding_website/engagement_photos_mobile_gallery/seats_kiss_two_1_vttinu.png",
     height: 2195,
     width: 1464,
   },
@@ -215,22 +239,3 @@ export const our_story_background_mobile = {
   height: 25385,
   width: 2788,
 };
-
-export const footer_icons = [
-  {
-    id: 1,
-    name: "footer_heart_light_mode",
-    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1764724774/wedding_website/our_story/heart_maroon_h8yyoc.svg",
-    alt: "footer icon",
-    width: 146,
-    height: 136,
-  },
-  {
-    id: 2,
-    name: "footer_heart_dark_mode",
-    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1764808935/wedding_website/our_story/heart_blush_ra7hnw.svg",
-    alt: "footer icon",
-    width: 146,
-    height: 136,
-  },
-];

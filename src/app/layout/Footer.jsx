@@ -1,15 +1,11 @@
 "use client";
 
 import Responsive_Image_Theme from "../components/Responsive_Image_Theme";
-import ResponsiveImage from "../components/Responsive_Image";
 import { icons, footer_icons } from "../data/photos";
 
 import styles from "../styling/footer.module.css";
 
 export default function Footer() {
-  const illustrationLight = footer_icons.find((p) => p.id === 1);
-  const illustrationDark = footer_icons.find((p) => p.id === 2);
-
   return (
     <>
       <footer>
@@ -21,11 +17,9 @@ export default function Footer() {
             <p className={styles.copy}>Website by Marf Inc.</p>
           </div>
         </section>
-        <ResponsiveImage
-          initialPhoto={illustrationLight}
-          secondaryPhoto={illustrationDark}
-          initialClass={`${styles.heart} ${styles.heart_light}`}
-          secondaryClass={`${styles.heart} ${styles.heart_dark}`}
+        <Responsive_Image_Theme
+          photoData={footer_icons}
+          className={styles.heart}
         />
       </footer>
     </>

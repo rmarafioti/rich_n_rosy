@@ -84,9 +84,9 @@ export default function RSVP_Form() {
 
   return (
     <div className={styles.contact_form_container}>
-      <h1 className={styles.page_name}>RSVP</h1>
       <div className={styles.header_container}>
-        <h2 className={styles.header}>RSVP by XX-XX-XXXX</h2>
+        <h1 className={styles.page_name}>RSVP</h1>
+        <h2 className={styles.header}>Kindly RSVP by May 31st, 2026</h2>
       </div>
       <form className={styles.form} ref={formRef} onSubmit={sendEmail}>
         <label className={styles.label}>Name*</label>

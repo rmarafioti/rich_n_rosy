@@ -1,7 +1,5 @@
 "use client";
 
-import styles from "../styling/responsive_image.module.css";
-
 export default function Responsive_Image_Theme({ photoData, className = "" }) {
   const { src_light, src_dark, alt, height, width } = photoData;
 
