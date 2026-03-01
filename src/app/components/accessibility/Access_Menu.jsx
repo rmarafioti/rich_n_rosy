@@ -38,15 +38,6 @@ export default function AccessMenu({
           </div>
           <section className={styles.controls}>
             <div className={styles.controlSection}>
-              <p className={styles.controlItem}>Theme</p>
-              <div className={styles.controlItem}>
-                <Toggle
-                  onToggle={() => toggleSetting("isThemeDark")}
-                  isToggled={accessibility.isThemeDark}
-                />
-              </div>
-            </div>
-            <div className={styles.controlSection}>
               <p className={styles.controlItem}>Remove Font Style</p>
               <div className={styles.controlItem}>
                 <Toggle

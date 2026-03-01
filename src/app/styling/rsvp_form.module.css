@@ -104,24 +104,6 @@
   }
 }
 
-[data-theme="dark"]
-  :is(.page_name, .header, .label, .radio_label, .required_error) {
-  color: #ecd5cd;
-}
-
-[data-theme="dark"] .name {
-  color: var(--foreground);
-  background-color: #3b3840;
-}
-
-[data-theme="dark"] .send {
-  color: var(--background);
-}
-
-[data-theme="dark"] .send:hover {
-  background-color: var(--button_color_dm);
-}
-
 @media (max-width: 667px) and (hover: none) {
   .contact_form_container {
     position: relative;

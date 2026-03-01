@@ -92,14 +92,6 @@ width: 100%;
     }
   }
 
-[data-theme="dark"] :is(.gallery_button, .indicator.active) {
-  color: #ecd5cd;
-}
-
-[data-theme="dark"] :is(.closeButton, .indicators) {
-  color: #680a14;
-}
-
 
 @media (max-width: 1300px) {
   .modalContent {

@@ -1,10 +1,6 @@
 .image {
-  width: 100%;
+  width: 100vw;
   height: auto;
-}
-
-.image_mobile {
-  display: none;
 }
 
 .page_name {
@@ -52,11 +48,8 @@
     margin-right: 0rem;
   }
 
-  .image {
-    display: none;
-  }
 
-  .image_mobile {
+  .image {
     position: absolute;
     top: 0;
     display: block;

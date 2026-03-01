@@ -25,6 +25,7 @@ export default function Navbar() {
   const links = [
     { href: "/", label: "Home" },
     { href: "/wedding_info", label: "Wedding Info" },
+    { href: "/registry", label: "Registry" },
     { href: "/our_story", label: "Our Story" },
     { href: "/gallery", label: "Gallery" },
     { href: "/rsvp", label: "RSVP" },

@@ -153,27 +153,3 @@ button {
     background-color: #232227;
   }
 }
-
-/* manual theme dark mode toggle */
-
-[data-theme="dark"] html {
-  color-scheme: dark;
-}
-
-:root[data-theme="dark"] {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --button_color_dm: #ecd5cd;
-
-  --antique_white: #0a0a0a;
-  --lilac: #0a0a0a;
-  --olive: #0a0a0a;
-  --background_color: #0a0a0a;
-  --rose: #0a0a0a;
-  --blush: #0a0a0a;
-  --maroon: #ecd5cd;
-}
-
-[data-theme="dark"] nav {
-  background-color: #232227;
-}

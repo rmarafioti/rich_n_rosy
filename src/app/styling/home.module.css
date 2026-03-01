@@ -48,6 +48,14 @@
   height: 640px;
 }
 
+ @media (prefers-color-scheme: dark) {
+    .title,
+    .sub_title,
+    .copy {
+      color: #ecd5cd;
+    }
+  }
+
 @media (max-width: 1300px) {
   .header_container {
     top: 270px;
@@ -93,7 +101,8 @@
   .form_photo {
     display: none;
   }
-  @media (prefers-color-scheme: dark) {
+   @media (prefers-color-scheme: dark) {
+    .sub_title,
     .copy {
       color: #ecd5cd;
     }

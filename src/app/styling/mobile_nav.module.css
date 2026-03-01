@@ -88,17 +88,4 @@
   }
 }
 
-[data-theme="dark"] .nav_link {
-  border-bottom: 1px solid #3b3840;
-}
-
-[data-theme="dark"] .icon {
-  display: none;
-}
-
-[data-theme="dark"] .icon_dark {
-  display: block;
-  width: 100px;
-  height: auto;
-}
 

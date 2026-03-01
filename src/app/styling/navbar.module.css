@@ -135,24 +135,6 @@
   }
 }
 
-[data-theme="dark"] :is(.nav_link, .menu_icon) {
-  color: #ecd5cd;
-  background-color: #3b3840;
-}
-
-[data-theme="dark"] :is(.nav_link:hover, .menu_icon:hover, .active_link) {
-  background: #0a0a0a;
-}
-
-[data-theme="dark"] .icon_light {
-  display: none;
-}
-
-[data-theme="dark"] .icon_dark {
-  display: block;
-  left: 48px;
-}
-
 /* mobile breakpoint */
 @media (max-width: 1300px) {
   .nav_link {
@@ -177,11 +159,5 @@
     .menu_icon {
       background-color: transparent;
     }
-  }
-  [data-theme="dark"] :is(.nav_link, .menu_icon) {
-    background-color: transparent;
-  }
-  [data-theme="dark"] :is(.nav_link:hover, .menu_icon:hover, .active_link) {
-    background: transparent;
   }
 }

@@ -55,6 +55,20 @@ export const wedding_info_photo = {
   },
 };
 
+export const rsvp_photo = {
+  alt: "Wedding Photo",
+  desktop: {
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1763258181/wedding_website/feature_photos/feature_photo_three_kkkmez.png",
+    height: 2093,
+    width: 1731,
+  },
+  mobile: {
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1761875753/wedding_website/engagement_photos_mobile_gallery/theatre_walking_two_1_eeiisl.png",
+    height: 2195,
+    width: 1464,
+  },
+};
+
 export const feature_photos = [
   {
     id: 5,

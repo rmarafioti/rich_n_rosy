@@ -102,10 +102,6 @@
   background-color: transparent;
 }
 
-[data-theme="dark"] .mobile_photo_layout:hover {
-  border: 2px solid #ecd5cd;
-}
-
 @media (prefers-color-scheme: dark) {
   .mobile_photo_layout:hover {
     border: 2px solid #ecd5cd;
@@ -198,11 +194,4 @@
   .button_container {
     width: 90%;
   }
-  [data-theme="dark"] .mobile_photo_layout:hover {
-  border: none;
-}
-}
-
-[data-theme="dark"] :is(.heading, .copy, .copy_tag, .tap) {
-  color: #ecd5cd;
 }

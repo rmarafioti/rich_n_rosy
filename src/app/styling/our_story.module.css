@@ -209,30 +209,6 @@
   }
 }
 
-[data-theme="dark"] .story_card {
-  background-color: #3b3840;
-}
-
-[data-theme="dark"] .train_icon_dark {
-  display: block;
-  margin-right: 1rem;
-}
-
-[data-theme="dark"] :is(.our_story_bg, .train_icon_light) {
-  display: none;
-}
-
-[data-theme="dark"] .our_story_bg_dark {
-  margin-top: 6rem;
-  position: absolute;
-  width: 1000px;
-  height: 8500px;
-  z-index: 1;
-  pointer-events: none;
-  display: block;
-  object-fit: contain;
-}
-
 @media (min-width: 1540px) {
   .header_container {
     padding-left: 36rem;
@@ -352,34 +328,6 @@
   }
   .card_8 {
     margin-bottom: 0rem;
-  }
-  [data-theme="dark"] :is(.our_story_bg_dark, .our_story_icons_mobile) {
-    display: none;
-  }
-  [data-theme="dark"] .our_story_icons_mobile_dark {
-    display: block;
-    float: right;
-    margin-left: 1rem;
-  }
-  [data-theme="dark"] .card_2 .our_story_icons_mobile_dark {
-    width: 170px;
-    height: auto;
-  }
-  [data-theme="dark"] .card_3 .our_story_icons_mobile_dark,
-  [data-theme="dark"] .card_4 .our_story_icons_mobile_dark {
-    width: 140px;
-    height: auto;
-  }
-
-  [data-theme="dark"] .card_5 .our_story_icons_mobile_dark,
-  [data-theme="dark"] .card_8 .our_story_icons_mobile_dark {
-    width: 160px;
-    height: auto;
-  }
-
-  [data-theme="dark"] .card_7 .our_story_icons_mobile_dark {
-    width: 150px;
-    height: auto;
   }
   @media (prefers-color-scheme: dark) {
     .our_story_bg_dark,
