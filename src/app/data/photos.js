@@ -41,7 +41,7 @@ export const hero_section_photo = {
   },
 };
 
-export const big_day_photo = {
+export const wedding_info_photo = {
   alt: "Wedding Photo",
   desktop: {
     src: "https://res.cloudinary.com/dzpne110u/image/upload/v1763217310/wedding_website/feature_photos/feature_photo_two_mpbx3s.png",
