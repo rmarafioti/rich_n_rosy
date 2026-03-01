@@ -18,7 +18,8 @@
   margin: 2rem 0rem 2rem 0rem;
 }
 
-.header {
+.note {
+  font-weight: 600;
   width: 420px;
 }
 
@@ -50,7 +51,8 @@
   width: 400px;
 }
 
-.radio_group {
+.radio_group,
+.radio_group_bottom {
   margin-bottom: 3rem;
 }
 
@@ -128,9 +130,10 @@
     margin-bottom: 0.5rem;
     width: 100%;
   }
-  .header {
+  .note {
     color: #ecd5cd;
     margin: 0rem;
+    margin-bottom: 1rem;
     width: 100%;
   }
   .label {
@@ -148,12 +151,16 @@
     width: 100%;
   }
   .name {
-    margin-bottom: 6rem;
+    margin-bottom: 2rem;
   }
-  .radio_group {
+  .radio_group,
+  .radio_group_bottom {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1rem;
+    margin-bottom: 4.5rem;
+  }
+  .radio_group_bottom {
+    margin-bottom: 2rem;
   }
   .radio_label {
     color: #ecd5cd;
