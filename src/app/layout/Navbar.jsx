@@ -47,17 +47,41 @@ export default function Navbar() {
           <div className={pc.link_container}>
             {links
               .filter((link) => link.href !== "/")
-              .map(({ href, label }) => (
-                <Link
-                  key={href}
-                  href={href}
-                  className={`${pc.nav_link} ${
-                    isActive(href) ? pc.active_link : ""
-                  }`}
-                >
-                  {label}
-                </Link>
-              ))}
+              .map(({ href, label }) =>
+                href === "/wedding_info" ? (
+                  <div key={href} className={pc.dropdown_wrapper}>
+                    <Link
+                      href={href}
+                      className={`${pc.nav_link} ${
+                        isActive(href) ? pc.active_link : ""
+                      }`}
+                    >
+                      {label}
+                    </Link>
+                    <section className={pc.dropdown}>
+                      <Link href="wedding_info" className={pc.dd_link}>
+                        Event Schedule
+                      </Link>
+                      <Link href="wedding_info" className={pc.dd_link}>
+                        Things To Do
+                      </Link>
+                      <Link href="wedding_info" className={pc.dd_link}>
+                        Directions
+                      </Link>
+                    </section>
+                  </div>
+                ) : (
+                  <Link
+                    key={href}
+                    href={href}
+                    className={`${pc.nav_link} ${
+                      isActive(href) ? pc.active_link : ""
+                    }`}
+                  >
+                    {label}
+                  </Link>
+                ),
+              )}
           </div>
         </div>
 
@@ -84,16 +108,39 @@ export default function Navbar() {
       >
         {links
           .filter((link) => link.href !== "/")
-          .map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              role="heading"
-              className={mobile.nav_link}
-            >
-              {label}
-            </Link>
-          ))}
+          .map(({ href, label }) =>
+            href === "/wedding_info" ? (
+              <div key={href} className={mobile.dropdown_wrapper}>
+                <Link
+                  href={href}
+                  role="heading"
+                  className={mobile.nav_link_wrapped}
+                >
+                  {label}
+                </Link>
+                <section className={mobile.dropdown}>
+                  <Link href="wedding_info" className={mobile.dd_link}>
+                    &#8226; Event Schedule
+                  </Link>
+                  <Link href="wedding_info" className={mobile.dd_link}>
+                    &#8226; Things To Do
+                  </Link>
+                  <Link href="wedding_info" className={mobile.dd_link}>
+                    &#8226; Directions
+                  </Link>
+                </section>
+              </div>
+            ) : (
+              <Link
+                key={href}
+                href={href}
+                role="heading"
+                className={mobile.nav_link}
+              >
+                {label}
+              </Link>
+            ),
+          )}
       </menu>
     </>
   );
