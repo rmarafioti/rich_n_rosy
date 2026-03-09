@@ -12,7 +12,10 @@ function MobilePhotoCard({ photo, onClick }) {
   const [ref, isVisible] = useVisibilityObserver(0.1);
 
   return (
-    <div ref={ref} className={styles.mobile_photo_layout}>
+    <div
+      ref={ref}
+      className={`${styles.mobile_photo_layout} ${photo.id === 1 ? styles.hide_on_mobile : ""}`}
+    >
       <Image
         src={photo.src}
         alt={photo.alt}
@@ -38,6 +41,7 @@ export default function Gallery() {
   } = usePhotoGallery(engagement_photos_mobile);
 
   const backgroundPhoto = feature_photos.find((p) => p.id === 5);
+  const marquee_photo = engagement_photos_mobile.find((p) => p.id === 1);
 
   return (
     <main>
@@ -46,6 +50,9 @@ export default function Gallery() {
           <h1 className={styles.heading}>
             <span className={styles.kern}>P</span>hoto Gallery
           </h1>
+          <p className={styles.tap}>
+            <i>*tap photos to view</i>
+          </p>
           <p className={styles.copy}>
             <a href="https://www.musicboxtheatre.com/" target="_blank">
               The Music Box Theatre
@@ -55,6 +62,13 @@ export default function Gallery() {
             movies, welcomed our favorite filmmakers, and become one of our
             favorite date spots.
           </p>
+          <Image
+            src={marquee_photo.src}
+            alt={marquee_photo.alt}
+            width={marquee_photo.width}
+            height={marquee_photo.height}
+            className={styles.marquee_photo}
+          />
           <p className={styles.copy}>
             If you asked us to describe our perfect night, we&apos;d be at the
             Music Box with fresh popcorn, the sound of the organ, and
@@ -69,7 +83,6 @@ export default function Gallery() {
             </a>{" "}
             for this unforgettable experience.
           </p>
-          <p className={styles.tap}>tap photos to view</p>
         </section>
         <section className={styles.mobile_gallery}>
           {engagement_photos_mobile.map((photo, index) => (

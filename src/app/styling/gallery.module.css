@@ -22,15 +22,19 @@
   letter-spacing: -0.03em;
 }
 
+.tap {
+  text-align: right;
+  margin-right: 11rem;
+  margin-bottom: 2rem;
+}
+
 .copy,
 .copy_tag {
   margin-bottom: 1rem;;
 } 
 
-.tap {
-  text-align: right;
-  padding-top: 5rem;
-  margin-right: 2rem;
+.marquee_photo {
+  display: none;
 }
 
 .mobile_gallery {
@@ -148,6 +152,12 @@
     color: var(--maroon);
     margin: 0rem 1rem 2rem 1rem;
   }
+  .marquee_photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
   .tap {
     display: none;
   }
@@ -193,5 +203,8 @@
   }
   .button_container {
     width: 90%;
+  }
+  .hide_on_mobile {
+    display: none;
   }
 }
