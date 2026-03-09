@@ -77,32 +77,10 @@
   border-bottom: 1px solid var(--blush);
 }
 
-.dropdown_wrapper {
-  text-decoration: none;
-  font-size: 20px;
-  margin-top: 2rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--blush);
-}
-
 .nav_link_wrapped {
   text-decoration: none;
   font-size: 20px;
   padding: 1.5rem;
-}
-
-.dropdown {
-  display: flex;
-  flex-direction: column;
-  padding-top: 1rem;
-}
-
-.dropdown > .dd_link {
-  text-decoration: none;
-  text-align: justify;
-  font-weight: 300;
-  padding: .5rem;
-  padding-left: 2rem;
 }
 
 /* dark mode stylings */

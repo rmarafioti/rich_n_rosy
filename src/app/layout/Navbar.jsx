@@ -34,6 +34,22 @@ export default function Navbar() {
   const isActive = (href) =>
     pathname === href || pathname.startsWith(href + "/");
 
+  function DropDownMenu() {
+    return (
+      <section className={pc.dropdown}>
+        <Link href="wedding_info#eventschedule" className={pc.dd_link}>
+          Event Schedule
+        </Link>
+        <Link href="wedding_info#thingstodo" className={pc.dd_link}>
+          Things To Do
+        </Link>
+        <Link href="wedding_info#directions" className={pc.dd_link}>
+          Directions
+        </Link>
+      </section>
+    );
+  }
+
   return (
     <>
       <nav>
@@ -58,17 +74,7 @@ export default function Navbar() {
                     >
                       {label}
                     </Link>
-                    <section className={pc.dropdown}>
-                      <Link href="wedding_info" className={pc.dd_link}>
-                        Event Schedule
-                      </Link>
-                      <Link href="wedding_info" className={pc.dd_link}>
-                        Things To Do
-                      </Link>
-                      <Link href="wedding_info" className={pc.dd_link}>
-                        Directions
-                      </Link>
-                    </section>
+                    <DropDownMenu />
                   </div>
                 ) : (
                   <Link
@@ -110,7 +116,7 @@ export default function Navbar() {
           .filter((link) => link.href !== "/")
           .map(({ href, label }) =>
             href === "/wedding_info" ? (
-              <div key={href} className={mobile.dropdown_wrapper}>
+              <div key={href} className={pc.dropdown_wrapper}>
                 <Link
                   href={href}
                   role="heading"
@@ -118,17 +124,7 @@ export default function Navbar() {
                 >
                   {label}
                 </Link>
-                <section className={mobile.dropdown}>
-                  <Link href="wedding_info" className={mobile.dd_link}>
-                    &#8226; Event Schedule
-                  </Link>
-                  <Link href="wedding_info" className={mobile.dd_link}>
-                    &#8226; Things To Do
-                  </Link>
-                  <Link href="wedding_info" className={mobile.dd_link}>
-                    &#8226; Directions
-                  </Link>
-                </section>
+                <DropDownMenu />
               </div>
             ) : (
               <Link

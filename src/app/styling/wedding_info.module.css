@@ -5,32 +5,25 @@
 }
 
 .header_container {
-  position: absolute;
   align-self: flex-start;
   text-align: left;
   margin-top: 1rem;
   width: 540px;
   margin-left: 5rem;
-  color: var(--blush);
+  color: var(--maroon);
   padding: 1rem;
 }
 
-.header {
-  background-color: rgba(24, 23, 23, 0.8);
-  border-radius: 10px;
-}
-
 .intro {
+  font-weight: 600;
   margin-bottom: 1rem;
 }
 
 .title {
-  color: var(--blush);
   font-family: var(--summer-of-love-font);
   font-size: 80px;
   font-weight: normal;
   word-spacing: 0.1em;
-  text-shadow: 5px 0px 5px #030303;
   margin-bottom: 1rem;
 }
 
@@ -41,10 +34,11 @@
   letter-spacing: -0.02em;
 }
 
+.section {
+  margin-bottom: 8rem;
+}
+
 .schedule {
-  background-color: rgba(130, 124, 124, 0.8);
-  border-radius: 10px;
-  padding: .5rem;
   margin-bottom: 1rem;
 }
 
@@ -57,7 +51,7 @@
   font-size: 24px;
   padding-bottom: .5rem;
   margin: .5rem 1rem 1rem 1rem;
-  border-bottom: 1px solid var(--blush);
+  border-bottom: 1px solid var(--maroon);
 }
 
 /* dark mode stylings */
