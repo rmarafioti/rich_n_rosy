@@ -72,7 +72,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 120px;
+  width: 180px;
 }
 
 .sizeItem {
@@ -86,6 +86,20 @@
 
 .sizeItem:hover {
   border: 1px solid #242424;
+}
+
+.indicators {
+  display: flex;
+}
+
+.indicator {
+  font-size: 12px;
+  margin: 0.2rem;
+  color: var(--maroon);
+}
+
+.indicator.active {
+  color: var(--rose);
 }
 
 .resetButton {

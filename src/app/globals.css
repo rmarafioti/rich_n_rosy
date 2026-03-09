@@ -45,7 +45,7 @@ label {
 }
 
 @media (max-width: 667px) {
-  h2 {
+  h2, h3, h4 {
     font-size: 1.8em;
   }
 }

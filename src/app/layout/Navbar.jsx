@@ -37,13 +37,25 @@ export default function Navbar() {
   function DropDownMenu() {
     return (
       <section className={pc.dropdown}>
-        <Link href="wedding_info#eventschedule" className={pc.dd_link}>
+        <Link
+          href="wedding_info#eventschedule"
+          onClick={() => setMenuOpen(false)}
+          className={pc.dd_link}
+        >
           Event Schedule
         </Link>
-        <Link href="wedding_info#thingstodo" className={pc.dd_link}>
+        <Link
+          href="wedding_info#thingstodo"
+          onClick={() => setMenuOpen(false)}
+          className={pc.dd_link}
+        >
           Things To Do
         </Link>
-        <Link href="wedding_info#directions" className={pc.dd_link}>
+        <Link
+          href="wedding_info#directions"
+          onClick={() => setMenuOpen(false)}
+          className={pc.dd_link}
+        >
           Directions
         </Link>
       </section>
