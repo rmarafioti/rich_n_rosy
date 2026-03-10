@@ -45,18 +45,18 @@ export default function Navbar() {
           Event Schedule
         </Link>
         <Link
-          href="wedding_info#thingstodo"
-          onClick={() => setMenuOpen(false)}
-          className={pc.dd_link}
-        >
-          Things To Do
-        </Link>
-        <Link
           href="wedding_info#directions"
           onClick={() => setMenuOpen(false)}
           className={pc.dd_link}
         >
           Directions
+        </Link>
+        <Link
+          href="wedding_info#thingstodo"
+          onClick={() => setMenuOpen(false)}
+          className={pc.dd_link}
+        >
+          Things To Do
         </Link>
       </section>
     );
