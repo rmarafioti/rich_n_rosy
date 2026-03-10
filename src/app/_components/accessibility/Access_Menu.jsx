@@ -8,7 +8,7 @@ import { FaCircle } from "react-icons/fa6";
 
 import Toggle from "./Toggle";
 
-import styles from "../../styling/access_menu.module.css";
+import styles from "../../_styling/access_menu.module.css";
 
 export default function AccessMenu({
   accessibility,

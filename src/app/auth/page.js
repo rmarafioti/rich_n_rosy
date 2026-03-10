@@ -3,14 +3,14 @@
 import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import ResponsiveImage from "../components/Responsive_Image";
+import ResponsiveImage from "../_components/Responsive_Image";
 import {
   icons,
   engagement_photos_mobile,
   feature_photos,
-} from "../data/photos";
+} from "../_data/photos";
 
-import styles from "../styling/auth_page.module.css";
+import styles from "../_styling/auth_page.module.css";
 
 export default function Auth() {
   const headerPhoto = feature_photos.find((p) => p.id === 5);

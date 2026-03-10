@@ -3,12 +3,12 @@
 import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import Responsive_Image_Theme from "../components/Responsive_Image_Theme";
-import { icons } from "../data/photos";
+import Responsive_Image_Theme from "../_components/Responsive_Image_Theme";
+import { icons } from "../_data/photos";
 
 /* naming conventions to define responsive design*/
-import pc from "../styling/navbar.module.css";
-import mobile from "../styling/mobile_nav.module.css";
+import pc from "../_styling/navbar.module.css";
+import mobile from "../_styling/mobile_nav.module.css";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);

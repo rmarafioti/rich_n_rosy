@@ -6,9 +6,9 @@ import { Fraunces } from "next/font/google";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
-import Navbar from "../layout/Navbar";
-import Footer from "../layout/Footer";
-import Access_Menu from "../components/accessibility/Access_Menu";
+import Navbar from "../_layout/Navbar";
+import Footer from "../_layout/Footer";
+import Access_Menu from "./accessibility/Access_Menu";
 
 const fraunces = Fraunces({
   variable: "--main-font",
@@ -17,7 +17,7 @@ const fraunces = Fraunces({
 });
 
 const summer_of_love = localFont({
-  src: "../../app/fonts/SummerofLove.otf",
+  src: "../../app/_fonts/SummerofLove.otf",
   variable: "--summer-of-love-font",
   display: "swap",
 });
@@ -32,13 +32,13 @@ export default function AppWrapper({ children }) {
   });
 
   const adjustFontSize = (increment) => {
-    setAccessibility((prev) => ({
-      ...prev,
-      fontSizeAdjust: Math.max(
-        1,
-        Math.min(1.2, prev.fontSizeAdjust + increment),
-      ),
-    }));
+    setAccessibility((prev) => {
+      const newValue =
+        Math.round(
+          Math.max(1, Math.min(1.2, prev.fontSizeAdjust + increment)) * 10,
+        ) / 10;
+      return { ...prev, fontSizeAdjust: newValue };
+    });
   };
 
   const toggleSetting = (key) => {

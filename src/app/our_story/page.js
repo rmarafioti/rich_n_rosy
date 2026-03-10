@@ -1,14 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import useVisibilityObserver from "../hooks/useVisibilityObserver";
-import { our_story_background } from "../data/photos";
-import { ourStory, train_icon } from "../data/ourStory";
-import Responsive_Image_Theme from "../components/Responsive_Image_Theme";
+import useVisibilityObserver from "../_hooks/useVisibilityObserver";
+import { our_story_background } from "../_data/photos";
+import { ourStory, train_icon } from "../_data/ourStory";
+import Responsive_Image_Theme from "../_components/Responsive_Image_Theme";
 import Image from "next/image";
 import { FaCircleArrowDown } from "react-icons/fa6";
 
-import styles from "../styling/our_story.module.css";
+import styles from "../_styling/our_story.module.css";
 
 function StoryCard({ date, text, dateTwo, textTwo, cardId, photoData }) {
   const [ref, isVisible] = useVisibilityObserver(0.1);

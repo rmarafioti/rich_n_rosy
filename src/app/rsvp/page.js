@@ -1,8 +1,8 @@
 "use client";
 
-import { rsvp_photo } from "../data/photos";
-import Responsive_Image_Layout from "../components/Responsive_Image_Layout";
-import RSVP_Form from "../components/forms/Rsvp_Form";
+import { rsvp_photo } from "../_data/photos";
+import Responsive_Image_Layout from "../_components/Responsive_Image_Layout";
+import RSVP_Form from "../_components/forms/Rsvp_Form";
 
 import styles from "../styling/rsvp.module.css";
 

@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import Image_Gallery_Modal from "../components/Image_Gallery_Modal";
-import usePhotoGallery from "../hooks/usePhotoGallery";
-import useVisibilityObserver from "../hooks/useVisibilityObserver";
-import { engagement_photos_mobile, feature_photos } from "../data/photos";
+import Image_Gallery_Modal from "../_components/Image_Gallery_Modal";
+import usePhotoGallery from "../_hooks/usePhotoGallery";
+import useVisibilityObserver from "../_hooks/useVisibilityObserver";
+import { engagement_photos_mobile, feature_photos } from "../_data/photos";
 
-import styles from "../styling/gallery.module.css";
+import styles from "../_styling/gallery.module.css";
 
 function MobilePhotoCard({ photo, onClick }) {
   const [ref, isVisible] = useVisibilityObserver(0.1);

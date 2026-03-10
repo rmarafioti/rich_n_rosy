@@ -1,4 +1,4 @@
-import App_Wrapper from "./components/App_Wrapper";
+import App_Wrapper from "./_components/App_Wrapper";
 
 import "./globals.css";
 

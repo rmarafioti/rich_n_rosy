@@ -1,9 +1,9 @@
 "use client";
 
-import Responsive_Image_Theme from "../components/Responsive_Image_Theme";
-import { icons, footer_icons } from "../data/photos";
+import Responsive_Image_Theme from "../_components/Responsive_Image_Theme";
+import { icons, footer_icons } from "../_data/photos";
 
-import styles from "../styling/footer.module.css";
+import styles from "../_styling/footer.module.css";
 
 export default function Footer() {
   return (

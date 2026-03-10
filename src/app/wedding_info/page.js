@@ -1,9 +1,9 @@
 "use client";
 
-import { wedding_info_photo } from "../data/photos";
-import Responsive_Image_Layout from "../components/Responsive_Image_Layout";
+import { wedding_info_photo } from "../_data/photos";
+import Responsive_Image_Layout from "../_components/Responsive_Image_Layout";
 
-import styles from "../styling/wedding_info.module.css";
+import styles from "../_styling/wedding_info.module.css";
 
 export default function Event() {
   return (
