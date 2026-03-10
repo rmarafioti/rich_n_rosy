@@ -4,7 +4,7 @@ import { rsvp_photo } from "../_data/photos";
 import Responsive_Image_Layout from "../_components/Responsive_Image_Layout";
 import RSVP_Form from "../_components/forms/Rsvp_Form";
 
-import styles from "../styling/rsvp.module.css";
+import styles from "../_styling/rsvp.module.css";
 
 export default function Rsvp() {
   return (

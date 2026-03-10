@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 import Form_Modal from "./Form_Modal";
 import useModal from "../../_hooks/useModal";
 
-import styles from "../../styling/rsvp_form.module.css";
+import styles from "../../_styling/rsvp_form.module.css";
 
 export default function RSVP_Form() {
   const formRef = useRef();
