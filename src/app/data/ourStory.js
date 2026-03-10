@@ -1,26 +1,20 @@
-export const train_icon = [
-  {
-    id: 1,
-    name: "train icon light",
-    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1764897049/wedding_website/our_story/cta_maroon_wu9bpk.svg",
-    alt: "Chicago CTA train icon",
-    width: 102,
-    height: 108,
-  },
-  {
-    id: 2,
-    name: "train icon dark",
-    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1764897041/wedding_website/our_story/cta_blush_xypk20.svg",
-    alt: "Chicago CTA train icon",
-    width: 102,
-    height: 108,
-  },
-];
+export const train_icon = {
+  id: 1,
+  name: "train icon light",
+  src_light:
+    "https://res.cloudinary.com/dzpne110u/image/upload/v1764897049/wedding_website/our_story/cta_maroon_wu9bpk.svg",
+  src_dark:
+    "https://res.cloudinary.com/dzpne110u/image/upload/v1764897041/wedding_website/our_story/cta_blush_xypk20.svg",
+  alt: "Chicago CTA train icon",
+  width: 102,
+  height: 108,
+};
 
 export const ourStory = [
   {
     id: 1,
-    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1764724774/wedding_website/our_story/heart_maroon_h8yyoc.svg",
+    src_light:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1764724774/wedding_website/our_story/heart_maroon_h8yyoc.svg",
     src_dark:
       "https://res.cloudinary.com/dzpne110u/image/upload/v1764808935/wedding_website/our_story/heart_blush_ra7hnw.svg",
     alt: "our story icon",
@@ -31,7 +25,8 @@ export const ourStory = [
   },
   {
     id: 2,
-    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1764724744/wedding_website/our_story/art_museum_maroon_pljan0.svg",
+    src_light:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1764724744/wedding_website/our_story/art_museum_maroon_pljan0.svg",
     src_dark:
       "https://res.cloudinary.com/dzpne110u/image/upload/v1764809557/wedding_website/our_story/art_museum_blush_ibmulq.svg",
     alt: "our story icon",
@@ -42,7 +37,8 @@ export const ourStory = [
   },
   {
     id: 3,
-    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1764724798/wedding_website/our_story/ny_coffee_maroon_w7wwof.svg",
+    src_light:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1764724798/wedding_website/our_story/ny_coffee_maroon_w7wwof.svg",
     src_dark:
       "https://res.cloudinary.com/dzpne110u/image/upload/v1764809595/wedding_website/our_story/ny_coffee_blush_huinbv.svg",
     alt: "our story icon",
@@ -53,7 +49,8 @@ export const ourStory = [
   },
   {
     id: 4,
-    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1764724783/wedding_website/our_story/keys_maroon_bmqd4x.svg",
+    src_light:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1764724783/wedding_website/our_story/keys_maroon_bmqd4x.svg",
     src_dark:
       "https://res.cloudinary.com/dzpne110u/image/upload/v1764809586/wedding_website/our_story/keys_blush_mpts3g.svg",
     alt: "our story icon",
@@ -64,7 +61,8 @@ export const ourStory = [
   },
   {
     id: 5,
-    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1764724834/wedding_website/our_story/the_boss_maroon_rsi85o.svg",
+    src_light:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1764724834/wedding_website/our_story/the_boss_maroon_rsi85o.svg",
     src_dark:
       "https://res.cloudinary.com/dzpne110u/image/upload/v1764809622/wedding_website/our_story/the_boss_blush_ijmlji.svg",
     alt: "our story icon",
@@ -75,7 +73,8 @@ export const ourStory = [
   },
   {
     id: 6,
-    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1764724824/wedding_website/our_story/stevie_maroon_ip2jbr.svg",
+    src_light:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1764724824/wedding_website/our_story/stevie_maroon_ip2jbr.svg",
     src_dark:
       "https://res.cloudinary.com/dzpne110u/image/upload/v1764809613/wedding_website/our_story/stevie_blush_akd4nr.svg",
     alt: "our story icon",
@@ -86,7 +85,8 @@ export const ourStory = [
   },
   {
     id: 7,
-    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1764724765/wedding_website/our_story/bulb_maroon_btizuh.svg",
+    src_light:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1764724765/wedding_website/our_story/bulb_maroon_btizuh.svg",
     src_dark:
       "https://res.cloudinary.com/dzpne110u/image/upload/v1764809572/wedding_website/our_story/bulb_blush_qmxgos.svg",
     alt: "our story icon",
@@ -97,7 +97,8 @@ export const ourStory = [
   },
   {
     id: 8,
-    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1764724808/wedding_website/our_story/ring_maroon_s832pq.svg",
+    src_light:
+      "https://res.cloudinary.com/dzpne110u/image/upload/v1764724808/wedding_website/our_story/ring_maroon_s832pq.svg",
     src_dark:
       "https://res.cloudinary.com/dzpne110u/image/upload/v1764809605/wedding_website/our_story/ring_blush_apa6f7.svg",
     alt: "our story icon",

@@ -2,8 +2,6 @@
 
 import { getImageProps } from "next/image";
 
-import styles from "../styling/responsive_image.module.css";
-
 export default function Responsive_Image_Layout({ photoData, className = "" }) {
   const { desktop, mobile, alt } = photoData;
   const primaryAttributes = { alt, priority: true };

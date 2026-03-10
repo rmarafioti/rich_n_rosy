@@ -1,31 +1,16 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ourStory, train_icon } from "../data/ourStory";
 import useVisibilityObserver from "../hooks/useVisibilityObserver";
-import {
-  our_story_background,
-  our_story_background_dark,
-  our_story_background_mobile,
-} from "../data/photos";
-import ResponsiveImage from "../components/Responsive_Image";
+import { our_story_background } from "../data/photos";
+import { ourStory, train_icon } from "../data/ourStory";
+import Responsive_Image_Theme from "../components/Responsive_Image_Theme";
 import Image from "next/image";
 import { FaCircleArrowDown } from "react-icons/fa6";
 
 import styles from "../styling/our_story.module.css";
 
-function StoryCard({
-  date,
-  text,
-  src,
-  src_dark,
-  alt,
-  width,
-  height,
-  dateTwo,
-  textTwo,
-  cardId,
-}) {
+function StoryCard({ date, text, dateTwo, textTwo, cardId, photoData }) {
   const [ref, isVisible] = useVisibilityObserver(0.1);
 
   const nextStopId = cardId + 1;
@@ -42,19 +27,9 @@ function StoryCard({
     >
       <div className={styles.date_section}>
         <p className={styles.date}>{date}:</p>
-        <Image
-          src={src}
-          alt={alt}
-          width={width}
-          height={height}
+        <Responsive_Image_Theme
+          photoData={photoData}
           className={styles.our_story_icons_mobile}
-        />
-        <Image
-          src={src_dark}
-          alt={alt}
-          width={width}
-          height={height}
-          className={styles.our_story_icons_mobile_dark}
         />
         <p className={styles.text}>{text}</p>
       </div>
@@ -83,13 +58,6 @@ function StoryCard({
 export default function Our_Story() {
   const [isLoading, setIsLoading] = useState(true);
 
-  const ourStoryBackground = our_story_background;
-  const ourStoryBackgroundDark = our_story_background_dark;
-  const ourStoryBackgroundMobile = our_story_background_mobile;
-
-  const trainIconLight = train_icon.find((p) => p.id === 1);
-  const trainIconDark = train_icon.find((p) => p.id === 2);
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
@@ -98,15 +66,22 @@ export default function Our_Story() {
     return () => clearTimeout(timer);
   }, []);
 
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsDesktop(window.innerWidth >= 667);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
   if (isLoading) {
     return (
       <div className={styles.loading_container}>
         <div className={styles.loader}>
-          <ResponsiveImage
-            initialPhoto={trainIconLight}
-            secondaryPhoto={trainIconDark}
-            initialClass={styles.train_icon_light}
-            secondaryClass={styles.train_icon_dark}
+          <Responsive_Image_Theme
+            photoData={train_icon}
+            className={styles.train_icon}
           />
           <p className={styles.arrival_message}>
             The Love Train will arrive shortly...
@@ -121,11 +96,9 @@ export default function Our_Story() {
       <div className={styles.header_container}>
         <h1 className={styles.title}>Hop On The Love Train!</h1>
         <div className={styles.train_container}>
-          <ResponsiveImage
-            initialPhoto={trainIconLight}
-            secondaryPhoto={trainIconDark}
-            initialClass={styles.train_icon_light}
-            secondaryClass={styles.train_icon_dark}
+          <Responsive_Image_Theme
+            photoData={train_icon}
+            className={styles.train_icon}
           />
           <p className={styles.sub_title}>
             Take a ride & discover our journey to tying the knot!
@@ -138,31 +111,28 @@ export default function Our_Story() {
             key={story.id}
             date={story.date}
             text={story.text}
-            src={story.src}
-            src_dark={story.src_dark}
-            alt={story.alt}
-            width={story.width}
-            height={story.height}
+            photoData={story}
             dateTwo={story.dateTwo}
             textTwo={story.textTwo}
             cardId={story.id}
           />
         ))}
       </div>
-      <ResponsiveImage
-        initialPhoto={ourStoryBackground}
-        secondaryPhoto={ourStoryBackgroundMobile}
-        initialClass={styles.our_story_bg}
-        secondaryClass={styles.our_story_bg_mobile}
-      />
-      <Image
-        src={ourStoryBackgroundDark.src}
-        alt={ourStoryBackgroundDark.alt}
-        width={ourStoryBackgroundDark.width}
-        height={ourStoryBackgroundDark.height}
-        className={styles.our_story_bg_dark}
-        priority
-      />
+      {isDesktop ? (
+        <Responsive_Image_Theme
+          photoData={our_story_background.desktop}
+          className={styles.our_story_bg}
+        />
+      ) : (
+        <Image
+          src={our_story_background.mobile.src}
+          alt={our_story_background.alt}
+          width={our_story_background.mobile.width}
+          height={our_story_background.mobile.height}
+          className={styles.our_story_bg_mobile}
+          priority
+        />
+      )}
     </main>
   );
 }
