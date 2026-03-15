@@ -43,16 +43,9 @@ export const hero_section_photo = {
 
 export const wedding_info_photo = {
   alt: "Wedding Photo",
-  desktop: {
-    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1763217310/wedding_website/feature_photos/feature_photo_two_mpbx3s.png",
-    height: 1472,
-    width: 692,
-  },
-  mobile: {
-    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1761875964/wedding_website/engagement_photos_mobile_gallery/seats_kiss_two_1_vttinu.png",
-    height: 2195,
-    width: 1464,
-  },
+  src: "https://res.cloudinary.com/dzpne110u/image/upload/v1773538098/wedding_website/engagement_photos_pc_gallery/wedding_info_photo_r8s0ao.png",
+  height: 680,
+  width: 962,
 };
 
 export const rsvp_photo = {
@@ -69,40 +62,26 @@ export const rsvp_photo = {
   },
 };
 
-export const feature_photos = [
-  {
-    id: 5,
-    name: "full_theatre",
+export const auth_photo = {
+  alt: "Wedding Photo",
+  desktop: {
     src: "https://res.cloudinary.com/dzpne110u/image/upload/v1762900255/wedding_website/feature_photos/feature_photo_one_zwydiz.png",
-    alt: "engagement photo",
     height: 1472,
     width: 692,
   },
-  {
-    id: 6,
-    name: "watching_backs_of_heads",
-    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1762127438/wedding_website/feature_photos/hero_section_x6c6sx.png",
-    alt: "engagement photo",
-    height: 1561,
-    width: 2912,
+  mobile: {
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1761875964/wedding_website/engagement_photos_mobile_gallery/seats_kiss_two_1_vttinu.png",
+    height: 2195,
+    width: 1464,
   },
-  {
-    id: 7,
-    name: "seats_kissing_two",
-    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1763217310/wedding_website/feature_photos/feature_photo_two_mpbx3s.png",
-    alt: "engagement photo",
-    height: 1472,
-    width: 692,
-  },
-  {
-    id: 8,
-    name: "walking_aisle_close_up",
-    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1763258181/wedding_website/feature_photos/feature_photo_three_kkkmez.png",
-    alt: "engagement photo",
-    height: 2093,
-    width: 1731,
-  },
-];
+};
+
+export const full_theatre = {
+  alt: "engagement photo",
+  src: "https://res.cloudinary.com/dzpne110u/image/upload/v1762900255/wedding_website/feature_photos/feature_photo_one_zwydiz.png",
+  height: 1472,
+  width: 692,
+};
 
 export const engagement_photos_pc = [
   {

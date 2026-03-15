@@ -3,19 +3,12 @@
 import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import ResponsiveImage from "../_components/Responsive_Image";
-import {
-  icons,
-  engagement_photos_mobile,
-  feature_photos,
-} from "../_data/photos";
+import Responsive_Image_Layout from "../_components/Responsive_Image_Layout";
+import { icons, auth_photo } from "../_data/photos";
 
 import styles from "../_styling/auth_page.module.css";
 
 export default function Auth() {
-  const headerPhoto = feature_photos.find((p) => p.id === 5);
-  const headerPhotoMobile = engagement_photos_mobile.find((p) => p.id === 6);
-
   const [passcode, setPasscode] = useState("");
   const [loading, setLoading] = useState(false);
   const [validationError, setValidationError] = useState({ auth: false });
@@ -95,11 +88,9 @@ export default function Auth() {
             </form>
           </section>
         </article>
-        <ResponsiveImage
-          initialPhoto={headerPhoto}
-          secondaryPhoto={headerPhotoMobile}
-          initialClass={styles.header_photo}
-          secondaryClass={styles.header_photo_mobile}
+        <Responsive_Image_Layout
+          photoData={auth_photo}
+          className={styles.header_photo}
         />
       </div>
     </main>

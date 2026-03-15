@@ -4,7 +4,7 @@ import Image from "next/image";
 import Image_Gallery_Modal from "../_components/Image_Gallery_Modal";
 import usePhotoGallery from "../_hooks/usePhotoGallery";
 import useVisibilityObserver from "../_hooks/useVisibilityObserver";
-import { engagement_photos_mobile, feature_photos } from "../_data/photos";
+import { engagement_photos_mobile, full_theatre } from "../_data/photos";
 
 import styles from "../_styling/gallery.module.css";
 
@@ -40,7 +40,6 @@ export default function Gallery() {
     photos,
   } = usePhotoGallery(engagement_photos_mobile);
 
-  const backgroundPhoto = feature_photos.find((p) => p.id === 5);
   const marquee_photo = engagement_photos_mobile.find((p) => p.id === 1);
 
   return (
@@ -95,10 +94,10 @@ export default function Gallery() {
         </section>
       </article>
       <Image
-        src={backgroundPhoto.src}
-        alt={backgroundPhoto.alt}
-        width={backgroundPhoto.width}
-        height={backgroundPhoto.height}
+        src={full_theatre.src}
+        alt={full_theatre.alt}
+        width={full_theatre.width}
+        height={full_theatre.height}
         className={styles.background_photo}
         sizes="100vw"
       />

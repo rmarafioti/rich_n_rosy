@@ -1,14 +1,14 @@
 "use client";
 
 import { wedding_info_photo } from "../_data/photos";
-import Responsive_Image_Layout from "../_components/Responsive_Image_Layout";
+import Image from "next/image";
 
 import styles from "../_styling/wedding_info.module.css";
 
 export default function Event() {
   return (
     <main>
-      <article className={styles.header_container}>
+      <section className={styles.header_section}>
         <div className={styles.header}>
           <p className={styles.intro}>Come celebrate the wedding of</p>
           <h1 className={styles.title}>
@@ -16,6 +16,16 @@ export default function Event() {
             <span className={styles.kern_two}>R</span>ich Marafioti
           </h1>
         </div>
+        <Image
+          src={wedding_info_photo.src}
+          alt={wedding_info_photo.alt}
+          width={wedding_info_photo.width}
+          height={wedding_info_photo.height}
+          className={styles.wedding_info_photo}
+          priority
+        />
+      </section>
+      <article className={styles.main}>
         <section className={styles.section} id="eventschedule">
           <div className={styles.schedule}>
             <h2>Event Schdule</h2>
