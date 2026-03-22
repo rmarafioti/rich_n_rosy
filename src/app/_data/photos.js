@@ -18,6 +18,37 @@ export const footer_icons = {
   height: 136,
 };
 
+export const illustrations = [
+  {
+    id: 1,
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1774190903/wedding_website/our_story/heart_o_chicago_1_i6d9ux.svg",
+    alt: "Heart Of Chicago motel illustration",
+    height: 397,
+    width: 285,
+  },
+  {
+    id: 2,
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1774190892/wedding_website/our_story/andersonville_1_ka6ve9.svg",
+    alt: "Andersonville water tower illustration",
+    height: 357,
+    width: 295,
+  },
+  {
+    id: 3,
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1774190876/wedding_website/our_story/pier_1_rgdkha.svg",
+    alt: "Hollywood Beach pier illustration",
+    height: 394,
+    width: 226,
+  },
+  {
+    id: 3,
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1774190876/wedding_website/our_story/popcorn_1_ke5oq6.svg",
+    alt: "Popcorn bucket illustration",
+    height: 343,
+    width: 200,
+  },
+];
+
 export const form_photo = {
   id: 1,
   name: "form_photo",

@@ -1,11 +1,13 @@
 "use client";
 
-import { wedding_info_photo } from "../_data/photos";
+import { wedding_info_photo, illustrations } from "../_data/photos";
 import Image from "next/image";
 
 import styles from "../_styling/wedding_info.module.css";
 
 export default function Event() {
+  const heat_of_chicago = illustrations.find((p) => p.id === 1);
+
   return (
     <main>
       <section className={styles.header_section}>
@@ -38,6 +40,12 @@ export default function Event() {
               <p>&#8226; 6:30 - 9:30 pm</p>
             </div>
           </div>
+          <Image
+            src={heat_of_chicago.src}
+            alt={heat_of_chicago.alt}
+            width={heat_of_chicago.width}
+            height={heat_of_chicago.height}
+          />
           <div className={styles.schedule}>
             <p className={styles.date}>
               Saturday, July 18th &#8226; The Big Day!
