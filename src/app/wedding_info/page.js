@@ -7,6 +7,8 @@ import styles from "../_styling/wedding_info.module.css";
 
 export default function Event() {
   const heat_of_chicago = illustrations.find((p) => p.id === 1);
+  const water_tower = illustrations.find((p) => p.id === 2);
+  const pier = illustrations.find((p) => p.id === 3);
 
   return (
     <main>
@@ -40,12 +42,6 @@ export default function Event() {
               <p>&#8226; 6:30 - 9:30 pm</p>
             </div>
           </div>
-          <Image
-            src={heat_of_chicago.src}
-            alt={heat_of_chicago.alt}
-            width={heat_of_chicago.width}
-            height={heat_of_chicago.height}
-          />
           <div className={styles.schedule}>
             <p className={styles.date}>
               Saturday, July 18th &#8226; The Big Day!
@@ -67,6 +63,12 @@ export default function Event() {
               <p>&#8226; Stay tuned for Sunday's plans!</p>
             </div>
           </div>
+          <Image
+            src={heat_of_chicago.src}
+            alt={heat_of_chicago.alt}
+            width={heat_of_chicago.width}
+            height={heat_of_chicago.height}
+          />
         </section>
         <section className={styles.section} id="directions">
           <h3>Directions</h3>
@@ -79,6 +81,12 @@ export default function Event() {
             hendrerit semper vel class aptent taciti sociosqu. Ad litora
             torquent per conubia nostra inceptos himenaeos.
           </p>
+          <Image
+            src={water_tower.src}
+            alt={water_tower.alt}
+            width={water_tower.width}
+            height={water_tower.height}
+          />
         </section>
         <section className={styles.section} id="thingstodo">
           <h4>Things To Do</h4>
@@ -91,6 +99,12 @@ export default function Event() {
             hendrerit semper vel class aptent taciti sociosqu. Ad litora
             torquent per conubia nostra inceptos himenaeos.
           </p>
+          <Image
+            src={pier.src}
+            alt={pier.alt}
+            width={pier.width}
+            height={pier.height}
+          />
         </section>
       </article>
     </main>

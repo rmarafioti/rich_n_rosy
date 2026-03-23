@@ -4,7 +4,11 @@ import Image from "next/image";
 import Image_Gallery_Modal from "../_components/Image_Gallery_Modal";
 import usePhotoGallery from "../_hooks/usePhotoGallery";
 import useVisibilityObserver from "../_hooks/useVisibilityObserver";
-import { engagement_photos_mobile, full_theatre } from "../_data/photos";
+import {
+  illustrations,
+  engagement_photos_mobile,
+  full_theatre,
+} from "../_data/photos";
 
 import styles from "../_styling/gallery.module.css";
 
@@ -41,6 +45,7 @@ export default function Gallery() {
   } = usePhotoGallery(engagement_photos_mobile);
 
   const marquee_photo = engagement_photos_mobile.find((p) => p.id === 1);
+  const popcorn = illustrations.find((p) => p.id === 4);
 
   return (
     <main>
@@ -68,13 +73,20 @@ export default function Gallery() {
             height={marquee_photo.height}
             className={styles.marquee_photo}
           />
-          <p className={styles.copy}>
+          <p className={styles.copy} id={styles.copy_bottom}>
             If you asked us to describe our perfect night, we&apos;d be at the
             Music Box with fresh popcorn, the sound of the organ, and
             experiencing the magic of the movies together. Shooting our
             engagement photos in this iconic place that we hold so close to our
             hearts was a dream come true.
           </p>
+          <Image
+            src={popcorn.src}
+            alt={popcorn.alt}
+            width={popcorn.width}
+            height={popcorn.height}
+            className={styles.popcorn}
+          />
           <p className={styles.copy_tag}>
             Thank you to The Music Box Theatre and photographer{" "}
             <a href="https://www.jeffperlmancreative.com/" target="_blank">

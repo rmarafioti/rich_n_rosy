@@ -9,6 +9,7 @@
 
 .copy_container {
   width: 680px;
+  margin-right: 2rem;
 }
 
 .heading {
@@ -28,10 +29,14 @@
   margin-bottom: 2rem;
 }
 
+.popcorn {
+  display: none;
+}
+
 .copy,
 .copy_tag {
-  margin-bottom: 1rem;;
-} 
+  margin-bottom: 1rem;
+}
 
 .marquee_photo {
   display: none;
@@ -110,8 +115,11 @@
   .mobile_photo_layout:hover {
     border: 2px solid #ecd5cd;
   }
-  .heading, .copy, .copy_tag, .tap {
-    color: #ecd5cd
+  .heading,
+  .copy,
+  .copy_tag,
+  .tap {
+    color: #ecd5cd;
   }
 }
 
@@ -137,8 +145,9 @@
   .copy_container {
     text-align: left;
     width: auto;
+    margin-right: 0rem;
   }
-   .heading {
+  .heading {
     text-align: left;
     padding-left: 1rem;
     font-size: 78px;
@@ -152,6 +161,9 @@
     color: var(--maroon);
     margin: 0rem 1rem 2rem 1rem;
   }
+  #copy_bottom {
+    margin-bottom: 0rem;
+  }
   .marquee_photo {
     display: block;
     width: 100%;
@@ -160,6 +172,12 @@
   }
   .tap {
     display: none;
+  }
+  .popcorn {
+    display: block;
+    height: 260px;
+    margin-bottom: 0.5rem;
+    margin-left: 6rem;
   }
   .photo_container {
     display: none;
@@ -177,7 +195,7 @@
     margin: 0rem 0.2rem;
     border: none;
   }
-  .mobile_photo_layout:hover{
+  .mobile_photo_layout:hover {
     border: none;
   }
   .mobile_photo {
@@ -186,7 +204,9 @@
     margin-bottom: 0.5rem;
     opacity: 0;
     transform: translateY(40px);
-    transition: opacity 0.4s ease-out, transform 0.8s ease-out;
+    transition:
+      opacity 0.4s ease-out,
+      transform 0.8s ease-out;
     pointer-events: none;
     cursor: default;
     filter: blur(0px);
@@ -199,7 +219,9 @@
   .mobile_photo.visible {
     opacity: 1;
     transform: translateY(0px);
-    transition: opacity 1.5s ease-in, transform 1s ease-in;
+    transition:
+      opacity 1.5s ease-in,
+      transform 1s ease-in;
   }
   .button_container {
     width: 90%;

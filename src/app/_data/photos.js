@@ -41,7 +41,7 @@ export const illustrations = [
     width: 226,
   },
   {
-    id: 3,
+    id: 4,
     src: "https://res.cloudinary.com/dzpne110u/image/upload/v1774190876/wedding_website/our_story/popcorn_1_ke5oq6.svg",
     alt: "Popcorn bucket illustration",
     height: 343,
