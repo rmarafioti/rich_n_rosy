@@ -1,7 +1,8 @@
 "use client";
 
 import Responsive_Image_Theme from "../_components/Responsive_Image_Theme";
-import { icons, footer_icons } from "../_data/photos";
+import Image from "next/image";
+import { icons, heart_illustration } from "../_data/photos";
 
 import styles from "../_styling/footer.module.css";
 
@@ -17,8 +18,11 @@ export default function Footer() {
             <p className={styles.copy}>Website by Marf Inc.</p>
           </div>
         </section>
-        <Responsive_Image_Theme
-          photoData={footer_icons}
+        <Image
+          src={heart_illustration.src}
+          alt={heart_illustration.alt}
+          width={heart_illustration.width}
+          height={heart_illustration.height}
           className={styles.heart}
         />
       </footer>

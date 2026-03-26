@@ -10,7 +10,17 @@ import { FaCircleArrowDown } from "react-icons/fa6";
 
 import styles from "../_styling/our_story.module.css";
 
-function StoryCard({ date, text, dateTwo, textTwo, cardId, photoData }) {
+function StoryCard({
+  date,
+  text,
+  dateTwo,
+  textTwo,
+  cardId,
+  src,
+  alt,
+  width,
+  height,
+}) {
   const [ref, isVisible] = useVisibilityObserver(0.1);
 
   const nextStopId = cardId + 1;
@@ -27,8 +37,11 @@ function StoryCard({ date, text, dateTwo, textTwo, cardId, photoData }) {
     >
       <div className={styles.date_section}>
         <p className={styles.date}>{date}:</p>
-        <Responsive_Image_Theme
-          photoData={photoData}
+        <Image
+          src={src}
+          alt={alt}
+          height={height}
+          width={width}
           className={styles.our_story_icons_mobile}
         />
         <p className={styles.text}>{text}</p>
@@ -79,8 +92,11 @@ export default function Our_Story() {
     return (
       <div className={styles.loading_container}>
         <div className={styles.loader}>
-          <Responsive_Image_Theme
-            photoData={train_icon}
+          <Image
+            src={train_icon.src}
+            alt={train_icon.alt}
+            height={train_icon.height}
+            width={train_icon.width}
             className={styles.train_icon}
           />
           <p className={styles.arrival_message}>
@@ -96,8 +112,11 @@ export default function Our_Story() {
       <div className={styles.header_container}>
         <h1 className={styles.title}>Hop On The Love Train!</h1>
         <div className={styles.train_container}>
-          <Responsive_Image_Theme
-            photoData={train_icon}
+          <Image
+            src={train_icon.src}
+            alt={train_icon.alt}
+            height={train_icon.height}
+            width={train_icon.width}
             className={styles.train_icon}
           />
           <p className={styles.sub_title}>
@@ -109,9 +128,12 @@ export default function Our_Story() {
         {ourStory.map((story) => (
           <StoryCard
             key={story.id}
+            src={story.src}
+            alt={story.alt}
+            width={story.width}
+            height={story.height}
             date={story.date}
             text={story.text}
-            photoData={story}
             dateTwo={story.dateTwo}
             textTwo={story.textTwo}
             cardId={story.id}

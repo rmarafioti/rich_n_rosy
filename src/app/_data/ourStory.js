@@ -1,29 +1,23 @@
 export const train_icon = {
   id: 1,
   name: "train icon light",
-  src_light:
-    "https://res.cloudinary.com/dzpne110u/image/upload/v1764897049/wedding_website/our_story/cta_maroon_wu9bpk.svg",
-  src_dark:
-    "https://res.cloudinary.com/dzpne110u/image/upload/v1764897041/wedding_website/our_story/cta_blush_xypk20.svg",
+  src: "https://res.cloudinary.com/dzpne110u/image/upload/v1774527084/wedding_website/dual_theme_svgs/cta_hu2tt9.svg",
   alt: "Chicago CTA train icon",
-  width: 102,
-  height: 108,
+  width: 244,
+  height: 288,
 };
 
 export const ourStory = [
   {
     id: 1,
-    src_light:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1764724774/wedding_website/our_story/heart_maroon_h8yyoc.svg",
-    src_dark:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1764808935/wedding_website/our_story/heart_blush_ra7hnw.svg",
-    alt: "our story icon",
-    width: 146,
-    height: 136,
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1774527108/wedding_website/dual_theme_svgs/heart_ijfmh4.svg",
+    alt: "heart illustration",
+    width: 346,
+    height: 323,
     date: "June 2021",
     text: "Our first date! It was a hot summer night and we spent hours on Rich's patio talking and getting to know each other. We knew right away that we were in for something special.",
   },
-  {
+  /*{
     id: 2,
     src_light:
       "https://res.cloudinary.com/dzpne110u/image/upload/v1764724744/wedding_website/our_story/art_museum_maroon_pljan0.svg",
@@ -109,5 +103,5 @@ export const ourStory = [
     dateTwo: "July 2026",
     textTwo:
       "We say “I do!”. We can't wait to celebrate with you as we begin the next chapter of our lives together.",
-  },
+  },*/
 ];

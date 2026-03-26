@@ -8,14 +8,11 @@ export const icons = {
   width: 179,
 };
 
-export const footer_icons = {
-  alt: "footer icon",
-  src_light:
-    "https://res.cloudinary.com/dzpne110u/image/upload/v1764724774/wedding_website/our_story/heart_maroon_h8yyoc.svg",
-  src_dark:
-    "https://res.cloudinary.com/dzpne110u/image/upload/v1764808935/wedding_website/our_story/heart_blush_ra7hnw.svg",
-  width: 146,
-  height: 136,
+export const heart_illustration = {
+  alt: "heart illustration",
+  src: "https://res.cloudinary.com/dzpne110u/image/upload/v1774527108/wedding_website/dual_theme_svgs/heart_ijfmh4.svg",
+  width: 346,
+  height: 323,
 };
 
 export const illustrations = [
