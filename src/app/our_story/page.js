@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import useVisibilityObserver from "../_hooks/useVisibilityObserver";
 import { our_story_background } from "../_data/photos";
 import { ourStory, train_icon } from "../_data/ourStory";
-import Responsive_Image_Theme from "../_components/Responsive_Image_Theme";
+import Responsive_Image_Layout from "../_components/Responsive_Image_Layout";
 import Image from "next/image";
 import { FaCircleArrowDown } from "react-icons/fa6";
 
@@ -79,15 +79,6 @@ export default function Our_Story() {
     return () => clearTimeout(timer);
   }, []);
 
-  const [isDesktop, setIsDesktop] = useState(false);
-
-  useEffect(() => {
-    const check = () => setIsDesktop(window.innerWidth >= 667);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
-
   if (isLoading) {
     return (
       <div className={styles.loading_container}>
@@ -140,21 +131,10 @@ export default function Our_Story() {
           />
         ))}
       </div>
-      {isDesktop ? (
-        <Responsive_Image_Theme
-          photoData={our_story_background.desktop}
-          className={styles.our_story_bg}
-        />
-      ) : (
-        <Image
-          src={our_story_background.mobile.src}
-          alt={our_story_background.alt}
-          width={our_story_background.mobile.width}
-          height={our_story_background.mobile.height}
-          className={styles.our_story_bg_mobile}
-          priority
-        />
-      )}
+      <Responsive_Image_Layout
+        photoData={our_story_background}
+        className={styles.our_story_bg}
+      />
     </main>
   );
 }

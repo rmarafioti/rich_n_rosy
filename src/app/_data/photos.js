@@ -111,21 +111,18 @@ export const full_theatre = {
   width: 692,
 };
 
+/* these images need to optimized properly and dialed in*/
 export const our_story_background = {
   alt: "our story background",
   desktop: {
-    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1764723416/wedding_website/our_story/our_story_bg_pc_light_gonazn.png",
-    src_light:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1764723416/wedding_website/our_story/our_story_bg_pc_light_gonazn.png",
-    src_dark:
-      "https://res.cloudinary.com/dzpne110u/image/upload/v1764723443/wedding_website/our_story/our_story_bg_pc_dark_hubgmd.png",
-    height: 8556,
-    width: 916,
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1774571144/wedding_website/dual_theme_svgs/our_story_bg_dual_theme_cmael1.png",
+    height: 7474,
+    width: 800,
   },
   mobile: {
-    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1764542251/wedding_website/our_story/our_story_mobile_map_ndhq3t.svg",
-    height: 25385,
-    width: 2788,
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1774574260/wedding_website/our_story/our_story_bg_dual_theme_mobile_xuzjdp.png",
+    height: 16280,
+    width: 1788,
   },
 };
 
