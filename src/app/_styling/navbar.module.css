@@ -135,7 +135,7 @@
     background: #0a0a0a;
   }
   .dropdown > .dd_link {
-    color: #ecd5cd
+    color: #ecd5cd;
   }
   .dropdown > .dd_link:hover {
     background-color: #3b3840;
@@ -192,7 +192,7 @@
     font-size: 20px;
     min-width: 0px;
     max-width: 100%;
-    margin: 1rem .5rem 0rem .5rem;
+    margin: 1rem 0.5rem 0rem 0.5rem;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid var(--blush);
   }
@@ -255,5 +255,11 @@
     .menu_icon {
       background-color: transparent;
     }
+  }
+}
+
+@media (min-width: 1540px) {
+  .dropdown {
+    width: 250px;
   }
 }

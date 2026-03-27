@@ -111,13 +111,12 @@ export const full_theatre = {
   width: 692,
 };
 
-/* these images need to optimized properly and dialed in*/
 export const our_story_background = {
   alt: "our story background",
   desktop: {
-    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1774571144/wedding_website/dual_theme_svgs/our_story_bg_dual_theme_cmael1.png",
-    height: 7474,
-    width: 800,
+    src: "https://res.cloudinary.com/dzpne110u/image/upload/v1774613190/wedding_website/our_story/Frame_1_4_qqa7uz.png",
+    height: 11211,
+    width: 1200,
   },
   mobile: {
     src: "https://res.cloudinary.com/dzpne110u/image/upload/v1774574260/wedding_website/our_story/our_story_bg_dual_theme_mobile_xuzjdp.png",
