@@ -1,0 +1,64 @@
+.header_container {
+  text-align: left;
+  margin-top: 8rem;
+  width: 680px;
+}
+
+.title {
+  color: var(--maroon);
+  font-family: var(--summer-of-love-font);
+  font-size: 100px;
+  font-weight: normal;
+  word-spacing: 0.1em;
+}
+
+.sub_title {
+  font-family: var(--main-font);
+  font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 1rem;
+}
+
+.copy {
+  margin-bottom: 2rem;
+}
+
+.button {
+  text-align: center;
+  background-color: var(--maroon);
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--blush);
+  padding: 0.8rem 0.5rem 0.8rem 0.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.button:hover {
+  color: var(--foreground);
+  background-color: var(--rose);
+}
+
+@media (prefers-color-scheme: dark) {
+.button:hover {
+    color: var(--blush);
+    background-color: var(--maroon);
+}
+}
+
+@media (max-width: 667px) and (hover: none) {
+  .header_container {
+    position: relative;
+    top: -20px;
+    width: 90%;
+    margin: 0rem 1rem 0rem 1rem;
+  }
+   .title {
+    color: var(--maroon);
+    font-size: 76px;
+  }
+}
