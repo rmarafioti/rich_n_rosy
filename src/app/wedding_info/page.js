@@ -1,9 +1,22 @@
 "use client";
 
 import { wedding_info_photo, illustrations } from "../_data/photos";
+import { food_and_drink, experiences, shopping } from "../_data/guideItems";
 import Image from "next/image";
 
 import styles from "../_styling/wedding_info.module.css";
+
+function ListItem({ name, link }) {
+  return (
+    <ul>
+      <li>
+        <a href={link} target="_blank">
+          {name}
+        </a>
+      </li>
+    </ul>
+  );
+}
 
 export default function Event() {
   const heat_of_chicago = illustrations.find((p) => p.id === 1);
@@ -155,32 +168,21 @@ export default function Event() {
             <div className={styles.lists}>
               <div>
                 <p className={styles.section_title}>Food and Drink</p>
-                <ul>
-                  <li>Pizza Lobo</li>
-                  <li>Waterfront Cafe</li>
-                  <li>Lickety Split Ice Cream</li>
-                  <li>Metropolis Coffee</li>
-                  <li>Loaves and Witches</li>
-                  <li>Sfera</li>
-                </ul>
+                {food_and_drink.map((item) => (
+                  <ListItem key={item.id} {...item} />
+                ))}
               </div>
               <div>
                 <p className={styles.section_title}>Experiences</p>
-                <ul>
-                  <li>Lakefront Path</li>
-                  <li>Hollywood Beach</li>
-                  <li>Chicago Magic Lounge</li>
-                </ul>
+                {experiences.map((item) => (
+                  <ListItem key={item.id} {...item} />
+                ))}
               </div>
               <div>
                 <p className={styles.section_title}>Shopping</p>
-                <ul>
-                  <li>Women and Children First</li>
-                  <li>Broadway Antique Mart</li>
-                  <li>Four Sided</li>
-                  <li>Andersonville Galleria</li>
-                  <li>Wooly Mammoth</li>
-                </ul>
+                {shopping.map((item) => (
+                  <ListItem key={item.id} {...item} />
+                ))}
               </div>
             </div>
           </div>

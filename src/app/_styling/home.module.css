@@ -46,6 +46,7 @@
 .form_photo {
   width: auto;
   height: 640px;
+  border-radius: 20px;
 }
 
  @media (prefers-color-scheme: dark) {
