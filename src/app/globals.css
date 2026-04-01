@@ -40,8 +40,14 @@ h1, h2, h3, h4 {
 }
 
 p,
-label {
+label,
+li {
   font-size: 1.35em;
+}
+
+li {
+  margin-bottom: .2rem;
+  list-style-type: none;
 }
 
 @media (max-width: 667px) {

@@ -38,25 +38,25 @@ export default function Navbar() {
     return (
       <section className={pc.dropdown}>
         <Link
-          href="wedding_info#eventschedule"
+          href="wedding_info#wedding_details"
           onClick={() => setMenuOpen(false)}
           className={pc.dd_link}
         >
-          Event Schedule
+          Wedding Details
         </Link>
         <Link
-          href="wedding_info#directions"
+          href="wedding_info#travel_information"
           onClick={() => setMenuOpen(false)}
           className={pc.dd_link}
         >
-          Directions
+          Travel Information
         </Link>
         <Link
-          href="wedding_info#thingstodo"
+          href="wedding_info#neighborhood_guide"
           onClick={() => setMenuOpen(false)}
           className={pc.dd_link}
         >
-          Things To Do
+          Neighborhood Guide
         </Link>
       </section>
     );
