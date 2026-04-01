@@ -1,6 +1,6 @@
 .header_section {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   align-self: flex-start;
   text-align: left;
   margin: 4rem 0rem 0rem 5rem;
@@ -21,6 +21,7 @@
 .wedding_info_photo {
   height: 580px;
   width: auto;
+  border-radius: 20px;
 }
 
 .main {
@@ -62,7 +63,8 @@
   font-size: 1.35em;
 }
 
-.section {
+.section,
+.section_variant {
   display: flex;
   align-items: center;
   padding-top: 4rem;
@@ -77,13 +79,13 @@
   margin-right: 8rem;
 }
 
-.travel {
+.motel {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 500px;
   width: auto;
-  margin-right: 2rem;
+  margin-right: 8rem;
 }
 
 .info > p {
@@ -121,18 +123,22 @@
   padding: 1rem;
   border-radius: 20px;
   background-color: #f3ded8;
-  margin-right: 4rem;
+  margin-right: 6rem;
 }
 
 .lists > div {
   width: 260px;
 }
 
-/* dark mode stylings */
+.water_tower {
+  height: 440px;
+  width: auto;
+}
+
 @media (prefers-color-scheme: dark) {
-  .title,
-  .date {
-    color: #ecd5cd;
+  .event_schedule,
+  .lists {
+    background-color: #232227;
   }
 }
 
@@ -148,16 +154,38 @@
   .intro,
   .image_mobile,
   .main,
-  .header {
+  .header,
+  .header_section,
+  .event_schedule,
+  .schedule,
+  .travel,
+  .guide {
     width: 100%;
   }
+  .date {
+    width: 90%;
+  }
   .header_section {
-    flex-direction: column;
+    flex-direction: column-reverse;
     margin: 0rem;
-    text-align: center;
+  }
+  .intro,
+  .title {
+    margin-left: 0.5rem;
+  }
+  .header,
+  .event_schedule {
+    margin-right: 0rem;
+  }
+  .event_schedule {
+    padding: 1rem;
+    border-radius: 0px;
   }
   .wedding_info_photo {
     width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 0px;
   }
   .main {
     top: -20px;
@@ -182,12 +210,41 @@
     font-size: 24px;
     margin: 1rem 0rem 1rem 0rem;
   }
-  .section {
+  .section,
+  .section_variant {
     padding-top: 8rem;
+    margin: 0rem 1rem 0rem 0.5rem;
+    flex-direction: column;
   }
-  @media (prefers-color-scheme: dark) {
-    .copy {
-      color: #ecd5cd;
-    }
+  .section_variant {
+    flex-direction: column-reverse;
+  }
+  .illustration {
+    height: 400px;
+  }
+  .motel {
+    height: 460px;
+    width: auto;
+    margin-right: 0rem;
+  }
+  .schedule,
+  .travel {
+    margin-right: 0rem;
+  }
+
+  .lists {
+    flex-direction: column;
+    width: 100%;
+    background-color: transparent;
+    padding: 0rem;
+    border-radius: 0px;
+    margin: 0rem 1rem 2rem 0rem;
+  }
+  .lists > div {
+    width: 300px;
+  }
+  .water_tower {
+    height: 360px;
+    width: auto;
   }
 }

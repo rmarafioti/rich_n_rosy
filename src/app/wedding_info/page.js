@@ -109,13 +109,13 @@ export default function Event() {
             className={styles.illustration}
           />
         </section>
-        <section className={styles.section} id="travel_information">
+        <section className={styles.section_variant} id="travel_information">
           <Image
             src={heat_of_chicago.src}
             alt={heat_of_chicago.alt}
             width={heat_of_chicago.width}
             height={heat_of_chicago.height}
-            className={styles.travel}
+            className={styles.motel}
           />
           <div className={styles.travel}>
             <h3 className={styles.sub_header}>Travel Information</h3>
@@ -189,6 +189,7 @@ export default function Event() {
             alt={water_tower.alt}
             width={water_tower.width}
             height={water_tower.height}
+            className={styles.water_tower}
           />
         </section>
       </article>
