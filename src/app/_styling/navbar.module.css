@@ -89,7 +89,8 @@
   display: none;
   flex-direction: column;
   top: 100%;
-  width: 235px;
+  /*width: 235px;*/
+  width: 250px;
   background-color: var(--rose);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
