@@ -1,0 +1,36 @@
+.left_section {
+  display: flex;
+  align-items: center;
+}
+.icon {
+  width: 164px;
+  height: auto;
+  margin-left: 4rem;
+  margin-right: 2rem;
+}
+.heart {
+  height: 120px;
+  width: auto;
+  margin-right: 2rem;
+}
+
+.copy {
+  padding-bottom: 0.5rem;
+}
+
+@media (max-width: 667px) {
+  .icon {
+    margin-left: 1rem;
+    width: 100px;
+    height: auto;
+  }
+  .heart {
+    height: 78px;
+    width: auto;
+    margin-right: 1rem;
+  }
+  .copy {
+    font-size: 10px;
+    padding-bottom: 0.2rem;
+  }
+}

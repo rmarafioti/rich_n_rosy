@@ -1,30 +1,25 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ourStory, train_icon } from "../data/ourStory";
-import useVisibilityObserver from "../hooks/useVisibilityObserver";
-import {
-  our_story_background,
-  our_story_background_dark,
-  our_story_background_mobile,
-} from "../data/photos";
-import ResponsiveImage from "../components/Responsive_Image";
+import useVisibilityObserver from "../_hooks/useVisibilityObserver";
+import { our_story_background } from "../_data/photos";
+import { ourStory, train_icon } from "../_data/ourStory";
+import Responsive_Image_Layout from "../_components/Responsive_Image_Layout";
 import Image from "next/image";
 import { FaCircleArrowDown } from "react-icons/fa6";
 
-import styles from "../styling/our_story.module.css";
+import styles from "../_styling/our_story.module.css";
 
 function StoryCard({
   date,
   text,
-  src,
-  src_dark,
-  alt,
-  width,
-  height,
   dateTwo,
   textTwo,
   cardId,
+  src,
+  alt,
+  width,
+  height,
 }) {
   const [ref, isVisible] = useVisibilityObserver(0.1);
 
@@ -45,16 +40,9 @@ function StoryCard({
         <Image
           src={src}
           alt={alt}
-          width={width}
           height={height}
+          width={width}
           className={styles.our_story_icons_mobile}
-        />
-        <Image
-          src={src_dark}
-          alt={alt}
-          width={width}
-          height={height}
-          className={styles.our_story_icons_mobile_dark}
         />
         <p className={styles.text}>{text}</p>
       </div>
@@ -83,13 +71,6 @@ function StoryCard({
 export default function Our_Story() {
   const [isLoading, setIsLoading] = useState(true);
 
-  const ourStoryBackground = our_story_background;
-  const ourStoryBackgroundDark = our_story_background_dark;
-  const ourStoryBackgroundMobile = our_story_background_mobile;
-
-  const trainIconLight = train_icon.find((p) => p.id === 1);
-  const trainIconDark = train_icon.find((p) => p.id === 2);
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
@@ -102,11 +83,12 @@ export default function Our_Story() {
     return (
       <div className={styles.loading_container}>
         <div className={styles.loader}>
-          <ResponsiveImage
-            initialPhoto={trainIconLight}
-            secondaryPhoto={trainIconDark}
-            initialClass={styles.train_icon_light}
-            secondaryClass={styles.train_icon_dark}
+          <Image
+            src={train_icon.src}
+            alt={train_icon.alt}
+            height={train_icon.height}
+            width={train_icon.width}
+            className={styles.train_icon}
           />
           <p className={styles.arrival_message}>
             The Love Train will arrive shortly...
@@ -121,11 +103,12 @@ export default function Our_Story() {
       <div className={styles.header_container}>
         <h1 className={styles.title}>Hop On The Love Train!</h1>
         <div className={styles.train_container}>
-          <ResponsiveImage
-            initialPhoto={trainIconLight}
-            secondaryPhoto={trainIconDark}
-            initialClass={styles.train_icon_light}
-            secondaryClass={styles.train_icon_dark}
+          <Image
+            src={train_icon.src}
+            alt={train_icon.alt}
+            height={train_icon.height}
+            width={train_icon.width}
+            className={styles.train_icon}
           />
           <p className={styles.sub_title}>
             Take a ride & discover our journey to tying the knot!
@@ -136,32 +119,21 @@ export default function Our_Story() {
         {ourStory.map((story) => (
           <StoryCard
             key={story.id}
-            date={story.date}
-            text={story.text}
             src={story.src}
-            src_dark={story.src_dark}
             alt={story.alt}
             width={story.width}
             height={story.height}
+            date={story.date}
+            text={story.text}
             dateTwo={story.dateTwo}
             textTwo={story.textTwo}
             cardId={story.id}
           />
         ))}
       </div>
-      <ResponsiveImage
-        initialPhoto={ourStoryBackground}
-        secondaryPhoto={ourStoryBackgroundMobile}
-        initialClass={styles.our_story_bg}
-        secondaryClass={styles.our_story_bg_mobile}
-      />
-      <Image
-        src={ourStoryBackgroundDark.src}
-        alt={ourStoryBackgroundDark.alt}
-        width={ourStoryBackgroundDark.width}
-        height={ourStoryBackgroundDark.height}
-        className={styles.our_story_bg_dark}
-        priority
+      <Responsive_Image_Layout
+        photoData={our_story_background}
+        className={styles.our_story_bg}
       />
     </main>
   );

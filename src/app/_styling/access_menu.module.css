@@ -1,0 +1,163 @@
+.accessIcon {
+  font-size: 70px;
+  padding: 1rem;
+  position: fixed;
+  top: 176px;
+  right: 0px;
+  color: #242424;
+  border-radius: 10px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.accessMenu {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 176px;
+  right: 0px;
+  background: white;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 25px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  width: 400px;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  visibility: visible;
+}
+
+.menuHeader {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 1rem;
+  margin: 0rem;
+}
+
+.closeButton {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  background-color: #242424;
+  cursor: pointer;
+}
+
+.controls {
+  list-style-type: none;
+}
+
+.headerSection,
+.controlSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #c8c3c3;
+}
+
+.headerSection {
+  padding-bottom: 0.5rem;
+}
+
+.controlItem,
+.sizeItem {
+  padding: 0.6rem;
+  margin-bottom: 0rem;
+}
+
+.resizingContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 180px;
+}
+
+.sizeItem {
+  font-size: 2.6em;
+  padding: 0.8rem;
+  margin: 0.4rem;
+  border-radius: 8px;
+  background-color: #c8c3c3;
+  cursor: pointer;
+}
+
+.sizeItem:hover {
+  border: 1px solid #242424;
+}
+
+.indicators {
+  display: flex;
+}
+
+.indicator {
+  font-size: 12px;
+  margin: 0.2rem;
+  color: var(--maroon);
+}
+
+.indicator.active {
+  color: var(--rose);
+}
+
+.resetButton {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #242424;
+  font-weight: bold;
+  border-color: #242424;
+  background-color: #c8c3c3;
+  align-self: flex-end;
+  margin: 1rem 0rem 0.5rem 0rem;
+  cursor: pointer;
+}
+
+/* dark mode stylings */
+@media (prefers-color-scheme: dark) {
+  .headerSection,
+  .controls,
+  .accessIcon {
+    color: var(--foreground);
+  }
+  .accessMenu,
+  .accessIcon {
+    background-color: #242424;
+    border: 1px solid var(--foreground);
+    border-right: none;
+  }
+
+  .sizeItem {
+    color: #242424;
+  }
+  .closeButton {
+    border: 1px solid var(--foreground);
+  }
+}
+
+@media (max-width: 667px) {
+  .accessIcon {
+    background-color: var(--maroon);
+    color: var(--background);
+    font-size: 45px;
+    padding: 0.5rem;
+    top: 28px;
+    right: 80px;
+    width: 45.5px;
+  height: 45.5px;
+    border-radius: 25px;
+    box-shadow: none;
+    transition: all 0.5s ease-in-out;
+  }
+  .accessMenu {
+    top: 96px;
+    right: 0px;
+    border-radius: 0px;
+    width: 100%;
+  }
+  @media (prefers-color-scheme: dark) {
+    .accessMenu {
+      border: none;
+    }
+  }
+}

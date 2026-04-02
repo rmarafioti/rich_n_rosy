@@ -1,0 +1,252 @@
+"use client";
+
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
+import Form_Modal from "./Form_Modal";
+import useModal from "../../_hooks/useModal";
+
+import styles from "../../_styling/rsvp_form.module.css";
+
+export default function RSVP_Form() {
+  const formRef = useRef();
+  const [isLoading, setIsLoading] = useState(false);
+  const [messageStatus, setMessageStatus] = useState(null);
+  const { isOpen, openModal, closeModal } = useModal();
+
+  const inputForm = {
+    name: "",
+    guest: "",
+    attendance_wedding: "",
+    dietary_restrictions: "",
+    attendance_welcome: "",
+  };
+
+  const [formValues, setFormValues] = useState(inputForm);
+
+  const inputValidationError = {
+    name: false,
+    guest: false,
+    attendance_wedding: false,
+    attendance_welcome: false,
+  };
+
+  const [validationError, setValidationError] = useState(inputValidationError);
+
+  const validateAllFields = () => {
+    const errors = {
+      name: formValues.name.trim() === "",
+      guest: formValues.guest === "",
+      attendance_wedding: formValues.attendance_wedding === "",
+      attendance_welcome: formValues.attendance_welcome === "",
+    };
+    setValidationError(errors);
+    return errors;
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({
+      ...formValues,
+      [name]: value,
+    });
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    const errors = validateAllFields();
+    const isValid = Object.values(errors).every((error) => !error);
+
+    if (!isValid) {
+      console.log("Form validation failed:", validationError);
+      return;
+    }
+
+    setIsLoading(true);
+
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_RSVP;
+
+    emailjs.sendForm(serviceID, templateID, formRef.current, publicKey).then(
+      () => {
+        console.log("MESSAGE SENT!");
+        setMessageStatus("success");
+        setIsLoading(false);
+        setValidationError({});
+        formRef.current.reset();
+        setFormValues(inputForm);
+        openModal();
+      },
+      (error) => {
+        console.error("MESSAGE FAILED", error?.text);
+        setMessageStatus("error");
+        setIsLoading(false);
+      },
+    );
+  };
+
+  return (
+    <div className={styles.contact_form_container}>
+      <div className={styles.header_container}>
+        <h1 className={styles.page_name}>RSVP</h1>
+        <p className={styles.note}>Kindly RSVP by May 31st, 2026</p>
+      </div>
+      <form className={styles.form} ref={formRef} onSubmit={sendEmail}>
+        <label className={styles.label}>Name*</label>
+        <input
+          className={styles.name}
+          type="text"
+          name="name"
+          aria-label="name"
+          value={formValues.name}
+          onChange={handleInputChange}
+        />
+        <label className={styles.label}>Were you invited with a guest?*</label>
+        <div className={styles.radio_group}>
+          <label className={styles.radio_label}>
+            <input
+              type="radio"
+              name="guest"
+              value="yes"
+              checked={formValues.guest === "yes"}
+              onChange={handleInputChange}
+              className={styles.radio_button}
+              aria-label="guest_yes"
+            />
+            Yes
+          </label>
+          <label className={styles.radio_label}>
+            <input
+              type="radio"
+              name="guest"
+              value="no"
+              checked={formValues.guest === "no"}
+              onChange={handleInputChange}
+              className={styles.radio_button}
+              aria-label="guest_no"
+            />
+            No
+          </label>
+        </div>
+
+        <label className={styles.label}>
+          Will you and your guest be attending?*
+        </label>
+        <div className={styles.radio_group_bottom}>
+          <label className={styles.radio_label}>
+            <input
+              type="radio"
+              name="attendance_wedding"
+              value="yes"
+              checked={formValues.attendance_wedding === "yes"}
+              onChange={handleInputChange}
+              className={styles.radio_button}
+              aria-label="attendance_wedding_yes"
+            />
+            See you there!
+          </label>
+          <label className={styles.radio_label}>
+            <input
+              type="radio"
+              name="attendance_wedding"
+              value="no"
+              checked={formValues.attendance_wedding === "no"}
+              onChange={handleInputChange}
+              className={styles.radio_button}
+              aria-label="attendance_wedding_no"
+            />
+            Can't make it
+          </label>
+        </div>
+        <label className={styles.label}>
+          Dietary restrictions? Let us know
+        </label>
+        <textarea
+          className={styles.restrictions}
+          name="dietary_restrictions"
+          aria-label="dietary_restrictions"
+          value={formValues.dietary_restrictions}
+          onChange={handleInputChange}
+          placeholder="Enter restrictions here"
+        />
+        <label className={styles.label}>
+          Will you be attending the welcome dinner?*
+        </label>
+        <div className={styles.radio_group_bottom}>
+          <label className={styles.radio_label}>
+            <input
+              type="radio"
+              name="attendance_welcome"
+              value="yes"
+              checked={formValues.attendance_welcome === "yes"}
+              onChange={handleInputChange}
+              className={styles.radio_button}
+              aria-label="attendance_welcome_yes"
+            />
+            Yes
+          </label>
+          <label className={styles.radio_label}>
+            <input
+              type="radio"
+              name="attendance_welcome"
+              value="no"
+              checked={formValues.attendance_welcome === "no"}
+              onChange={handleInputChange}
+              className={styles.radio_button}
+              aria-label="attendance_welcome_no"
+            />
+            No
+          </label>
+          <label className={styles.radio_label}>
+            <input
+              type="radio"
+              name="attendance_welcome"
+              value="not sure"
+              checked={formValues.attendance_welcome === "not sure"}
+              onChange={handleInputChange}
+              className={styles.radio_button}
+              aria-label="attendance_welcome_not_sure"
+            />
+            Not Sure
+          </label>
+        </div>
+        <p className={styles.required}>*Required</p>
+        <input
+          className={styles.send}
+          type="submit"
+          aria-label="form_submit_button"
+          value={isLoading ? "Sending..." : "Send"}
+          disabled={isLoading}
+        />
+      </form>
+      <div className={styles.error_container}>
+        {validationError.name && (
+          <p className={styles.required_error}>*Please enter your name</p>
+        )}
+        {validationError.guest && (
+          <p className={styles.required_error}>
+            *Please specify if you were invited with a guest
+          </p>
+        )}
+        {validationError.attendance_wedding && (
+          <p className={styles.required_error}>
+            *Please let us know if you and your guest will be attending
+          </p>
+        )}
+        {validationError.attendance_welcome && (
+          <p className={styles.required_error}>
+            *Please let us know if you and your guest will be attending the
+            welcome dinner
+          </p>
+        )}
+        {messageStatus === "error" && (
+          <p className={styles.required_error}>
+            *Message failed to send. Please try again
+          </p>
+        )}
+      </div>
+      <Form_Modal isOpen={isOpen} closeModal={closeModal} />
+    </div>
+  );
+}

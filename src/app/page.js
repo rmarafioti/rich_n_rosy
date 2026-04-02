@@ -1,17 +1,13 @@
 "use client";
 
-import { engagement_photos_mobile, feature_photos } from "./data/photos";
-import ResponsiveImage from "./components/Responsive_Image";
-import Contact_Form from "./components/forms/Contact_Form";
+import { hero_section_photo, engagement_photos_mobile } from "./_data/photos";
+import Responsive_Image_Layout from "./_components/Responsive_Image_Layout";
+import Contact_Form from "./_components/forms/Contact_Form";
 import Image from "next/image";
 
-import styles from "./styling/home.module.css";
+import styles from "./_styling/home.module.css";
 
 export default function Home() {
-  const heroSectionPhotoPC = feature_photos.find((p) => p.id === 6);
-  const heroSectionPhotoMobile = engagement_photos_mobile.find(
-    (p) => p.id === 5
-  );
   const formPhoto = engagement_photos_mobile.find((p) => p.id === 12);
 
   return (
@@ -29,11 +25,9 @@ export default function Home() {
           you!
         </p>
       </article>
-      <ResponsiveImage
-        initialPhoto={heroSectionPhotoPC}
-        secondaryPhoto={heroSectionPhotoMobile}
-        initialClass={styles.image}
-        secondaryClass={styles.image_mobile}
+      <Responsive_Image_Layout
+        photoData={hero_section_photo}
+        className={styles.image}
       />
       <section className={styles.form_section}>
         <Contact_Form />

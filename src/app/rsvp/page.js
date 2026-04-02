@@ -1,26 +1,22 @@
 "use client";
 
-import { feature_photos, engagement_photos_mobile } from "../data/photos";
-import ResponsiveImage from "../components/Responsive_Image";
-import RSVP_Form from "../components/forms/Rsvp_Form";
+import { rsvp_photo } from "../_data/photos";
+import Responsive_Image_Layout from "../_components/Responsive_Image_Layout";
+import RSVP_Form from "../_components/forms/Rsvp_Form";
 
-import styles from "../styling/rsvp.module.css";
+import styles from "../_styling/rsvp.module.css";
 
 export default function Rsvp() {
-  const featurePhoto = feature_photos.find((p) => p.id === 8);
-  const featurePhotoMobile = engagement_photos_mobile.find((p) => p.id === 10);
   return (
     <main className={styles.page_body}>
-      <h1 className={styles.page_name}>Early RSVP</h1>
       <div className={styles.content_wrapper}>
+        {/* h1 tag needs to be here, not in teh component */}
         <article className={styles.header_container}>
           <RSVP_Form />
         </article>
-        <ResponsiveImage
-          initialPhoto={featurePhoto}
-          secondaryPhoto={featurePhotoMobile}
-          initialClass={styles.image}
-          secondaryClass={styles.image_mobile}
+        <Responsive_Image_Layout
+          photoData={rsvp_photo}
+          className={styles.image}
         />
       </div>
     </main>
