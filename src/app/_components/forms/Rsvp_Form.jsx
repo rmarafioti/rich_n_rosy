@@ -125,6 +125,7 @@ export default function RSVP_Form() {
             No
           </label>
         </div>
+
         <label className={styles.label}>
           Will you and your guest be attending?*
         </label>
@@ -152,6 +153,57 @@ export default function RSVP_Form() {
               aria-label="attendance_no"
             />
             Can't make it
+          </label>
+        </div>
+        <label className={styles.label}>
+          Dietary restrictions? Let us know
+        </label>
+        <textarea
+          className={styles.name}
+          name="name"
+          aria-label="dietery_resstrictions"
+          value={formValues.name}
+          onChange={handleInputChange}
+        />
+        <label className={styles.label}>
+          Will you be attending the rehearsal dinner?*
+        </label>
+        <div className={styles.radio_group}>
+          <label className={styles.radio_label}>
+            <input
+              type="radio"
+              name="guest"
+              value="yes"
+              checked={formValues.guest === "yes"}
+              onChange={handleInputChange}
+              className={styles.radio_button}
+              aria-label="guest_yes"
+            />
+            Yes
+          </label>
+          <label className={styles.radio_label}>
+            <input
+              type="radio"
+              name="guest"
+              value="no"
+              checked={formValues.guest === "no"}
+              onChange={handleInputChange}
+              className={styles.radio_button}
+              aria-label="guest_no"
+            />
+            No
+          </label>
+          <label className={styles.radio_label}>
+            <input
+              type="radio"
+              name="guest"
+              value="not sure yet"
+              checked={formValues.guest === "not sure yet"}
+              onChange={handleInputChange}
+              className={styles.radio_button}
+              aria-label="guest_not_sure"
+            />
+            Not Sure
           </label>
         </div>
         <p className={styles.required}>*Required</p>
