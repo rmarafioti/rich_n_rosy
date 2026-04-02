@@ -16,7 +16,9 @@ export default function RSVP_Form() {
   const inputForm = {
     name: "",
     guest: "",
-    attendance: "",
+    attendance_wedding: "",
+    dietary_restrictions: "",
+    attendance_rehearsal: "",
   };
 
   const [formValues, setFormValues] = useState(inputForm);
@@ -24,7 +26,8 @@ export default function RSVP_Form() {
   const inputValidationError = {
     name: false,
     guest: false,
-    attendance: false,
+    attendance_wedding: false,
+    attendance_rehearsal: false,
   };
 
   const [validationError, setValidationError] = useState(inputValidationError);
@@ -33,7 +36,8 @@ export default function RSVP_Form() {
     const errors = {
       name: formValues.name.trim() === "",
       guest: formValues.guest === "",
-      attendance: formValues.attendance === "",
+      attendance_wedding: formValues.attendance_wedding === "",
+      attendance_rehearsal: formValues.attendance_rehearsal === "",
     };
     setValidationError(errors);
     return errors;
@@ -133,24 +137,24 @@ export default function RSVP_Form() {
           <label className={styles.radio_label}>
             <input
               type="radio"
-              name="attendance"
+              name="attendance_wedding"
               value="yes"
-              checked={formValues.attendance === "yes"}
+              checked={formValues.attendance_wedding === "yes"}
               onChange={handleInputChange}
               className={styles.radio_button}
-              aria-label="attendance_yes"
+              aria-label="attendance_wedding_yes"
             />
             See you there!
           </label>
           <label className={styles.radio_label}>
             <input
               type="radio"
-              name="attendance"
+              name="attendance_wedding"
               value="no"
-              checked={formValues.attendance === "no"}
+              checked={formValues.attendance_wedding === "no"}
               onChange={handleInputChange}
               className={styles.radio_button}
-              aria-label="attendance_no"
+              aria-label="attendance_wedding_no"
             />
             Can't make it
           </label>
@@ -159,49 +163,50 @@ export default function RSVP_Form() {
           Dietary restrictions? Let us know
         </label>
         <textarea
-          className={styles.name}
-          name="name"
-          aria-label="dietery_resstrictions"
-          value={formValues.name}
+          className={styles.restrictions}
+          name="dietary_restrictions"
+          aria-label="dietary_restrictions"
+          value={formValues.dietary_restrictions}
           onChange={handleInputChange}
+          placeholder="Enter restrictions here"
         />
         <label className={styles.label}>
           Will you be attending the rehearsal dinner?*
         </label>
-        <div className={styles.radio_group}>
+        <div className={styles.radio_group_bottom}>
           <label className={styles.radio_label}>
             <input
               type="radio"
-              name="guest"
+              name="attendance_rehearsal"
               value="yes"
-              checked={formValues.guest === "yes"}
+              checked={formValues.attendance_rehearsal === "yes"}
               onChange={handleInputChange}
               className={styles.radio_button}
-              aria-label="guest_yes"
+              aria-label="attendance_rehearsal_yes"
             />
             Yes
           </label>
           <label className={styles.radio_label}>
             <input
               type="radio"
-              name="guest"
+              name="attendance_rehearsal"
               value="no"
-              checked={formValues.guest === "no"}
+              checked={formValues.attendance_rehearsal === "no"}
               onChange={handleInputChange}
               className={styles.radio_button}
-              aria-label="guest_no"
+              aria-label="attendance_rehearsal_no"
             />
             No
           </label>
           <label className={styles.radio_label}>
             <input
               type="radio"
-              name="guest"
-              value="not sure yet"
-              checked={formValues.guest === "not sure yet"}
+              name="attendance_rehearsal"
+              value="not sure"
+              checked={formValues.attendance_rehearsal === "not sure"}
               onChange={handleInputChange}
               className={styles.radio_button}
-              aria-label="guest_not_sure"
+              aria-label="attendance_rehearsal_not_sure"
             />
             Not Sure
           </label>
@@ -224,9 +229,15 @@ export default function RSVP_Form() {
             *Please specify if you were invited with a guest
           </p>
         )}
-        {validationError.attendance && (
+        {validationError.attendance_wedding && (
           <p className={styles.required_error}>
             *Please let us know if you and your guest will be attending
+          </p>
+        )}
+        {validationError.attendance_rehearsal && (
+          <p className={styles.required_error}>
+            *Please let us know if you and your guest will be attending the
+            rehearsal dinner
           </p>
         )}
         {messageStatus === "error" && (

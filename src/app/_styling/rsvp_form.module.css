@@ -37,13 +37,20 @@
 }
 
 .name,
+.restrictions,
 .send {
+  font-family: var(--main-font);
   font-size: 20px;
   display: flex;
   padding: 0.5rem;
   margin-top: 0.2rem;
   border-radius: 5px;
   border: 1px solid var(--foreground);
+}
+
+.restrictions {
+  height: 120px;
+  margin-bottom: 4rem;
 }
 
 .name {

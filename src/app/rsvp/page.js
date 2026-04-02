@@ -10,6 +10,7 @@ export default function Rsvp() {
   return (
     <main className={styles.page_body}>
       <div className={styles.content_wrapper}>
+        {/* h1 tag needs to be here, not in teh component */}
         <article className={styles.header_container}>
           <RSVP_Form />
         </article>

@@ -20,6 +20,7 @@
 .email,
 .message,
 .send {
+  font-family: var(--main-font);
   font-size: 20px;
   display: flex;
   padding: 0.5rem;
@@ -30,6 +31,8 @@
 }
 
 .message {
+  font-family: var(--main-font);
+  font-size: 20px;
   height: 120px;
 }
 
