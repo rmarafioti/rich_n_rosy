@@ -99,7 +99,8 @@
   .page_name,
   .header,
   .label,
-  .radio_label {
+  .radio_label,
+  .note {
     color: #ecd5cd;
   }
 }
