@@ -10,9 +10,11 @@ export default function Rsvp() {
   return (
     <main className={styles.page_body}>
       <div className={styles.content_wrapper}>
-        {/* h1 tag needs to be here, not in teh component */}
         <article className={styles.header_container}>
-          <RSVP_Form />
+          <div className={styles.contact_form_container}>
+            <h1 className={styles.page_name}>RSVP</h1>
+            <RSVP_Form />
+          </div>
         </article>
         <Responsive_Image_Layout
           photoData={rsvp_photo}

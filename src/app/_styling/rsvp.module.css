@@ -3,8 +3,24 @@
   height: auto;
 }
 
+.contact_form_container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  top: 120px;
+  color: var(--blush);
+  width: 590px;
+}
+
 .page_name {
-  display: none;
+  font-family: var(--summer-of-love-font);
+  color: var(--blush);
+  font-size: 100px;
+  font-weight: normal;
+  word-spacing: 0.1em;
+  align-self: flex-start;
+  margin-left: 10.5rem;
 }
 
 .header_container {
@@ -17,21 +33,27 @@
 }
 
 @media (max-width: 667px) and (hover: none) {
-  .page_body {
+  .contact_form_container {
+    position: relative;
+    align-items: center;
+    color: var(--maroon);
+    width: 100%;
+    top: 0px;
     text-align: left;
-     top: -20px;
-    background-color: black;
-    padding-bottom: 2rem;
+    z-index: 99;
   }
   .page_name {
-    display: block;
-    font-family: var(--summer-of-love-font);
-    font-size: 80px;
-    padding-left: 1rem;
-    font-weight: normal;
-    word-spacing: 0.1em;
-    background-color: var(--blush);
-    width: 100%;
+    position: relative;
+    top: 10px;
+    font-size: 78px;
+    align-self: flex-start;
+    margin-left: 1rem;
+  }
+  .page_body {
+    text-align: left;
+    top: -20px;
+    background-color: black;
+    padding-bottom: 2rem;
   }
 
   .content_wrapper {
@@ -47,7 +69,6 @@
     width: 100%;
     margin-right: 0rem;
   }
-
 
   .image {
     position: absolute;

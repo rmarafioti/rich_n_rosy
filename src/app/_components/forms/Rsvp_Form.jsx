@@ -87,9 +87,8 @@ export default function RSVP_Form() {
   };
 
   return (
-    <div className={styles.contact_form_container}>
+    <>
       <div className={styles.header_container}>
-        <h1 className={styles.page_name}>RSVP</h1>
         <p className={styles.note}>Kindly RSVP by May 31st, 2026</p>
       </div>
       <form className={styles.form} ref={formRef} onSubmit={sendEmail}>
@@ -159,7 +158,7 @@ export default function RSVP_Form() {
             Can't make it
           </label>
         </div>
-        <label className={styles.label}>
+        <label className={styles.label_variant}>
           Dietary restrictions? Let us know
         </label>
         <textarea
@@ -170,7 +169,7 @@ export default function RSVP_Form() {
           onChange={handleInputChange}
           placeholder="Enter restrictions here"
         />
-        <label className={styles.label}>
+        <label className={styles.label_variant}>
           Will you be attending the welcome dinner?*
         </label>
         <div className={styles.radio_group_bottom}>
@@ -247,6 +246,6 @@ export default function RSVP_Form() {
         )}
       </div>
       <Form_Modal isOpen={isOpen} closeModal={closeModal} />
-    </div>
+    </>
   );
 }

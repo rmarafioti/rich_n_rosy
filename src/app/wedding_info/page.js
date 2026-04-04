@@ -8,7 +8,7 @@ import styles from "../_styling/wedding_info.module.css";
 
 function ListItem({ name, link }) {
   return (
-    <ul>
+    <ul className={styles.list_items}>
       <li>
         <a href={link} target="_blank">
           {name}
