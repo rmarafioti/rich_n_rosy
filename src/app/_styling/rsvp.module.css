@@ -32,6 +32,12 @@
   display: contents;
 }
 
+  @media (prefers-color-scheme: dark) {
+    .page_name {
+      color: #ecd5cd;
+    }
+  }
+
 @media (max-width: 667px) and (hover: none) {
   .contact_form_container {
     position: relative;
