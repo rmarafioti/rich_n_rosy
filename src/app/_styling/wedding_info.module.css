@@ -231,7 +231,6 @@
   .travel {
     margin-right: 0rem;
   }
-
   .lists {
     flex-direction: column;
     width: 100%;
@@ -242,6 +241,10 @@
   }
   .lists > div {
     width: 300px;
+    margin-bottom: 2rem;
+  }
+  .list_items > li {
+    margin-bottom: 1rem;
   }
   .water_tower {
     height: 360px;
