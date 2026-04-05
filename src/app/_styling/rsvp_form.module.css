@@ -29,6 +29,7 @@
 
 .name,
 .restrictions,
+.guest_name,
 .send {
   font-family: var(--main-font);
   font-size: 20px;
@@ -41,10 +42,11 @@
 
 .restrictions {
   height: 120px;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
-.name {
+.name,
+.guest_name {
   margin-bottom: 3rem;
   width: 400px;
 }
@@ -60,6 +62,11 @@
 
 .radio_button {
   margin-right: 0.5rem;
+}
+
+.guest_note {
+  font-size: 18px;
+  font-weight: normal;
 }
 
 .send {
@@ -87,7 +94,23 @@
 }
 
 .required_error {
-  padding-bottom: 0.5rem;
+  font-size: 18px;
+  background-color: var(--maroon);
+}
+
+.error_container > .required_error {
+  padding: .5rem .5rem .5rem .8rem;
+}
+
+.error_container > .required_error:first-child {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.error_container > .required_error:last-child {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-bottom: 1rem;
 }
 
 /* dark mode stylings */
@@ -99,8 +122,10 @@
   .page_name,
   .header,
   .label,
+  .label_variant,
   .radio_label,
-  .note {
+  .note,
+  .restrictions {
     color: #ecd5cd;
   }
 }
@@ -141,19 +166,14 @@
     color: #ecd5cd;
   }
   .name,
+  .guest_name,
   .send {
     width: 100%;
-  }
-  .name {
-    margin-bottom: 2rem;
   }
   .radio_group,
   .radio_group_bottom {
     display: flex;
     flex-direction: column;
-    margin-bottom: 4.5rem;
-  }
-  .radio_group_bottom {
     margin-bottom: 2rem;
   }
   .radio_label {

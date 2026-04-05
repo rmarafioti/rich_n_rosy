@@ -17,6 +17,7 @@ export default function RSVP_Form() {
     name: "",
     guest: "",
     attendance_wedding: "",
+    guest_name: "",
     dietary_restrictions: "",
     attendance_welcome: "",
   };
@@ -27,8 +28,18 @@ export default function RSVP_Form() {
     name: false,
     guest: false,
     attendance_wedding: false,
+    guest_name: false,
     attendance_welcome: false,
   };
+
+  const isGuestNameDisabled =
+    !formValues.name ||
+    !formValues.guest ||
+    !formValues.attendance_wedding ||
+    (formValues.name && formValues.guest === "no") ||
+    (formValues.name &&
+      formValues.guest === "yes" &&
+      formValues.attendance_wedding === "no");
 
   const [validationError, setValidationError] = useState(inputValidationError);
 
@@ -38,6 +49,7 @@ export default function RSVP_Form() {
       guest: formValues.guest === "",
       attendance_wedding: formValues.attendance_wedding === "",
       attendance_welcome: formValues.attendance_welcome === "",
+      guest_name: !isGuestNameDisabled && formValues.guest_name.trim() === "",
     };
     setValidationError(errors);
     return errors;
@@ -158,6 +170,21 @@ export default function RSVP_Form() {
             Can't make it
           </label>
         </div>
+        {/* guest name */}
+        <label className={styles.label_variant}>
+          Guest Name*
+          <i className={styles.guest_note}>only required if you have a guest</i>
+        </label>
+        <input
+          className={styles.guest_name}
+          type="text"
+          name="guest_name"
+          aria-label="guest_name"
+          value={formValues.guest_name}
+          onChange={handleInputChange}
+          placeholder="Enter guest name here"
+          disabled={isGuestNameDisabled}
+        />
         <label className={styles.label_variant}>
           Dietary restrictions? Let us know
         </label>
@@ -231,6 +258,11 @@ export default function RSVP_Form() {
         {validationError.attendance_wedding && (
           <p className={styles.required_error}>
             *Please let us know if you and your guest will be attending
+          </p>
+        )}
+        {validationError.guest_name && (
+          <p className={styles.required_error}>
+            *Please enter your guest's name
           </p>
         )}
         {validationError.attendance_welcome && (
