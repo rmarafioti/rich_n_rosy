@@ -96,6 +96,9 @@ export default function Contact_Form() {
       <Link href="/rsvp" className={styles.rsvp_button}>
         RSVP
       </Link>
+      <Link href="/registry" className={styles.registry_button}>
+        Wedding Registry
+      </Link>
       <h2 className={styles.header}>Words of Wisdom</h2>
       <p className={styles.sub_header}>
         As we look towards this next chapter of our lives together, we are

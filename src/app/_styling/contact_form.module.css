@@ -3,7 +3,8 @@
   margin-right: 2rem;
 }
 
-.rsvp_button {
+.rsvp_button,
+.registry_button {
   display: none;
 }
 
@@ -79,7 +80,8 @@
     width: 90%;
     margin-right: 0rem;
   }
-  .rsvp_button {
+  .rsvp_button,
+  .registry_button {
     text-decoration: none;
     text-align: center;
     background-color: var(--maroon);
@@ -91,6 +93,10 @@
     padding: 0.8rem 0.5rem 0.8rem 0.5rem;
     border-radius: 5px;
     margin-bottom: 2rem;
+  }
+  .registry_button {
+    color: var(--maroon);
+    background-color: var(--rose);
   }
   .header {
     margin-top: 1rem;
@@ -125,6 +131,9 @@
   @media (prefers-color-scheme: dark) {
     .copy {
       color: #ecd5cd;
+    }
+    .registry_button {
+      background-color: #680a14;
     }
   }
 }

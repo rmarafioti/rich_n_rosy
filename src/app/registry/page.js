@@ -16,7 +16,15 @@ export default function Registry() {
           wishlist. Thank you in advance for the love and generosity you have
           shown us, whether through our registry or in your own way.
         </p>
-        <button className={styles.button}>Wedding Registry</button>
+        <div className={styles.link_container}>
+          <a
+            href="https://www.zola.com/registry/rosy-rich"
+            target="_blank"
+            className={styles.link}
+          >
+            Wedding Registry
+          </a>
+        </div>
       </article>
     </main>
   );
