@@ -26,7 +26,7 @@ export default function Navbar() {
     { href: "/", label: "Home" },
     { href: "/wedding_info", label: "Wedding Info" },
     { href: "/rsvp", label: "RSVP" },
-    /*{ href: "/registry", label: "Registry" },*/
+    { href: "/registry", label: "Registry" },
     { href: "/our_story", label: "Our Story" },
     { href: "/gallery", label: "Gallery" },
   ];

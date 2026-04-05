@@ -23,7 +23,15 @@
   margin-bottom: 2rem;
 }
 
-.button {
+.link_container {
+  display: flex;
+  width: 680px;
+}
+
+.link {
+  text-decoration: none;
+  border-radius: 5px;
+
   text-align: center;
   background-color: var(--maroon);
   font-family: var(--main-font);
@@ -38,16 +46,16 @@
   transition: background 0.2s ease-in-out;
 }
 
-.button:hover {
+.link:hover {
   color: var(--foreground);
   background-color: var(--rose);
 }
 
 @media (prefers-color-scheme: dark) {
-.button:hover {
+  .link:hover {
     color: var(--blush);
     background-color: var(--maroon);
-}
+  }
 }
 
 @media (max-width: 667px) and (hover: none) {
@@ -57,8 +65,11 @@
     width: 90%;
     margin: 0rem 1rem 0rem 1rem;
   }
-   .title {
+  .title {
     color: var(--maroon);
     font-size: 76px;
+  }
+  .link_container {
+    width: 100%;
   }
 }
