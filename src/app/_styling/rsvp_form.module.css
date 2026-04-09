@@ -198,5 +198,8 @@
     .copy {
       color: #ecd5cd;
     }
+    .required_error {
+      color:  #680a14;
+    }
   }
 }
